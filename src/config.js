@@ -6,17 +6,17 @@
  */
 export const CLINIC = {
   name: 'OviAm Clinic',
-  tagline: 'General Practice & Family Physician',
+  tagline: 'For Body & Mind Health · General & Family Care',
   city: 'Guduvanchery · Chengalpattu',
 
   // Phone shown to users + the tel: link
-  phoneDisplay: '+91 98401 23456',
-  phoneHref: 'tel:+919840123456',
+  phoneDisplay: '+91 81228 84249',
+  phoneHref: 'tel:+918122884249',
 
   // WhatsApp number in international format (used in wa.me links)
-  whatsapp: '919840123456',
+  whatsapp: '918122884249',
 
-  email: 'care@oviamclinic.in',
+  email: 'oviamclinic.healthpartner@gmail.com',
   address: '1st Floor, No. 872, Nellikuppam Main Road, Moolakazhani, Guduvanchery - 603202',
   landmark: 'Opposite Indian Oil Petrol Bunk',
   mapsUrl: 'https://maps.app.goo.gl/F4yehhgyHN5E27i86',

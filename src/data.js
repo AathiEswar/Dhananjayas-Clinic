@@ -3,9 +3,9 @@
 /* Site content — services, doctor, testimonials, FAQs, stats for OviAm Clinic. */
 
 export const SPECIALTIES_TICKER = [
-  'General Medicine', 'Family Healthcare', 'Fever & Infection Care', 'Diabetes Management',
-  'Hypertension & BP', 'Thyroid Care', 'Preventive Health Checks', 'Adult & Child Vaccinations',
-  'Teleconsultations', 'Home Sample Collection',
+  'General Medicine', 'Psychology & Counseling', 'Family Healthcare', 'Fever & Infection Care',
+  'Diabetes Management', 'Hypertension & BP', 'Thyroid Care', 'Mind Health',
+  'Preventive Health Checks', 'Adult & Child Vaccinations', 'Teleconsultations',
 ];
 
 export const SERVICES = [
@@ -19,6 +19,15 @@ export const SERVICES = [
     meta: 'Consultation Fee: ₹200',
   },
   {
+    id: 'psychology-care',
+    featured: true,
+    icon: 'heart',
+    title: 'Psychologist & Counseling Available',
+    desc: 'Dedicated psychological consultations, emotional wellness guidance, stress management, and mental health therapy for body & mind care.',
+    chips: ['Psychology Sessions', 'Counseling', 'Stress & Anxiety', 'Mind Health'],
+    meta: 'By Appointment',
+  },
+  {
     id: 'chronic-care',
     featured: false,
     icon: 'pulse',
@@ -30,7 +39,7 @@ export const SERVICES = [
   {
     id: 'preventive-health',
     featured: false,
-    icon: 'heart',
+    icon: 'sparkle',
     title: 'Preventive Health Checks',
     desc: 'Routine physical examinations, blood pressure checks, and preventive blood workups to catch potential health issues early.',
     chips: ['Routine Check-up', 'Blood Pressure', 'Blood Sugar Test', 'Wellness Advice'],
@@ -38,7 +47,7 @@ export const SERVICES = [
   {
     id: 'vaccinations',
     featured: false,
-    icon: 'sparkle',
+    icon: 'flask',
     title: 'Vaccinations & Immunization',
     desc: 'Essential routine vaccinations for adults and children to protect against preventable infectious diseases.',
     chips: ['Adult Immunization', 'Pediatric Shots', 'Flu Vaccines'],
@@ -46,7 +55,7 @@ export const SERVICES = [
   {
     id: 'teleconsultation',
     featured: false,
-    icon: 'flask',
+    icon: 'steth',
     title: 'Teleconsultations & Home Visits',
     desc: 'Virtual appointments for prescription renewals & follow-ups, plus in-home doctor consultation or sample collection for elderly patients.',
     chips: ['Home Visits', 'Tele-health', 'Senior Care', 'Sample Collection'],

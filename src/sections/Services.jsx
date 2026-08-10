@@ -41,7 +41,9 @@ export default function Services() {
               <p className="svc-card__desc">{s.desc}</p>
 
               <div className="svc-card__chips">
-                {s.chips.map((c) => <span className="chip" key={c}>{c}</span>)}
+                {s.chips.map((c) => (
+                  <span className={`chip ${c.includes('Mind') || c.includes('Psychology') ? 'chip--red' : ''}`} key={c}>{c}</span>
+                ))}
               </div>
 
               {s.meta && <p className="svc-card__meta">{s.meta}</p>}

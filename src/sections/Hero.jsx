@@ -2,7 +2,6 @@ import { useRef } from 'react';
 import { useScroll, useAnim, skipReveal } from '../context/ScrollContext';
 import { CLINIC } from '../config';
 import { SPECIALTIES_TICKER, DOCTORS } from '../data';
-import { MaskText } from '../lib/anim';
 import Button from '../components/Button';
 import Marquee from '../components/Marquee';
 import Icon from '../lib/Icons';
@@ -14,25 +13,16 @@ const Stars = ({ n = 5 }) => (
 );
 
 export default function Hero() {
-  const { openBooking, loaded } = useScroll();
+  const { openBooking } = useScroll();
   const scope = useRef(null);
   const nextDoc = DOCTORS[0];
 
-  /* intro choreography — desktop only; plays once the preloader finishes */
+  /* gentle perpetual float on the cards (instant start, zero delay) */
   useAnim(scope, (gsap) => {
-    if (!loaded || skipReveal()) return;
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-    tl.from('.hero__eyebrow, .hero__sub, .hero__ctas, .hero__proof', {
-      y: 26, autoAlpha: 0, duration: 0.9, stagger: 0.09,
-    }, 0.25)
-      .from('.hero__arch', { clipPath: 'inset(12% 8% 12% 8% round 300px)', scale: 1.06, autoAlpha: 0, duration: 1.2, ease: 'expo.out' }, 0.35)
-      .from('.hero__card, .hero__chip', { y: 34, autoAlpha: 0, scale: 0.94, duration: 0.8, stagger: 0.12, ease: 'back.out(1.6)' }, 0.75)
-      .from('.hero__ticker', { autoAlpha: 0, duration: 0.8 }, 1.0);
-
-    /* gentle perpetual float on the cards (compositor-only) */
-    gsap.to('.hero__card--slot', { y: -10, duration: 3.2, yoyo: true, repeat: -1, ease: 'sine.inOut', delay: 1.6 });
-    gsap.to('.hero__card--rating', { y: -14, duration: 3.8, yoyo: true, repeat: -1, ease: 'sine.inOut', delay: 1.9 });
-  }, [loaded]);
+    if (skipReveal()) return;
+    gsap.to('.hero__card--slot', { y: -10, duration: 3.2, yoyo: true, repeat: -1, ease: 'sine.inOut' });
+    gsap.to('.hero__card--rating', { y: -14, duration: 3.8, yoyo: true, repeat: -1, ease: 'sine.inOut' });
+  });
 
   return (
     <section className="hero" data-scroll-section id="top" ref={scope}>
@@ -43,23 +33,19 @@ export default function Hero() {
 
       <div className="hero__inner container">
         <div className="hero__copy">
-          <p className="eyebrow hero__eyebrow">
+          <p className="eyebrow hero__eyebrow" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
             <span className="pulse-dot" aria-hidden="true" />
-            Open today · Same-day slots available · {CLINIC.city}
+            <span>Open today · Same-day slots available · {CLINIC.city}</span>
+            <span className="chip chip--red">Psychologist Available</span>
           </p>
 
-          <MaskText
-            as="h1"
-            className="hero__title"
-            play={loaded}
-            stagger={0.06}
-            segments={[{ t: 'Good health begins ' }, { t: 'with being heard.', em: true }]}
-          />
+          <h1 className="hero__title">
+            Complete care for your <em>body &amp; mind health.</em>
+          </h1>
 
           <p className="hero__sub">
-            18+ years of trusted general physician care, chronic disease management,
-            and family medicine — right in Guduvanchery. Honest consultations, zero
-            unnecessary retests, and an affordable ₹200 fee.
+            18+ years of trusted general physician care, family medicine, chronic disease management,
+            and psychologist consultations in Guduvanchery. Attentive care at an affordable ₹200 fee.
           </p>
 
           <div className="hero__ctas">

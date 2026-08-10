@@ -14,7 +14,7 @@ export default function TrustStats() {
           ))}
         </div>
         <p className="stats__caption" data-reveal>
-          Trusted by families across Chennai since 2001 — and by their family doctors too.
+          Trusted by families across Guduvanchery for general medicine, family health & mind care.
         </p>
       </div>
     </section>
