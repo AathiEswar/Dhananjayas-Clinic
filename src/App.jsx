@@ -59,7 +59,7 @@ function Site() {
             <Hero />
             <TrustStats />
             <Services />
-            <About />
+            {/* <About /> */}
             <Doctors />
             <Process />
             <Testimonials />

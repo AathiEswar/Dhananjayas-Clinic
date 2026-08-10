@@ -23,7 +23,6 @@ export const CLINIC = {
 
   rating: '4.9',
   reviewCount: '150+',
-  fee: '₹200',
 
   hours: [
     { days: 'Mon – Sat (Morning)', time: '9:30 AM – 1:30 PM' },

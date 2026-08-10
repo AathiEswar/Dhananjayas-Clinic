@@ -56,7 +56,13 @@
 
 /* ── reset ─────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: auto; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: clamp(84px, 10vh, 120px);
+}
+section[id], div[id] {
+  scroll-margin-top: clamp(84px, 10vh, 120px);
+}
 html, body { height: 100%; }
 
 body {

@@ -45,7 +45,7 @@ export default function Hero() {
 
           <p className="hero__sub">
             18+ years of trusted general physician care, family medicine, chronic disease management,
-            and psychologist consultations in Guduvanchery. Attentive care at an affordable ₹200 fee.
+            and psychologist consultations in Guduvanchery. Attentive care with zero rushed appointments.
           </p>
 
           <div className="hero__ctas">
@@ -63,7 +63,7 @@ export default function Hero() {
               <strong>{CLINIC.rating}</strong> · {CLINIC.reviewCount} reviews
             </span>
             <span className="hero__proof-sep" aria-hidden="true" />
-            <span className="hero__proof-item"><strong>₹200</strong> Consult Fee</span>
+            <span className="hero__proof-item"><strong>100%</strong> Patient Focus</span>
             <span className="hero__proof-sep" aria-hidden="true" />
             <span className="hero__proof-item"><strong>18+</strong> years exp.</span>
           </div>

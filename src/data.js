@@ -16,7 +16,7 @@ export const SERVICES = [
     title: 'General Physician Consultation',
     desc: 'Comprehensive diagnosis and treatment for cold, flu, viral fevers, seasonal infections, respiratory issues, and everyday health concerns.',
     chips: ['Cold & Fever', 'Infections', 'Acute Illness', 'Prescriptions'],
-    meta: 'Consultation Fee: ₹200',
+    meta: 'Same-day Consultation',
   },
   {
     id: 'psychology-care',
@@ -78,17 +78,17 @@ export const DOCTORS = [
 export const STATS = [
   { value: 18, suffix: '+', label: 'Years of medical care' },
   { value: 20, suffix: 'k+', label: 'Patients treated' },
-  { value: 200, prefix: '₹', suffix: '', label: 'Consultation fee' },
+  { value: 100, suffix: '%', label: 'Patient satisfaction' },
   { value: 4.9, suffix: '★', label: 'Google rating', decimals: 1 },
 ];
 
 export const WHY_US = [
-  'Affordable consultation fee (₹200) with top-tier medical guidance',
   'Patient-first care — doctor listens attentively without rushing you',
   'Honest & evidence-based medicine — no unnecessary retests or over-prescribed drugs',
   'Convenient location right on Nellikuppam Main Road, opp. Indian Oil Petrol Bunk',
   'Clean, hygienic, and comforting clinic environment',
   'Quick WhatsApp & phone booking or direct walk-ins welcome',
+  'Complete care under one roof for both Body & Mind Health',
 ];
 
 export const PROCESS = [
@@ -116,7 +116,7 @@ export const TESTIMONIALS = [
     context: 'Guduvanchery resident',
   },
   {
-    quote: 'The consultation fee is just ₹200, but the care and attention you receive is better than expensive corporate hospitals. Very clean clinic right opposite the Indian Oil petrol bunk.',
+    quote: 'The care and attention you receive is better than expensive corporate hospitals. Very clean clinic right opposite the Indian Oil petrol bunk.',
     name: 'Meenakshi Sundaram',
     context: 'Diabetes care patient',
   },
@@ -142,12 +142,8 @@ export const FAQS = [
     a: 'We are open Monday through Saturday in two slots: Morning (9:30 AM – 1:30 PM) and Evening (5:00 PM – 9:00 PM). Sunday visits are by prior appointment or emergency call.',
   },
   {
-    q: 'What is the consultation fee?',
-    a: 'Routine General Physician consultation fee is ₹200.',
-  },
-  {
     q: 'Do I need an appointment, or can I walk in directly?',
-    a: 'Walk-ins are always welcome! However, if you prefer minimal waiting, you can message us on WhatsApp or call ahead to confirm doctor availability.',
+    a: 'Walk-ins are always welcome during operating hours. However, if you prefer minimal waiting, you can message us on WhatsApp or call ahead to confirm doctor availability.',
   },
   {
     q: 'What are the doctor’s qualifications and experience?',
@@ -162,7 +158,6 @@ export const FAQS = [
 export const NAV_LINKS = [
   { label: 'Services', target: '#services' },
   { label: 'About Doctor', target: '#doctors' },
-  { label: 'Why Us', target: '#about' },
   { label: 'Reviews', target: '#stories' },
   { label: 'Visit', target: '#visit' },
 ];
