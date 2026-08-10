@@ -73,19 +73,11 @@ export default function Doctors() {
     <section className="doctors section" data-scroll-section id="doctors">
       <div className="container">
         <SectionHeader
-          eyebrow="Our specialists"
-          segments={[{ t: 'Doctors who ' }, { t: 'listen first.', em: true }]}
+          eyebrow="Our Doctor"
+          segments={[{ t: 'Expert physician who ' }, { t: 'listens first.', em: true }]}
           side={
             <>
-              <p>Handpicked seniors from Chennai’s best institutions — chosen as much for bedside manner as for credentials.</p>
-              <div className="doctors__nav">
-                <button className="round-btn" onClick={() => nudge(-1)} aria-label="Previous doctors" data-cursor="hover">
-                  <Icon name="arrowR" size={17} strokeWidth={2} className="flip-x" />
-                </button>
-                <button className="round-btn" onClick={() => nudge(1)} aria-label="Next doctors" data-cursor="hover">
-                  <Icon name="arrowR" size={17} strokeWidth={2} />
-                </button>
-              </div>
+              <p>Experienced alumnus of Madras Medical College (MMC) with DNB specialization in Family Medicine — dedicated to compassionate, evidence-based care.</p>
             </>
           }
         />

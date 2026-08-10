@@ -8,8 +8,8 @@ export default function Contact() {
     <section className="contact section" data-scroll-section id="visit">
       <div className="container">
         <SectionHeader
-          eyebrow="Visit us"
-          segments={[{ t: 'Drop by — ' }, { t: 'the kettle’s always on.', em: true }]}
+          eyebrow="Visit OviAm Clinic"
+          segments={[{ t: 'Located in Moolakazhani, ' }, { t: 'Guduvanchery.', em: true }]}
         />
 
         <div className="contact__grid">
@@ -19,7 +19,7 @@ export default function Contact() {
               href={CLINIC.mapsUrl}
               target="_blank"
               rel="noreferrer"
-              aria-label="Open clinic location in Google Maps"
+              aria-label="Open OviAm Clinic location in Google Maps"
               data-cursor="hover"
               data-reveal
             >
@@ -41,13 +41,14 @@ export default function Contact() {
                 <i className="contact__pin-pulse" />
               </span>
               <span className="contact__map-cta">
-                Get directions <Icon name="arrow" size={14} strokeWidth={2.2} />
+                Get directions on Google Maps <Icon name="arrow" size={14} strokeWidth={2.2} />
               </span>
             </a>
 
             <address className="contact__addr" data-reveal>
               <h3>{CLINIC.name}</h3>
               <p>{CLINIC.address}</p>
+              <p className="contact__landmark" style={{ color: 'var(--c-accent, #C89B5A)', fontWeight: '600', marginTop: '6px' }}>Landmark: {CLINIC.landmark}</p>
             </address>
 
             <div className="contact__hours" data-reveal>

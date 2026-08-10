@@ -5,28 +5,30 @@
  * ─────────────────────────────────────────────────────────────
  */
 export const CLINIC = {
-  name: 'Solace Health',
-  tagline: 'Multi-Specialty Clinic',
-  city: 'Adyar · Chennai',
+  name: 'OviAm Clinic',
+  tagline: 'General Practice & Family Physician',
+  city: 'Guduvanchery · Chengalpattu',
 
-  // Phone shown to users + the tel: link (digits only after +)
-  phoneDisplay: '+91 44 4000 1234',
-  phoneHref: 'tel:+914440001234',
+  // Phone shown to users + the tel: link
+  phoneDisplay: '+91 98401 23456',
+  phoneHref: 'tel:+919840123456',
 
-  // WhatsApp number in international format, digits only (used in wa.me links)
-  whatsapp: '919876543210',
+  // WhatsApp number in international format (used in wa.me links)
+  whatsapp: '919840123456',
 
-  email: 'care@solacehealth.in',
-  address: '12, Lakeview Avenue, Adyar, Chennai 600020',
-  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Solace+Health+Clinic+Adyar+Chennai',
+  email: 'care@oviamclinic.in',
+  address: '1st Floor, No. 872, Nellikuppam Main Road, Moolakazhani, Guduvanchery - 603202',
+  landmark: 'Opposite Indian Oil Petrol Bunk',
+  mapsUrl: 'https://maps.app.goo.gl/F4yehhgyHN5E27i86',
 
   rating: '4.9',
-  reviewCount: '2,400+',
+  reviewCount: '150+',
+  fee: '₹200',
 
   hours: [
-    { days: 'Mon – Sat', time: '8:00 AM – 9:00 PM' },
-    { days: 'Sunday', time: '9:00 AM – 1:00 PM' },
-    { days: 'Diagnostics & Lab', time: 'From 6:30 AM daily' },
+    { days: 'Mon – Sat (Morning)', time: '9:30 AM – 1:30 PM' },
+    { days: 'Mon – Sat (Evening)', time: '5:00 PM – 9:00 PM' },
+    { days: 'Sunday', time: 'By Appointment / Closed' },
   ],
 };
 
@@ -36,5 +38,6 @@ export function waLink(message) {
 }
 
 export const WA_DEFAULT = waLink(
-  `Hi ${CLINIC.name}! I'd like to book an appointment. Please share the next available slots.`
+  `Hi ${CLINIC.name}! I'd like to consult the doctor. Please let me know the available time slots today.`
 );
+

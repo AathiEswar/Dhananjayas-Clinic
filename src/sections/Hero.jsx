@@ -57,14 +57,14 @@ export default function Hero() {
           />
 
           <p className="hero__sub">
-            30+ specialists, NABL-accredited diagnostics and cashless insurance —
-            under one calm roof. Book in 30 seconds; no queues, no hold music,
-            no waiting-room chaos.
+            18+ years of trusted general physician care, chronic disease management,
+            and family medicine — right in Guduvanchery. Honest consultations, zero
+            unnecessary retests, and an affordable ₹200 fee.
           </p>
 
           <div className="hero__ctas">
-            <Button magnetic icon="calendar" onClick={() => openBooking()} aria-label="Book an appointment">
-              Book an appointment
+            <Button magnetic icon="calendar" onClick={() => openBooking()} aria-label="Book a consultation">
+              Book a consultation
             </Button>
             <Button variant="ghost" icon="phone" href={CLINIC.phoneHref}>
               Call the clinic
@@ -77,9 +77,9 @@ export default function Hero() {
               <strong>{CLINIC.rating}</strong> · {CLINIC.reviewCount} reviews
             </span>
             <span className="hero__proof-sep" aria-hidden="true" />
-            <span className="hero__proof-item"><strong>40,000+</strong> patients cared for</span>
+            <span className="hero__proof-item"><strong>₹200</strong> Consult Fee</span>
             <span className="hero__proof-sep" aria-hidden="true" />
-            <span className="hero__proof-item"><strong>25+</strong> years in Chennai</span>
+            <span className="hero__proof-item"><strong>18+</strong> years exp.</span>
           </div>
         </div>
 
@@ -102,7 +102,7 @@ export default function Hero() {
               onClick={() => openBooking(nextDoc.dept, nextDoc.slot)}
               data-cursor="hover"
             >
-              Grab this slot <Icon name="arrowR" size={14} strokeWidth={2.2} />
+              Consult today <Icon name="arrowR" size={14} strokeWidth={2.2} />
             </button>
           </div>
 
@@ -113,7 +113,7 @@ export default function Hero() {
           </div>
 
           <div className="hero__chip" data-scroll data-scroll-speed="0.9">
-            <Icon name="shield" size={15} /> Cashless insurance
+            <Icon name="pin" size={15} /> Opp. Indian Oil Petrol Bunk
           </div>
         </div>
       </div>
