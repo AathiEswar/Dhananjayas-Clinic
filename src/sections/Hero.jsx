@@ -2,7 +2,6 @@ import { useRef } from 'react';
 import { useScroll, useAnim, skipReveal } from '../context/ScrollContext';
 import { CLINIC } from '../config';
 import { SPECIALTIES_TICKER, DOCTORS } from '../data';
-import { MaskText } from '../lib/anim';
 import Button from '../components/Button';
 import Marquee from '../components/Marquee';
 import Icon from '../lib/Icons';
@@ -14,25 +13,16 @@ const Stars = ({ n = 5 }) => (
 );
 
 export default function Hero() {
-  const { openBooking, loaded } = useScroll();
+  const { openBooking } = useScroll();
   const scope = useRef(null);
   const nextDoc = DOCTORS[0];
 
-  /* intro choreography — desktop only; plays once the preloader finishes */
+  /* gentle perpetual float on the cards (instant start, zero delay) */
   useAnim(scope, (gsap) => {
-    if (!loaded || skipReveal()) return;
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-    tl.from('.hero__eyebrow, .hero__sub, .hero__ctas, .hero__proof', {
-      y: 26, autoAlpha: 0, duration: 0.9, stagger: 0.09,
-    }, 0.25)
-      .from('.hero__arch', { clipPath: 'inset(12% 8% 12% 8% round 300px)', scale: 1.06, autoAlpha: 0, duration: 1.2, ease: 'expo.out' }, 0.35)
-      .from('.hero__card, .hero__chip', { y: 34, autoAlpha: 0, scale: 0.94, duration: 0.8, stagger: 0.12, ease: 'back.out(1.6)' }, 0.75)
-      .from('.hero__ticker', { autoAlpha: 0, duration: 0.8 }, 1.0);
-
-    /* gentle perpetual float on the cards (compositor-only) */
-    gsap.to('.hero__card--slot', { y: -10, duration: 3.2, yoyo: true, repeat: -1, ease: 'sine.inOut', delay: 1.6 });
-    gsap.to('.hero__card--rating', { y: -14, duration: 3.8, yoyo: true, repeat: -1, ease: 'sine.inOut', delay: 1.9 });
-  }, [loaded]);
+    if (skipReveal()) return;
+    gsap.to('.hero__card--slot', { y: -10, duration: 3.2, yoyo: true, repeat: -1, ease: 'sine.inOut' });
+    gsap.to('.hero__card--rating', { y: -14, duration: 3.8, yoyo: true, repeat: -1, ease: 'sine.inOut' });
+  });
 
   return (
     <section className="hero" data-scroll-section id="top" ref={scope}>
@@ -43,28 +33,24 @@ export default function Hero() {
 
       <div className="hero__inner container">
         <div className="hero__copy">
-          <p className="eyebrow hero__eyebrow">
+          <p className="eyebrow hero__eyebrow" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
             <span className="pulse-dot" aria-hidden="true" />
-            Open today · Same-day slots available · {CLINIC.city}
+            <span>Open today · Same-day slots available · {CLINIC.city}</span>
+            <span className="chip chip--red">Psychologist Available</span>
           </p>
 
-          <MaskText
-            as="h1"
-            className="hero__title"
-            play={loaded}
-            stagger={0.06}
-            segments={[{ t: 'Good health begins ' }, { t: 'with being heard.', em: true }]}
-          />
+          <h1 className="hero__title">
+            Complete care for your <em>body &amp; mind health.</em>
+          </h1>
 
           <p className="hero__sub">
-            30+ specialists, NABL-accredited diagnostics and cashless insurance —
-            under one calm roof. Book in 30 seconds; no queues, no hold music,
-            no waiting-room chaos.
+            18+ years of trusted general physician care, family medicine, chronic disease management,
+            and psychologist consultations in Guduvanchery. Attentive care with zero rushed appointments.
           </p>
 
           <div className="hero__ctas">
-            <Button magnetic icon="calendar" onClick={() => openBooking()} aria-label="Book an appointment">
-              Book an appointment
+            <Button magnetic icon="calendar" onClick={() => openBooking()} aria-label="Book a consultation">
+              Book a consultation
             </Button>
             <Button variant="ghost" icon="phone" href={CLINIC.phoneHref}>
               Call the clinic
@@ -77,9 +63,9 @@ export default function Hero() {
               <strong>{CLINIC.rating}</strong> · {CLINIC.reviewCount} reviews
             </span>
             <span className="hero__proof-sep" aria-hidden="true" />
-            <span className="hero__proof-item"><strong>40,000+</strong> patients cared for</span>
+            <span className="hero__proof-item"><strong>100%</strong> Patient Focus</span>
             <span className="hero__proof-sep" aria-hidden="true" />
-            <span className="hero__proof-item"><strong>25+</strong> years in Chennai</span>
+            <span className="hero__proof-item"><strong>18+</strong> years exp.</span>
           </div>
         </div>
 
@@ -102,7 +88,7 @@ export default function Hero() {
               onClick={() => openBooking(nextDoc.dept, nextDoc.slot)}
               data-cursor="hover"
             >
-              Grab this slot <Icon name="arrowR" size={14} strokeWidth={2.2} />
+              Consult today <Icon name="arrowR" size={14} strokeWidth={2.2} />
             </button>
           </div>
 
@@ -113,7 +99,7 @@ export default function Hero() {
           </div>
 
           <div className="hero__chip" data-scroll data-scroll-speed="0.9">
-            <Icon name="shield" size={15} /> Cashless insurance
+            <Icon name="pin" size={15} /> Opp. Indian Oil Petrol Bunk
           </div>
         </div>
       </div>

@@ -199,7 +199,39 @@ export function ScrollProvider({ loaded, children }) {
 
   /* ── api ─────────────────────────────────────────────────── */
   const scrollTo = useCallback((target, opts = {}) => {
-    locoRef.current?.scrollTo(target, { offset: -72, duration: 900, ...opts });
+    if (!target && target !== 0) return;
+
+    if (target === '#top' || target === 0) {
+      if (locoRef.current && isSmoothScroller()) {
+        locoRef.current.scrollTo(0, { duration: 800, ...opts });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      return;
+    }
+
+    const nav = document.querySelector('.nav');
+    const navHeight = nav ? nav.offsetHeight : 84;
+    const computedOffset = opts.offset !== undefined ? opts.offset : -(navHeight + 24);
+
+    if (typeof target === 'string') {
+      const el = document.querySelector(target);
+      if (el) {
+        if (locoRef.current && isSmoothScroller()) {
+          locoRef.current.scrollTo(el, { offset: computedOffset, duration: 800, ...opts });
+        } else {
+          const rect = el.getBoundingClientRect();
+          const currentY = window.scrollY || document.documentElement.scrollTop || 0;
+          const destinationY = currentY + rect.top + computedOffset;
+          window.scrollTo({ top: Math.max(0, destinationY), behavior: 'smooth' });
+        }
+        return;
+      }
+    }
+
+    if (locoRef.current) {
+      locoRef.current.scrollTo(target, { offset: computedOffset, duration: 800, ...opts });
+    }
   }, []);
 
   const onScroll = useCallback((cb) => {

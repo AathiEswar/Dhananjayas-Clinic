@@ -14,7 +14,6 @@ import About from './sections/About';
 import Doctors from './sections/Doctors';
 import Process from './sections/Process';
 import Testimonials from './sections/Testimonials';
-import Insurance from './sections/Insurance';
 import Faq from './sections/Faq';
 import CtaBanner from './sections/CtaBanner';
 import Contact from './sections/Contact';
@@ -60,11 +59,10 @@ function Site() {
             <Hero />
             <TrustStats />
             <Services />
-            <About />
+            {/* <About /> */}
             <Doctors />
             <Process />
             <Testimonials />
-            <Insurance />
             <Faq />
             <CtaBanner />
             <Contact />

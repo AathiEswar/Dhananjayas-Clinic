@@ -19,8 +19,22 @@ export default function FloatingDock() {
 
   return (
     <>
-      {/* Desktop pill */}
+      {/* Desktop pills */}
       <div className={`fab ${shown ? 'is-in' : ''}`}>
+        <Magnetic strength={0.3}>
+          <a
+            className="fab__btn fab__btn--wa"
+            href={WA_DEFAULT}
+            target="_blank"
+            rel="noreferrer"
+            data-cursor="hover"
+            aria-label="Chat on WhatsApp"
+          >
+            <Icon name="whatsapp" size={19} />
+            <span>WhatsApp</span>
+          </a>
+        </Magnetic>
+
         <Magnetic strength={0.4}>
           <button className="fab__btn" onClick={() => openBooking()} data-cursor="hover" aria-label="Book an appointment">
             <span className="fab__ring" aria-hidden="true" />

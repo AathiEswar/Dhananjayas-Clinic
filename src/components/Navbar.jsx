@@ -66,10 +66,12 @@ export default function Navbar() {
         <div className="nav__inner">
           <a className="nav__brand" href="#top" onClick={go('#top')} aria-label={`${CLINIC.name} — home`} data-cursor="hover">
             <span className="nav__mark" aria-hidden="true">
-              <svg viewBox="0 0 64 64" width="34" height="34">
-                <rect width="64" height="64" rx="16" fill="#0F4C42" />
-                <path d="M32 14c3.5 7 10 10.5 16 12-6 1.5-12.5 5-16 12-3.5-7-10-10.5-16-12 6-1.5 12.5-5 16-12z" fill="#F6F3EC" />
-                <circle cx="32" cy="46" r="4" fill="#C89B5A" />
+              <svg viewBox="0 0 64 64" width="38" height="38">
+                <rect width="64" height="64" rx="16" fill="var(--oviam-blue, #1D357D)" />
+                <circle cx="32" cy="32" r="23" fill="#FFFFFF" />
+                <rect x="27" y="15" width="10" height="34" rx="3" fill="var(--oviam-red, #DC2626)" />
+                <rect x="15" y="27" width="34" height="10" rx="3" fill="var(--oviam-red, #DC2626)" />
+                <circle cx="32" cy="32" r="6" fill="var(--oviam-gold, #F5A623)" />
               </svg>
             </span>
             <span className="nav__brand-txt">
@@ -90,6 +92,10 @@ export default function Navbar() {
             <a className="nav__phone" href={CLINIC.phoneHref} data-cursor="hover" aria-label={`Call ${CLINIC.phoneDisplay}`}>
               <Icon name="phone" size={16} />
               <span>{CLINIC.phoneDisplay}</span>
+            </a>
+            <a className="nav__wa" href={WA_DEFAULT} target="_blank" rel="noreferrer" data-cursor="hover" aria-label="WhatsApp OviAm Clinic">
+              <Icon name="whatsapp" size={17} />
+              <span>WhatsApp</span>
             </a>
             <Button variant="primary" className="btn--sm nav__cta" onClick={() => openBooking()} icon="calendar">
               Book appointment

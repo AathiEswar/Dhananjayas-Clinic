@@ -24,31 +24,31 @@ export default function About() {
                 <path id="circlePath" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" />
               </defs>
               <text>
-                <textPath href="#circlePath">SOLACE HEALTH · SINCE 2001 ·&nbsp;</textPath>
+                <textPath href="#circlePath">OVIAM CLINIC · GUDUVANCHERY · FAMILY HEALTH ·&nbsp;</textPath>
               </text>
             </svg>
             <span className="about__badge-core"><Icon name="sparkle" size={20} /></span>
           </div>
 
           <div className="about__exp" data-scroll data-scroll-speed="0.5">
-            <strong>25+</strong>
+            <strong>18+</strong>
             <span>years of<br />honest medicine</span>
           </div>
         </div>
 
         <div className="about__content">
           <SectionHeader
-            eyebrow="Why Solace"
+            eyebrow="Why OviAm Clinic"
             segments={[
               { t: 'Medicine that respects your time, ' },
-              { t: 'your worries, and your wallet.', em: true },
+              { t: 'your health, and your trust.', em: true },
             ]}
           />
           <p className="about__lead" data-reveal>
-            Healthcare in this city can feel like a maze of queues, retests and
-            upsells. We built Solace to be the opposite — one calm place where
-            appointments run on time, doctors listen first, and you never pay
-            for anything you don’t need.
+            Healthcare in Guduvanchery should be accessible, transparent, and comforting.
+            OviAm Clinic was built around one promise: attentive general physician care
+            where doctor consultations are never rushed, diagnosis is accurate, and you
+            never pay for unnecessary tests or over-prescribed drugs.
           </p>
 
           <ul className="about__list">
@@ -61,13 +61,12 @@ export default function About() {
           </ul>
 
           <blockquote className="about__sign" data-reveal>
-            “Every protocol here starts with one question — is this what we’d
-            want for our own family?”
-            <cite>— Dr. Meera Krishnan, Medical Director</cite>
+            “Every consultation here starts with one principle — listening attentively and giving the honest care we’d want for our own family.”
+            <cite>— Dr. Oviam (MBBS MMC, DNB Family Medicine)</cite>
           </blockquote>
 
           <button className="link-arrow" onClick={() => scrollTo('#doctors')} data-cursor="hover" data-reveal>
-            Meet our specialists <Icon name="arrowR" size={15} strokeWidth={2.2} />
+            Learn about our doctor <Icon name="arrowR" size={15} strokeWidth={2.2} />
           </button>
         </div>
       </div>

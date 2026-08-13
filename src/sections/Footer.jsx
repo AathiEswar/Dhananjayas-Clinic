@@ -22,11 +22,11 @@ export default function Footer() {
         <div className="footer__grid">
           <div className="footer__col footer__col--brand">
             <p>
-              A multi-specialty clinic in {CLINIC.city} where appointments run
-              on time and doctors listen first.
+              A trusted General Practice & Family Physician clinic in {CLINIC.city} where
+              consultations are never rushed and care comes first.
             </p>
             <button className="btn btn--primary btn--sm" onClick={() => openBooking()} data-cursor="hover">
-              <span className="btn__solo">Book appointment</span>
+              <span className="btn__solo">Book consultation</span>
               <span className="btn__ic"><Icon name="calendar" size={14} strokeWidth={2} /></span>
             </button>
           </div>
@@ -38,19 +38,20 @@ export default function Footer() {
             ))}
           </nav>
 
-          <nav className="footer__col" aria-label="Departments">
-            <h4>Departments</h4>
-            {SERVICES.slice(0, 6).map((s) => (
+          <nav className="footer__col" aria-label="Services">
+            <h4>Services</h4>
+            {SERVICES.slice(0, 5).map((s) => (
               <a key={s.id} href="#services" onClick={go('#services')} data-cursor="hover">{s.title}</a>
             ))}
           </nav>
 
           <div className="footer__col" aria-label="Contact">
-            <h4>Contact</h4>
+            <h4>Contact & Visit</h4>
             <p>{CLINIC.address}</p>
+            <p className="footer__landmark" style={{ fontSize: '0.85rem', opacity: 0.8, marginTop: '4px' }}>Landmark: {CLINIC.landmark}</p>
             <a href={CLINIC.phoneHref} data-cursor="hover">{CLINIC.phoneDisplay}</a>
             <a href={`mailto:${CLINIC.email}`} data-cursor="hover">{CLINIC.email}</a>
-            <p className="footer__hours">Mon–Sat 8 AM – 9 PM · Sun 9 AM – 1 PM</p>
+            <p className="footer__hours">Mon–Sat 9:30 AM–1:30 PM & 5 PM–9 PM</p>
           </div>
         </div>
 
