@@ -3,7 +3,7 @@
    ════════════════════════════════════════════════════════════ */
 
 /* ── hero ──────────────────────────────────────────────────── */
-.hero { position: relative; padding-top: clamp(120px, 14vh, 170px); overflow: hidden; }
+.hero { position: relative; padding-top: clamp(88px, 10vh, 120px); overflow: hidden; }
 
 .hero__bg { position: absolute; inset: 0; pointer-events: none; }
 .hero__blob { position: absolute; border-radius: 50%; }
@@ -31,6 +31,15 @@
 .hero__sub {
   margin-top: 26px; max-width: 47ch;
   font-size: clamp(1rem, 1.25vw, 1.13rem); line-height: 1.65; color: var(--ink-2);
+}
+.hero__sub-highlight {
+  color: var(--oviam-blue, #1D357D);
+  font-weight: 700;
+  background: var(--oviam-blue-soft, #EEF2FF);
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(29, 53, 125, 0.15);
+  white-space: nowrap;
 }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
 .hero__proof {
@@ -140,7 +149,7 @@
   .hero__card--slot { left: -6px; }
 }
 @media (max-width: 560px) {
-  .hero { padding-top: 104px; }
+  .hero { padding-top: 84px; }
   .hero__visual { min-height: 430px; }
   .hero__card--rating { right: -6px; }
 }

@@ -76,7 +76,6 @@ export default function Navbar() {
             </span>
             <span className="nav__brand-txt">
               <strong>{CLINIC.name}</strong>
-              <em>{CLINIC.tagline}</em>
             </span>
           </a>
 

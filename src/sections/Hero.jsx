@@ -33,19 +33,13 @@ export default function Hero() {
 
       <div className="hero__inner container">
         <div className="hero__copy">
-          <p className="eyebrow hero__eyebrow" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
-            <span className="pulse-dot" aria-hidden="true" />
-            <span>Open today · Same-day slots available · {CLINIC.city}</span>
-            <span className="chip chip--red">Psychologist Available</span>
-          </p>
-
           <h1 className="hero__title">
             Complete care for your <em>body &amp; mind health.</em>
           </h1>
 
           <p className="hero__sub">
             18+ years of trusted general physician care, family medicine, chronic disease management,
-            and psychologist consultations in Guduvanchery. Attentive care with zero rushed appointments.
+            and psychologist consultations in <strong className="hero__sub-highlight">Guduvanchery</strong>. Attentive care with zero rushed appointments.
           </p>
 
           <div className="hero__ctas">
