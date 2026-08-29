@@ -12,10 +12,17 @@ export default function Footer() {
       <div className="container">
         <div className="footer__top">
           <p className="footer__tag" data-reveal>Care that puts you at ease.</p>
-          <h2 className="footer__wordmark" aria-hidden="true">
-            {CLINIC.name.split('').map((ch, i) => (
-              <span key={i} style={{ '--i': i }}>{ch === ' ' ? ' ' : ch}</span>
-            ))}
+          <h2 className="footer__wordmark" aria-label={CLINIC.name}>
+            <span className="footer__wordmark-line">
+              {"Care and Cure".split('').map((ch, i) => (
+                <span key={`l1-${i}`} style={{ '--i': i }}>{ch === ' ' ? '\u00A0' : ch}</span>
+              ))}
+            </span>
+            <span className="footer__wordmark-line">
+              {"Homoeopathic Clinic".split('').map((ch, i) => (
+                <span key={`l2-${i}`} style={{ '--i': i + 13 }}>{ch === ' ' ? '\u00A0' : ch}</span>
+              ))}
+            </span>
           </h2>
         </div>
 

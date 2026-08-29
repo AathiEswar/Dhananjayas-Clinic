@@ -72,7 +72,10 @@ export default function Preloader({ onComplete }) {
             <path d="M32 23 C32 23 27 31 27 36 C27 39 29.2 41 32 41 C34.8 41 37 39 37 36 C37 31 32 23 32 23 Z" fill="var(--gold, #D97706)" />
           </svg>
         </span>
-        <span className="preloader__name">{CLINIC.name}</span>
+        <h1 className="preloader__name">
+          <span>Care and Cure</span>
+          <span>Homoeopathic Clinic</span>
+        </h1>
         <span className="preloader__tag">{CLINIC.tagline}</span>
       </div>
       <span className="preloader__num" ref={numRef}>0</span>

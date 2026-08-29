@@ -74,7 +74,8 @@ export default function Navbar() {
               </svg>
             </span>
             <span className="nav__brand-txt">
-              <strong>{CLINIC.name}</strong>
+              <strong>Care &amp; Cure</strong>
+              <em>Homoeopathic Clinic</em>
             </span>
           </a>
 

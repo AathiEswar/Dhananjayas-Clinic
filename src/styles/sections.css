@@ -594,11 +594,18 @@
 .footer__top { border-bottom: 1px solid rgba(246, 243, 236, 0.14); padding-bottom: clamp(30px, 4vw, 50px); }
 .footer__tag { font: 420 italic 17px/1.4 var(--font-serif); color: rgba(246, 243, 236, 0.65); margin-bottom: 14px; }
 .footer__wordmark {
-  font: 420 clamp(3rem, 10.5vw, 8.6rem)/0.95 var(--font-serif);
-  letter-spacing: -0.03em; white-space: nowrap;
+  font: 420 clamp(2rem, 5.6vw, 4.6rem)/1.08 var(--font-serif);
+  letter-spacing: -0.025em;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
-.footer__wordmark span { display: inline-block; transition: transform 0.4s var(--ease-out), color 0.4s; }
-.footer__wordmark span:hover { transform: translateY(-10px) rotate(-3deg); color: var(--sage); }
+.footer__wordmark-line {
+  display: block;
+  white-space: nowrap;
+}
+.footer__wordmark-line span { display: inline-block; transition: transform 0.4s var(--ease-out), color 0.4s; }
+.footer__wordmark-line span:hover { transform: translateY(-8px) rotate(-3deg); color: var(--sage); }
 
 .footer__grid {
   display: grid; grid-template-columns: 1.3fr 0.8fr 1fr 1.1fr;
