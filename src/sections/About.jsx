@@ -24,31 +24,30 @@ export default function About() {
                 <path id="circlePath" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" />
               </defs>
               <text>
-                <textPath href="#circlePath">VETRI HOSPITAL · VINAYAGAPURAM · MULTISPECIALTY ·&nbsp;</textPath>
+                <textPath href="#circlePath">CARE &amp; CURE HOMOEOPATHIC CLINIC · GUDUVANCHERY ·&nbsp;</textPath>
               </text>
             </svg>
             <span className="about__badge-core"><Icon name="sparkle" size={20} /></span>
           </div>
 
           <div className="about__exp" data-scroll data-scroll-speed="0.5">
-            <strong>15+</strong>
-            <span>years of<br />honest medicine</span>
+            <strong>12+</strong>
+            <span>years of<br />natural healing</span>
           </div>
         </div>
 
         <div className="about__content">
           <SectionHeader
-            eyebrow="Why Vetri Hospital"
+            eyebrow="Why Care & Cure Homoeopathy"
             segments={[
-              { t: 'Medicine that respects your time, ' },
-              { t: 'your health, and your trust.', em: true },
+              { t: 'Healing that respects your body, ' },
+              { t: 'your health, and your peace of mind.', em: true },
             ]}
           />
           <p className="about__lead" data-reveal>
-            Healthcare in Vinayagapuram should be accessible, transparent, and comforting.
-            Vetri Hospital was built around one promise: attentive medical care
-            where doctor consultations are never rushed, diagnosis is accurate, and you
-            receive genuine, compassionate care for your whole family.
+            Homeopathic care in Guduvanchery should be gentle, root-cause focused, and deeply comforting.
+            Care and Cure Homoeopathic Clinic was established to provide patient-first holistic medicine
+            where remedies are natural, non-addictive, and personalized for your long-term wellness.
           </p>
 
           <ul className="about__list">
@@ -61,8 +60,8 @@ export default function About() {
           </ul>
 
           <blockquote className="about__sign" data-reveal>
-            “Every consultation here starts with one principle — listening attentively and giving the honest care we’d want for our own family.”
-            <cite>— Dr. G. T. Kumaragururajan (MBBS, General Physician)</cite>
+            “True homeopathic healing addresses the individual as a whole — restoring natural balance and vitality safely and gently.”
+            <cite>— Senior Homeopathic Physician (BHMS)</cite>
           </blockquote>
 
           <button className="link-arrow" onClick={() => scrollTo('#doctors')} data-cursor="hover" data-reveal>

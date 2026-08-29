@@ -8,8 +8,8 @@ export default function Contact() {
     <section className="contact section" data-scroll-section id="visit">
       <div className="container">
         <SectionHeader
-          eyebrow="Visit Vetri Hospital"
-          segments={[{ t: 'Located on Surapet Main Road, ' }, { t: 'Vinayagapuram, Kolathur.', em: true }]}
+          eyebrow="Visit Care and Cure Homoeopathic Clinic"
+          segments={[{ t: 'Located on Rajaji Nagar Main Road, ' }, { t: 'Nandivaram, Guduvanchery.', em: true }]}
         />
 
         <div className="contact__grid">
@@ -19,7 +19,7 @@ export default function Contact() {
               href={CLINIC.mapsUrl}
               target="_blank"
               rel="noreferrer"
-              aria-label="Open Vetri Hospital location in Google Maps"
+              aria-label="Open Care and Cure Homoeopathic Clinic location in Google Maps"
               data-cursor="hover"
               data-reveal
             >

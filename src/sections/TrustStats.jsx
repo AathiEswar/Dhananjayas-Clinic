@@ -14,7 +14,7 @@ export default function TrustStats() {
           ))}
         </div>
         <p className="stats__caption" data-reveal>
-          Trusted by families across Vinayagapuram & Kolathur for general medicine, family health & specialist care.
+          Trusted by families across Guduvanchery & Nandivaram for natural homeopathy, skin, hair & holistic care.
         </p>
       </div>
     </section>

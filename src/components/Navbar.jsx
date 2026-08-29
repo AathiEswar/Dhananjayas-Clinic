@@ -67,11 +67,10 @@ export default function Navbar() {
           <a className="nav__brand" href="#top" onClick={go('#top')} aria-label={`${CLINIC.name} — home`} data-cursor="hover">
             <span className="nav__mark" aria-hidden="true">
               <svg viewBox="0 0 64 64" width="38" height="38">
-                <rect width="64" height="64" rx="16" fill="var(--teal, #0F766E)" />
+                <rect width="64" height="64" rx="16" fill="var(--teal, #059669)" />
                 <circle cx="32" cy="32" r="23" fill="#FFFFFF" />
-                <rect x="27" y="15" width="10" height="34" rx="3" fill="var(--red, #DC2626)" />
-                <rect x="15" y="27" width="34" height="10" rx="3" fill="var(--red, #DC2626)" />
-                <path d="M23 24 L32 36 L41 24" fill="none" stroke="var(--gold, #F5A623)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M32 15 C24 23 20 29 20 35 C20 42 25 47 32 47 C39 47 44 42 44 35 C44 29 40 23 32 15 Z" fill="var(--teal, #059669)" />
+                <path d="M32 23 C32 23 27 31 27 36 C27 39 29.2 41 32 41 C34.8 41 37 39 37 36 C37 31 32 23 32 23 Z" fill="var(--gold, #D97706)" />
               </svg>
             </span>
             <span className="nav__brand-txt">

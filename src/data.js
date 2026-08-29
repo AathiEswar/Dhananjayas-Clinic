@@ -1,186 +1,165 @@
-/* Site content — services, doctors, testimonials, FAQs, stats for Vetri Hospital (Vinayagapuram, Chennai). */
+/* Site content — services, doctors, testimonials, FAQs, stats for Care and Cure Homoeopathic Clinic (Guduvanchery). */
 
 export const SPECIALTIES_TICKER = [
-  'General Medicine', 'Pediatrics & Child Care', 'General & Laparoscopic Surgery',
-  'Orthopedics', 'Cardiology', 'Dermatology & Skin Care', 'Nephrology',
-  'Diabetes & BP Care', 'Fever & Infection Care', '24/7 Emergency Casualty',
+  'Homeopathic Consultation', 'Skin Care (Psoriasis & Eczema)', 'Hair Fall Treatment',
+  'PCOS & Thyroid Care', 'Respiratory & Allergic Rhinitis', 'Gastric & IBS Relief',
+  'Pediatric Homeopathy', 'Migraine & Headache Care', 'Holistic Immunity', 'Natural Remedies',
 ];
 
 export const SERVICES = [
   {
-    id: 'general-consultation',
+    id: 'skin-hair-care',
     featured: true,
-    icon: 'steth',
-    title: 'General Physician & Family Care',
-    desc: 'Comprehensive consultations for cold, flu, viral fevers, seasonal infections, respiratory issues, and family healthcare by Dr. G. T. Kumaragururajan.',
-    chips: ['Dr. G. T. Kumaragururajan', 'Fever & Infection', 'Acute Care', 'Prescriptions'],
-    meta: 'Daily OPD Consultations',
-  },
-  {
-    id: 'multispecialty-opd',
-    featured: true,
-    icon: 'heart',
-    title: 'Multispecialty Consultant OPD',
-    desc: 'Specialist consultations with visiting experts across Pediatrics, Orthopedics, General Surgery, Dermatology, Cardiology, Nephrology, and Oncology.',
-    chips: ['Pediatrics', 'Orthopedics', 'Surgery', 'Dermatology'],
-    meta: 'Specialist Panels',
-  },
-  {
-    id: 'pediatric-care',
-    featured: false,
     icon: 'sparkle',
-    title: 'Pediatrics & Child Health Care',
-    desc: 'Dedicated child consultations, pediatric fever management, growth tracking, and routine vaccinations to keep your child healthy.',
-    chips: ['Child Specialist', 'Vaccinations', 'Growth Tracking', 'Pediatric Fever'],
-    meta: 'Pediatric OPD',
+    title: 'Skin & Hair Fall Homeopathy',
+    desc: 'Specialized constitutional homeopathic treatments for chronic Psoriasis, Eczema, Vitiligo, Acne, Urticaria, and severe Hair Fall.',
+    chips: ['Psoriasis & Eczema', 'Hair Fall Care', 'Vitiligo & Acne', 'Natural Healing'],
+    meta: 'Root-Cause Treatment',
   },
   {
-    id: 'chronic-care',
-    featured: false,
+    id: 'chronic-metabolic',
+    featured: true,
     icon: 'pulse',
-    title: 'Chronic Disease Care',
-    desc: 'Long-term management and routine monitoring for Diabetes, High Blood Pressure (Hypertension), Thyroid, and Lipid control.',
-    chips: ['Diabetes Care', 'Hypertension / BP', 'Thyroid Screening', 'Lipid Management'],
-    meta: 'Routine Tracking',
+    title: 'Chronic & Hormonal Wellness',
+    desc: 'Gentle, holistic homeopathy management for Thyroid disorders, PCOS / PCOD, Migraines, Chronic Fatigue, and Metabolic imbalances.',
+    chips: ['Thyroid Care', 'PCOS / PCOD', 'Migraine Relief', 'Hormonal Balance'],
+    meta: 'Holistic Management',
   },
   {
-    id: 'surgery-wound-care',
+    id: 'respiratory-immunity',
+    featured: false,
+    icon: 'steth',
+    title: 'Respiratory & Allergy Care',
+    desc: 'Natural homeopathic remedies for Allergic Rhinitis, Asthma, Sinusitis, Chronic Cough, Bronchitis, and seasonal allergies.',
+    chips: ['Allergic Rhinitis', 'Asthma Care', 'Sinusitis Relief', 'Immunity Boost'],
+    meta: 'Allergy Care',
+  },
+  {
+    id: 'pediatric-homeopathy',
+    featured: false,
+    icon: 'heart',
+    title: 'Pediatric & Child Health Care',
+    desc: 'Safe, sweet, and effective homeopathic treatments for recurring pediatric cold, fever, tonsillitis, asthma, and child growth wellness.',
+    chips: ['Child Immunity', 'Tonsillitis', 'Safe & Gentle', 'Pediatric Wellness'],
+  },
+  {
+    id: 'digestive-health',
     featured: false,
     icon: 'flask',
-    title: 'General Surgery & Minor Procedures',
-    desc: 'General & laparoscopic surgical consultations, minor surgical interventions, wound dressing, and post-op care.',
-    chips: ['General Surgery', 'Minor Procedures', 'Wound Dressing', 'Post-Op Care'],
+    title: 'Digestive & Gastric Relief',
+    desc: 'Effective natural remedies for IBS (Irritable Bowel Syndrome), Acidity, Chronic Constipation, Fatty Liver, and Gastritis.',
+    chips: ['IBS & Acidity', 'Gastritis Care', 'Liver Health', 'Digestion'],
   },
   {
-    id: 'emergency-casualty',
+    id: 'womens-wellness',
     featured: false,
-    icon: 'steth',
-    title: 'Emergency & Urgent Outpatient Care',
-    desc: 'Prompt medical care for acute fever, minor trauma, asthma attacks, dehydration, and urgent health concerns.',
-    chips: ['Emergency Care', 'Acute Fever', 'First Aid', 'Sample Collection'],
+    icon: 'sparkle',
+    title: 'Women’s Holistic Health',
+    desc: 'Personalized homeopathic care for menstrual irregularities, fibroids, menopausal symptoms, and female emotional wellness.',
+    chips: ['Menstrual Health', 'Hormonal Care', 'Wellness Advice', 'Female Care'],
   },
 ];
 
 export const DOCTORS = [
   {
-    name: 'Dr. G. T. Kumaragururajan',
-    dept: 'General Physician & Family Medicine',
-    creds: 'MBBS — Senior General Practitioner',
-    exp: '15+ yrs exp.',
-    slot: 'Today, 10:00 AM & 5:30 PM',
-    initials: 'GK',
-    hue: 180,
-    bio: 'Experienced General Practitioner specializing in comprehensive family healthcare, viral fevers, chronic disease management, and primary diagnostic care in Vinayagapuram.',
-  },
-  {
-    name: 'Dr. S. Aravind Vimal',
-    dept: 'General & Laparoscopic Surgery',
-    creds: 'MBBS, MS (General Surgery)',
-    exp: 'Senior Specialist',
-    slot: 'Consultant OPD',
-    initials: 'AV',
-    hue: 205,
-    bio: 'Consultant General & Laparoscopic Surgeon offering surgical opinions, minor procedures, and abdominal surgical consultations.',
-  },
-  {
-    name: 'Dr. Divya Thilak',
-    dept: 'Pediatrics & Child Care',
-    creds: 'MBBS, DCH (Pediatrics)',
-    exp: 'Child Specialist',
-    slot: 'Pediatric OPD',
-    initials: 'DT',
-    hue: 160,
-    bio: 'Experienced Pediatrician providing compassionate child health management, infant care, and pediatric fever treatment.',
+    name: 'Dr. Homoeopathic Specialist',
+    dept: 'Senior Homeopathic Physician & Classical Homeopath',
+    creds: 'BHMS — Consultant Homeopath',
+    exp: '12+ yrs exp.',
+    slot: 'Today, 10:30 AM & 6:00 PM',
+    initials: 'CC',
+    hue: 155,
+    bio: 'Experienced Homeopathic Physician specializing in classical homeopathy, chronic skin & hair ailments, respiratory allergies, and holistic family health in Guduvanchery.',
   },
 ];
 
 export const STATS = [
-  { value: 15, suffix: '+', label: 'Years serving Vinayagapuram' },
-  { value: 35, suffix: 'k+', label: 'Patients treated' },
-  { value: 100, suffix: '%', label: 'Patient dedication' },
-  { value: 4.8, suffix: '★', label: 'Google Maps rating', decimals: 1 },
+  { value: 12, suffix: '+', label: 'Years of homeopathic care' },
+  { value: 25, suffix: 'k+', label: 'Patients treated' },
+  { value: 100, suffix: '%', label: 'Natural & safe medicine' },
+  { value: 4.9, suffix: '★', label: 'Google rating', decimals: 1 },
 ];
 
 export const WHY_US = [
-  'Attentive doctor care by Dr. G. T. Kumaragururajan & specialist consultant panel',
-  'Honest & evidence-based medical treatments without excessive medication',
-  'Prime location on Surapet Main Road, SBOA Teachers Nagar, Vinayagapuram',
-  'Clean, hygienic hospital environment with emergency casualty support',
-  'Easy phone (+91 89033 31234) & WhatsApp booking or walk-in consultations',
-  'Comprehensive general healthcare and multispecialty OPD under one roof',
+  'Personalized constitutional homeopathy — addressing root causes, not just symptoms',
+  '100% natural, gentle & safe remedies without harmful side effects or drug dependency',
+  'Specialized treatments for chronic skin diseases, hair fall, PCOS, thyroid & allergies',
+  'Convenient location on Rajaji Nagar Main Road, Thangappapuram, Nandivaram, Guduvanchery',
+  'Open daily 10:00 AM – 10:00 PM with easy phone (+91 97899 20400) & WhatsApp booking',
+  'Clean, hygienic, and comforting clinic ambiance',
 ];
 
 export const PROCESS = [
   {
     step: '01',
-    title: 'Walk in or Book online',
-    desc: 'Walk straight into the hospital on Surapet Main Road or message us on WhatsApp for a quick consultation slot.',
+    title: 'Walk in or Book on WhatsApp',
+    desc: 'Visit our clinic on Rajaji Nagar Main Road or message us on WhatsApp to reserve your consultation time.',
   },
   {
     step: '02',
-    title: 'Attentive Doctor Consultation',
-    desc: 'Dr. G. T. Kumaragururajan and our specialists spend dedicated time understanding your symptoms and health history.',
+    title: 'Detailed Case Taking',
+    desc: 'Our homeopathic physician conducts a thorough, patient case evaluation to understand your physical & emotional health history.',
   },
   {
     step: '03',
-    title: 'Clear Diagnosis & Care Plan',
-    desc: 'Receive digital prescriptions, practical health guidance, and genuine treatment recommendations.',
+    title: 'Personalized Natural Remedies',
+    desc: 'Receive customized homeopathic medicines, clear dosage instructions, and holistic lifestyle guidance.',
   },
 ];
 
 export const TESTIMONIALS = [
   {
-    quote: 'Dr. G. T. Kumaragururajan is extremely calm and soft-spoken. He explains the root cause of fever clearly without prescribing unnecessary heavy medicines. Highly recommended family hospital in Vinayagapuram.',
-    name: 'Rajesh Kumar',
-    context: 'Vinayagapuram resident',
+    quote: 'Care and Cure Homoeopathic Clinic provided excellent treatment for my long-standing skin allergy and psoriasis. The doctor listened very patiently and prescribed gentle, effective remedies.',
+    name: 'K. Ramesh',
+    context: 'Guduvanchery resident',
   },
   {
-    quote: 'Very reliable clinic and hospital on Surapet Main Road. The pediatric consultation for my child and general physician care for my father were handled with great care.',
-    name: 'Priya Dharshini',
-    context: 'Family care patient',
+    quote: 'Brought my daughter for hair fall and sinus issues. Highly effective homeopathic medicines with no side effects. Very clean and well-maintained clinic in Nandivaram.',
+    name: 'S. Meena',
+    context: 'Perumattunallur resident',
   },
   {
-    quote: 'Convenient location near SBOA Teachers Nagar, Vinayagapuram. Minimal waiting time and polite doctor staff. Clean and comfortable clinic.',
-    name: 'Anand V.',
-    context: 'Surapet resident',
+    quote: 'Great clinic on Rajaji Nagar Main Road! The doctor explains the root cause clearly and gives genuine advice. Very reasonable fees and friendly atmosphere.',
+    name: 'V. Sundar',
+    context: 'Nandivaram patient',
   },
   {
-    quote: 'Brought my mother for BP and blood sugar checkup. The doctor listened patiently and gave very practical diet advice in Tamil. Great healthcare center for Kolathur area.',
-    name: 'Murugan S.',
-    context: 'Kolathur patient',
+    quote: 'Very reliable homeopathic center in Guduvanchery. My mother got great relief from chronic acidity and knee pain. Highly recommended!',
+    name: 'Jayanthi R.',
+    context: 'Guduvanchery patient',
   },
 ];
 
 export const FAQS = [
   {
-    q: 'Where is Vetri Hospital located?',
-    a: 'Vetri Hospital is located at No. C1B, Surapet Main Road, SBOA Teachers Nagar, Vinayagapuram, Kolathur, Chennai - 600099 (directly on Surapet Main Road).',
+    q: 'Where is Care and Cure Homoeopathic Clinic located?',
+    a: 'Care and Cure Homoeopathic Clinic is located at Plot No. 102, Rajaji Nagar Main Road, Thangappapuram, Perumattunallur Village, Nandivaram, Guduvanchery - 603202.',
   },
   {
-    q: 'What are the consultation timings at Vetri Hospital?',
-    a: 'Outpatient consultation hours are Monday to Sunday: Morning (9:00 AM – 1:30 PM) and Evening (5:00 PM – 9:00 PM). Emergency casualty care is available 24/7.',
+    q: 'What are the clinic consultation timings?',
+    a: 'We are open every day (Monday to Sunday) from 10:00 AM to 10:00 PM.',
   },
   {
     q: 'Do I need an appointment, or can I walk in directly?',
-    a: 'Walk-ins are always welcome during OPD hours. For minimal waiting time, you can call us at +91 89033 31234 or message on WhatsApp to reserve your slot.',
+    a: 'Walk-ins are welcome. However, to ensure minimal waiting time, you can call us at +91 97899 20400 or message on WhatsApp to reserve your slot.',
   },
   {
-    q: 'Which doctors and specialties are available at Vetri Hospital?',
-    a: 'Our facility features Dr. G. T. Kumaragururajan (General Physician) along with consultant specialists in General Surgery, Pediatrics, Orthopedics, Cardiology, Dermatology, Nephrology, and Oncology.',
+    q: 'What conditions can be treated at Care and Cure Homoeopathic Clinic?',
+    a: 'We specialize in treating chronic skin conditions (Psoriasis, Eczema, Vitiligo, Acne), hair fall, PCOS/PCOD, Thyroid, Asthma, Sinusitis, IBS, Acidity, Migraine, and Pediatric health issues.',
   },
   {
-    q: 'How do I contact Vetri Hospital for inquiries?',
-    a: 'You can call us directly at +91 89033 31234 or email vetrihospital.vinayagapuram@gmail.com for appointment assistance or directions.',
+    q: 'Are homeopathic remedies safe for children and elderly patients?',
+    a: 'Yes! Homeopathic medicines are completely natural, sweet, non-toxic, free from side effects, and safe for patients of all ages, including children and seniors.',
   },
 ];
 
 export const NAV_LINKS = [
-  { label: 'Services', target: '#services' },
-  { label: 'Doctors', target: '#doctors' },
+  { label: 'Treatments', target: '#services' },
+  { label: 'About Doctor', target: '#doctors' },
   { label: 'Reviews', target: '#stories' },
   { label: 'Location', target: '#visit' },
 ];
 
 export const TIME_SLOTS = [
-  '9:00 AM', '10:30 AM', '11:30 AM', '5:00 PM', '6:30 PM', '7:30 PM', '8:30 PM',
+  '10:30 AM', '11:30 AM', '12:30 PM', '5:30 PM', '6:30 PM', '7:30 PM', '8:30 PM', '9:15 PM',
 ];

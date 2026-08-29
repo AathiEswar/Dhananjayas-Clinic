@@ -34,11 +34,11 @@ export default function Hero() {
       <div className="hero__inner container">
         <div className="hero__copy">
           <h1 className="hero__title">
-            Trusted healthcare for your <em>family in Vinayagapuram.</em>
+            Natural homeopathic healing for your <em>whole family.</em>
           </h1>
 
           <p className="hero__sub">
-            15+ years of trusted general physician care, family medicine, and multispecialty consultant OPD in <strong className="hero__sub-highlight">Vinayagapuram</strong>, Kolathur. Attentive care with zero rushed appointments.
+            12+ years of trusted constitutional homeopathic care, skin &amp; hair treatments, and chronic disease remedies in <strong className="hero__sub-highlight">Guduvanchery</strong>. Gentle care with zero harmful side effects.
           </p>
 
           <div className="hero__ctas">
@@ -46,7 +46,7 @@ export default function Hero() {
               Book a consultation
             </Button>
             <Button variant="ghost" icon="phone" href={CLINIC.phoneHref}>
-              Call the hospital
+              Call the clinic
             </Button>
           </div>
 
@@ -56,9 +56,9 @@ export default function Hero() {
               <strong>{CLINIC.rating}</strong> · {CLINIC.reviewCount} reviews
             </span>
             <span className="hero__proof-sep" aria-hidden="true" />
-            <span className="hero__proof-item"><strong>100%</strong> Patient Focus</span>
+            <span className="hero__proof-item"><strong>100%</strong> Natural Care</span>
             <span className="hero__proof-sep" aria-hidden="true" />
-            <span className="hero__proof-item"><strong>15+</strong> years exp.</span>
+            <span className="hero__proof-item"><strong>12+</strong> years exp.</span>
           </div>
         </div>
 
@@ -92,7 +92,7 @@ export default function Hero() {
           </div>
 
           <div className="hero__chip" data-scroll data-scroll-speed="0.9">
-            <Icon name="pin" size={15} /> Surapet Main Road, Vinayagapuram
+            <Icon name="pin" size={15} /> Rajaji Nagar Main Road, Guduvanchery
           </div>
         </div>
       </div>
