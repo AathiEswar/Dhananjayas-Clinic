@@ -14,7 +14,7 @@ export default function TrustStats() {
           ))}
         </div>
         <p className="stats__caption" data-reveal>
-          Trusted by families across Guduvanchery for general medicine, family health & mind care.
+          Trusted by families across Vinayagapuram & Kolathur for general medicine, family health & specialist care.
         </p>
       </div>
     </section>

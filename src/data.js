@@ -1,11 +1,9 @@
-/* Site content — services, doctors, testimonials, FAQs, stats. Edit freely. */
-
-/* Site content — services, doctor, testimonials, FAQs, stats for OviAm Clinic. */
+/* Site content — services, doctors, testimonials, FAQs, stats for Vetri Hospital (Vinayagapuram, Chennai). */
 
 export const SPECIALTIES_TICKER = [
-  'General Medicine', 'Psychology & Counseling', 'Family Healthcare', 'Fever & Infection Care',
-  'Diabetes Management', 'Hypertension & BP', 'Thyroid Care', 'Mind Health',
-  'Preventive Health Checks', 'Adult & Child Vaccinations', 'Teleconsultations',
+  'General Medicine', 'Pediatrics & Child Care', 'General & Laparoscopic Surgery',
+  'Orthopedics', 'Cardiology', 'Dermatology & Skin Care', 'Nephrology',
+  'Diabetes & BP Care', 'Fever & Infection Care', '24/7 Emergency Casualty',
 ];
 
 export const SERVICES = [
@@ -13,156 +11,176 @@ export const SERVICES = [
     id: 'general-consultation',
     featured: true,
     icon: 'steth',
-    title: 'General Physician Consultation',
-    desc: 'Comprehensive diagnosis and treatment for cold, flu, viral fevers, seasonal infections, respiratory issues, and everyday health concerns.',
-    chips: ['Cold & Fever', 'Infections', 'Acute Illness', 'Prescriptions'],
-    meta: 'Same-day Consultation',
+    title: 'General Physician & Family Care',
+    desc: 'Comprehensive consultations for cold, flu, viral fevers, seasonal infections, respiratory issues, and family healthcare by Dr. G. T. Kumaragururajan.',
+    chips: ['Dr. G. T. Kumaragururajan', 'Fever & Infection', 'Acute Care', 'Prescriptions'],
+    meta: 'Daily OPD Consultations',
   },
   {
-    id: 'psychology-care',
+    id: 'multispecialty-opd',
     featured: true,
     icon: 'heart',
-    title: 'Psychologist & Counseling Available',
-    desc: 'Dedicated psychological consultations, emotional wellness guidance, stress management, and mental health therapy for body & mind care.',
-    chips: ['Psychology Sessions', 'Counseling', 'Stress & Anxiety', 'Mind Health'],
-    meta: 'By Appointment',
+    title: 'Multispecialty Consultant OPD',
+    desc: 'Specialist consultations with visiting experts across Pediatrics, Orthopedics, General Surgery, Dermatology, Cardiology, Nephrology, and Oncology.',
+    chips: ['Pediatrics', 'Orthopedics', 'Surgery', 'Dermatology'],
+    meta: 'Specialist Panels',
+  },
+  {
+    id: 'pediatric-care',
+    featured: false,
+    icon: 'sparkle',
+    title: 'Pediatrics & Child Health Care',
+    desc: 'Dedicated child consultations, pediatric fever management, growth tracking, and routine vaccinations to keep your child healthy.',
+    chips: ['Child Specialist', 'Vaccinations', 'Growth Tracking', 'Pediatric Fever'],
+    meta: 'Pediatric OPD',
   },
   {
     id: 'chronic-care',
     featured: false,
     icon: 'pulse',
     title: 'Chronic Disease Care',
-    desc: 'Long-term management and personalized routine monitoring for Diabetes, High Blood Pressure (Hypertension), Thyroid, and Cholesterol.',
-    chips: ['Diabetes Care', 'Hypertension / BP', 'Thyroid Screen', 'Lipid Control'],
-    meta: 'Regular tracking & advice',
+    desc: 'Long-term management and routine monitoring for Diabetes, High Blood Pressure (Hypertension), Thyroid, and Lipid control.',
+    chips: ['Diabetes Care', 'Hypertension / BP', 'Thyroid Screening', 'Lipid Management'],
+    meta: 'Routine Tracking',
   },
   {
-    id: 'preventive-health',
-    featured: false,
-    icon: 'sparkle',
-    title: 'Preventive Health Checks',
-    desc: 'Routine physical examinations, blood pressure checks, and preventive blood workups to catch potential health issues early.',
-    chips: ['Routine Check-up', 'Blood Pressure', 'Blood Sugar Test', 'Wellness Advice'],
-  },
-  {
-    id: 'vaccinations',
+    id: 'surgery-wound-care',
     featured: false,
     icon: 'flask',
-    title: 'Vaccinations & Immunization',
-    desc: 'Essential routine vaccinations for adults and children to protect against preventable infectious diseases.',
-    chips: ['Adult Immunization', 'Pediatric Shots', 'Flu Vaccines'],
+    title: 'General Surgery & Minor Procedures',
+    desc: 'General & laparoscopic surgical consultations, minor surgical interventions, wound dressing, and post-op care.',
+    chips: ['General Surgery', 'Minor Procedures', 'Wound Dressing', 'Post-Op Care'],
   },
   {
-    id: 'teleconsultation',
+    id: 'emergency-casualty',
     featured: false,
     icon: 'steth',
-    title: 'Teleconsultations & Home Visits',
-    desc: 'Virtual appointments for prescription renewals & follow-ups, plus in-home doctor consultation or sample collection for elderly patients.',
-    chips: ['Home Visits', 'Tele-health', 'Senior Care', 'Sample Collection'],
+    title: 'Emergency & Urgent Outpatient Care',
+    desc: 'Prompt medical care for acute fever, minor trauma, asthma attacks, dehydration, and urgent health concerns.',
+    chips: ['Emergency Care', 'Acute Fever', 'First Aid', 'Sample Collection'],
   },
 ];
 
 export const DOCTORS = [
   {
-    name: 'Dr. Oviam',
-    dept: 'General Physician & Family Specialist',
-    creds: 'MBBS (Madras Medical College, 2006), DNB (Family Medicine, 2024)',
-    exp: '18+ yrs exp.',
-    slot: 'Today, 5:30 PM',
-    initials: 'DO',
-    hue: 168,
-    bio: 'Alumnus of prestigious Madras Medical College (MMC) with 18+ years of dedicated clinical practice. Specialized in General Medicine and Family Medicine with a patient-first approach.',
+    name: 'Dr. G. T. Kumaragururajan',
+    dept: 'General Physician & Family Medicine',
+    creds: 'MBBS — Senior General Practitioner',
+    exp: '15+ yrs exp.',
+    slot: 'Today, 10:00 AM & 5:30 PM',
+    initials: 'GK',
+    hue: 180,
+    bio: 'Experienced General Practitioner specializing in comprehensive family healthcare, viral fevers, chronic disease management, and primary diagnostic care in Vinayagapuram.',
+  },
+  {
+    name: 'Dr. S. Aravind Vimal',
+    dept: 'General & Laparoscopic Surgery',
+    creds: 'MBBS, MS (General Surgery)',
+    exp: 'Senior Specialist',
+    slot: 'Consultant OPD',
+    initials: 'AV',
+    hue: 205,
+    bio: 'Consultant General & Laparoscopic Surgeon offering surgical opinions, minor procedures, and abdominal surgical consultations.',
+  },
+  {
+    name: 'Dr. Divya Thilak',
+    dept: 'Pediatrics & Child Care',
+    creds: 'MBBS, DCH (Pediatrics)',
+    exp: 'Child Specialist',
+    slot: 'Pediatric OPD',
+    initials: 'DT',
+    hue: 160,
+    bio: 'Experienced Pediatrician providing compassionate child health management, infant care, and pediatric fever treatment.',
   },
 ];
 
 export const STATS = [
-  { value: 18, suffix: '+', label: 'Years of medical care' },
-  { value: 20, suffix: 'k+', label: 'Patients treated' },
-  { value: 100, suffix: '%', label: 'Patient satisfaction' },
-  { value: 4.9, suffix: '★', label: 'Google rating', decimals: 1 },
+  { value: 15, suffix: '+', label: 'Years serving Vinayagapuram' },
+  { value: 35, suffix: 'k+', label: 'Patients treated' },
+  { value: 100, suffix: '%', label: 'Patient dedication' },
+  { value: 4.8, suffix: '★', label: 'Google Maps rating', decimals: 1 },
 ];
 
 export const WHY_US = [
-  'Patient-first care — doctor listens attentively without rushing you',
-  'Honest & evidence-based medicine — no unnecessary retests or over-prescribed drugs',
-  'Convenient location right on Nellikuppam Main Road, opp. Indian Oil Petrol Bunk',
-  'Clean, hygienic, and comforting clinic environment',
-  'Quick WhatsApp & phone booking or direct walk-ins welcome',
-  'Complete care under one roof for both Body & Mind Health',
+  'Attentive doctor care by Dr. G. T. Kumaragururajan & specialist consultant panel',
+  'Honest & evidence-based medical treatments without excessive medication',
+  'Prime location on Surapet Main Road, SBOA Teachers Nagar, Vinayagapuram',
+  'Clean, hygienic hospital environment with emergency casualty support',
+  'Easy phone (+91 89033 31234) & WhatsApp booking or walk-in consultations',
+  'Comprehensive general healthcare and multispecialty OPD under one roof',
 ];
 
 export const PROCESS = [
   {
     step: '01',
     title: 'Walk in or Book online',
-    desc: 'Walk straight into the clinic or message us on WhatsApp for a quick slot. No complicated procedure.',
+    desc: 'Walk straight into the hospital on Surapet Main Road or message us on WhatsApp for a quick consultation slot.',
   },
   {
     step: '02',
     title: 'Attentive Doctor Consultation',
-    desc: 'Dr. Oviam spends dedicated time listening to your history, conducting a precise examination without rush.',
+    desc: 'Dr. G. T. Kumaragururajan and our specialists spend dedicated time understanding your symptoms and health history.',
   },
   {
     step: '03',
     title: 'Clear Diagnosis & Care Plan',
-    desc: 'Receive digital prescriptions, clear dietary/lifestyle advice, and honest treatment recommendations.',
+    desc: 'Receive digital prescriptions, practical health guidance, and genuine treatment recommendations.',
   },
 ];
 
 export const TESTIMONIALS = [
   {
-    quote: 'Dr. Oviam is extremely polite and patient. He takes time to understand the root cause of the fever instead of just prescribing heavy antibiotics right away. Highly recommended for family care in Guduvanchery.',
-    name: 'Saravanan K.',
-    context: 'Guduvanchery resident',
+    quote: 'Dr. G. T. Kumaragururajan is extremely calm and soft-spoken. He explains the root cause of fever clearly without prescribing unnecessary heavy medicines. Highly recommended family hospital in Vinayagapuram.',
+    name: 'Rajesh Kumar',
+    context: 'Vinayagapuram resident',
   },
   {
-    quote: 'The care and attention you receive is better than expensive corporate hospitals. Very clean clinic right opposite the Indian Oil petrol bunk.',
-    name: 'Meenakshi Sundaram',
-    context: 'Diabetes care patient',
+    quote: 'Very reliable clinic and hospital on Surapet Main Road. The pediatric consultation for my child and general physician care for my father were handled with great care.',
+    name: 'Priya Dharshini',
+    context: 'Family care patient',
   },
   {
-    quote: 'Brought my mother for BP and thyroid check-up. The doctor explained everything clearly in Tamil and gave very practical advice. Very minimal wait time as well.',
-    name: 'Venkatesh R.',
-    context: 'Family health consultation',
+    quote: 'Convenient location near SBOA Teachers Nagar, Vinayagapuram. Minimal waiting time and polite doctor staff. Clean and comfortable clinic.',
+    name: 'Anand V.',
+    context: 'Surapet resident',
   },
   {
-    quote: 'Great neighborhood clinic! Clean ambiance, friendly consultation, and easy to reach on Nellikuppam main road.',
-    name: 'Anitha P.',
-    context: 'General medicine patient',
+    quote: 'Brought my mother for BP and blood sugar checkup. The doctor listened patiently and gave very practical diet advice in Tamil. Great healthcare center for Kolathur area.',
+    name: 'Murugan S.',
+    context: 'Kolathur patient',
   },
 ];
 
 export const FAQS = [
   {
-    q: 'Where is OviAm Clinic located?',
-    a: 'OviAm Clinic is located on the 1st Floor, No. 872, Nellikuppam Main Road, Moolakazhani, Guduvanchery, Chengalpattu (603202) — directly opposite the Indian Oil Petrol Bunk.',
+    q: 'Where is Vetri Hospital located?',
+    a: 'Vetri Hospital is located at No. C1B, Surapet Main Road, SBOA Teachers Nagar, Vinayagapuram, Kolathur, Chennai - 600099 (directly on Surapet Main Road).',
   },
   {
-    q: 'What are the clinic timings?',
-    a: 'We are open Monday through Saturday in two slots: Morning (9:30 AM – 1:30 PM) and Evening (5:00 PM – 9:00 PM). Sunday visits are by prior appointment or emergency call.',
+    q: 'What are the consultation timings at Vetri Hospital?',
+    a: 'Outpatient consultation hours are Monday to Sunday: Morning (9:00 AM – 1:30 PM) and Evening (5:00 PM – 9:00 PM). Emergency casualty care is available 24/7.',
   },
   {
     q: 'Do I need an appointment, or can I walk in directly?',
-    a: 'Walk-ins are always welcome during operating hours. However, if you prefer minimal waiting, you can message us on WhatsApp or call ahead to confirm doctor availability.',
+    a: 'Walk-ins are always welcome during OPD hours. For minimal waiting time, you can call us at +91 89033 31234 or message on WhatsApp to reserve your slot.',
   },
   {
-    q: 'What are the doctor’s qualifications and experience?',
-    a: 'Dr. Oviam completed MBBS from Madras Medical College (MMC) in 2006 and holds a DNB in Family Medicine, with over 18 years of clinical experience in General Medicine.',
+    q: 'Which doctors and specialties are available at Vetri Hospital?',
+    a: 'Our facility features Dr. G. T. Kumaragururajan (General Physician) along with consultant specialists in General Surgery, Pediatrics, Orthopedics, Cardiology, Dermatology, Nephrology, and Oncology.',
   },
   {
-    q: 'Do you offer home visits or teleconsultations?',
-    a: 'Yes, teleconsultations are available for follow-ups and prescription renewals. For elderly patients unable to visit the clinic, home consultations and blood sample collection can be scheduled.',
+    q: 'How do I contact Vetri Hospital for inquiries?',
+    a: 'You can call us directly at +91 89033 31234 or email vetrihospital.vinayagapuram@gmail.com for appointment assistance or directions.',
   },
 ];
 
 export const NAV_LINKS = [
   { label: 'Services', target: '#services' },
-  { label: 'About Doctor', target: '#doctors' },
+  { label: 'Doctors', target: '#doctors' },
   { label: 'Reviews', target: '#stories' },
-  { label: 'Visit', target: '#visit' },
+  { label: 'Location', target: '#visit' },
 ];
 
 export const TIME_SLOTS = [
-  '9:30 AM', '10:30 AM', '11:30 AM', '5:30 PM', '6:30 PM', '7:30 PM', '8:30 PM',
+  '9:00 AM', '10:30 AM', '11:30 AM', '5:00 PM', '6:30 PM', '7:30 PM', '8:30 PM',
 ];
-

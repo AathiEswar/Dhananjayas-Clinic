@@ -13,14 +13,26 @@ export default function FloatingDock() {
   const { onScroll, openBooking, booking } = useScroll();
   const [visible, setVisible] = useState(false);
 
-  useEffect(() => onScroll((y) => setVisible(y > 520)), [onScroll]);
+  useEffect(() => onScroll((y) => setVisible(y > 280)), [onScroll]);
 
   const shown = visible && !booking.open;
 
   return (
     <>
-      {/* Desktop pills */}
+      {/* Desktop floating action pills */}
       <div className={`fab ${shown ? 'is-in' : ''}`}>
+        <Magnetic strength={0.3}>
+          <a
+            className="fab__btn fab__btn--phone"
+            href={CLINIC.phoneHref}
+            data-cursor="hover"
+            aria-label={`Call ${CLINIC.name}`}
+          >
+            <Icon name="phone" size={18} strokeWidth={2} />
+            <span>Call</span>
+          </a>
+        </Magnetic>
+
         <Magnetic strength={0.3}>
           <a
             className="fab__btn fab__btn--wa"
@@ -44,17 +56,17 @@ export default function FloatingDock() {
         </Magnetic>
       </div>
 
-      {/* Mobile dock */}
+      {/* Mobile sticky dock */}
       <nav className={`dock ${shown ? 'is-in' : ''}`} aria-label="Quick actions">
-        <a className="dock__item" href={CLINIC.phoneHref}>
+        <a className="dock__item" href={CLINIC.phoneHref} aria-label={`Call ${CLINIC.name}`}>
           <Icon name="phone" size={19} />
           <span>Call</span>
         </a>
-        <a className="dock__item" href={WA_DEFAULT} target="_blank" rel="noreferrer">
+        <a className="dock__item" href={WA_DEFAULT} target="_blank" rel="noreferrer" aria-label="WhatsApp consultation">
           <Icon name="whatsapp" size={19} />
           <span>WhatsApp</span>
         </a>
-        <button className="dock__item dock__item--main" onClick={() => openBooking()}>
+        <button className="dock__item dock__item--main" onClick={() => openBooking()} aria-label="Book appointment">
           <Icon name="calendar" size={19} strokeWidth={2} />
           <span>Book now</span>
         </button>

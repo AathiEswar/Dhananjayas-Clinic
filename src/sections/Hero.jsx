@@ -34,12 +34,11 @@ export default function Hero() {
       <div className="hero__inner container">
         <div className="hero__copy">
           <h1 className="hero__title">
-            Complete care for your <em>body &amp; mind health.</em>
+            Trusted healthcare for your <em>family in Vinayagapuram.</em>
           </h1>
 
           <p className="hero__sub">
-            18+ years of trusted general physician care, family medicine, chronic disease management,
-            and psychologist consultations in <strong className="hero__sub-highlight">Guduvanchery</strong>. Attentive care with zero rushed appointments.
+            15+ years of trusted general physician care, family medicine, and multispecialty consultant OPD in <strong className="hero__sub-highlight">Vinayagapuram</strong>, Kolathur. Attentive care with zero rushed appointments.
           </p>
 
           <div className="hero__ctas">
@@ -47,7 +46,7 @@ export default function Hero() {
               Book a consultation
             </Button>
             <Button variant="ghost" icon="phone" href={CLINIC.phoneHref}>
-              Call the clinic
+              Call the hospital
             </Button>
           </div>
 
@@ -59,7 +58,7 @@ export default function Hero() {
             <span className="hero__proof-sep" aria-hidden="true" />
             <span className="hero__proof-item"><strong>100%</strong> Patient Focus</span>
             <span className="hero__proof-sep" aria-hidden="true" />
-            <span className="hero__proof-item"><strong>18+</strong> years exp.</span>
+            <span className="hero__proof-item"><strong>15+</strong> years exp.</span>
           </div>
         </div>
 
@@ -88,12 +87,12 @@ export default function Hero() {
 
           <div className="hero__card hero__card--rating" data-scroll data-scroll-speed="1.1">
             <Stars />
-            <p><strong>{CLINIC.rating}</strong> on Google</p>
+            <p><strong>{CLINIC.rating}</strong> on Google Maps</p>
             <span>{CLINIC.reviewCount} patient reviews</span>
           </div>
 
           <div className="hero__chip" data-scroll data-scroll-speed="0.9">
-            <Icon name="pin" size={15} /> Opp. Indian Oil Petrol Bunk
+            <Icon name="pin" size={15} /> Surapet Main Road, Vinayagapuram
           </div>
         </div>
       </div>

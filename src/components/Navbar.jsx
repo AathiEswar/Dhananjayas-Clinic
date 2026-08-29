@@ -67,11 +67,11 @@ export default function Navbar() {
           <a className="nav__brand" href="#top" onClick={go('#top')} aria-label={`${CLINIC.name} — home`} data-cursor="hover">
             <span className="nav__mark" aria-hidden="true">
               <svg viewBox="0 0 64 64" width="38" height="38">
-                <rect width="64" height="64" rx="16" fill="var(--oviam-blue, #1D357D)" />
+                <rect width="64" height="64" rx="16" fill="var(--teal, #0F766E)" />
                 <circle cx="32" cy="32" r="23" fill="#FFFFFF" />
-                <rect x="27" y="15" width="10" height="34" rx="3" fill="var(--oviam-red, #DC2626)" />
-                <rect x="15" y="27" width="34" height="10" rx="3" fill="var(--oviam-red, #DC2626)" />
-                <circle cx="32" cy="32" r="6" fill="var(--oviam-gold, #F5A623)" />
+                <rect x="27" y="15" width="10" height="34" rx="3" fill="var(--red, #DC2626)" />
+                <rect x="15" y="27" width="34" height="10" rx="3" fill="var(--red, #DC2626)" />
+                <path d="M23 24 L32 36 L41 24" fill="none" stroke="var(--gold, #F5A623)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </span>
             <span className="nav__brand-txt">
@@ -92,7 +92,7 @@ export default function Navbar() {
               <Icon name="phone" size={16} />
               <span>{CLINIC.phoneDisplay}</span>
             </a>
-            <a className="nav__wa" href={WA_DEFAULT} target="_blank" rel="noreferrer" data-cursor="hover" aria-label="WhatsApp OviAm Clinic">
+            <a className="nav__wa" href={WA_DEFAULT} target="_blank" rel="noreferrer" data-cursor="hover" aria-label={`WhatsApp ${CLINIC.name}`}>
               <Icon name="whatsapp" size={17} />
               <span>WhatsApp</span>
             </a>

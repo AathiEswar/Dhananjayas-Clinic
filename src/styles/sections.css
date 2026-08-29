@@ -28,12 +28,12 @@
   font-size: clamp(1rem, 1.25vw, 1.13rem); line-height: 1.65; color: var(--ink-2);
 }
 .hero__sub-highlight {
-  color: var(--oviam-blue, #1D357D);
+  color: var(--teal, #0F766E);
   font-weight: 700;
-  background: var(--oviam-blue-soft, #EEF2FF);
+  background: var(--sage-soft, #F0FDF4);
   padding: 2px 8px;
   border-radius: 6px;
-  border: 1px solid rgba(29, 53, 125, 0.15);
+  border: 1px solid rgba(15, 118, 110, 0.2);
   white-space: nowrap;
 }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }

@@ -66,11 +66,11 @@ export default function Preloader({ onComplete }) {
       <div className="preloader__inner">
         <span className="preloader__mark">
           <svg viewBox="0 0 64 64" width="52" height="52" aria-hidden="true">
-            <rect width="64" height="64" rx="16" fill="var(--oviam-blue, #1D357D)" />
+            <rect width="64" height="64" rx="16" fill="var(--teal, #0F766E)" />
             <circle cx="32" cy="32" r="23" fill="#FFFFFF" />
-            <rect x="27" y="15" width="10" height="34" rx="3" fill="var(--oviam-red, #DC2626)" />
-            <rect x="15" y="27" width="34" height="10" rx="3" fill="var(--oviam-red, #DC2626)" />
-            <circle cx="32" cy="32" r="6" fill="var(--oviam-gold, #F5A623)" />
+            <rect x="27" y="15" width="10" height="34" rx="3" fill="var(--red, #DC2626)" />
+            <rect x="15" y="27" width="34" height="10" rx="3" fill="var(--red, #DC2626)" />
+            <path d="M23 24 L32 36 L41 24" fill="none" stroke="var(--gold, #F5A623)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </span>
         <span className="preloader__name">{CLINIC.name}</span>
