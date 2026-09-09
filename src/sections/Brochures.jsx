@@ -1,10 +1,42 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 import SectionHeader from '../components/SectionHeader';
 import { BROCHURE_IMAGES, ADDITIONAL_PROGRAMS } from '../data';
+import { useScroll } from '../context/ScrollContext';
 import Icon from '../lib/Icons';
 
 export default function Brochures() {
   const [activeModal, setActiveModal] = useState(null);
+  const { lockScroll, unlockScroll } = useScroll();
+
+  const closeModal = useCallback(() => {
+    if (activeModal) {
+      unlockScroll();
+      setActiveModal(null);
+    }
+  }, [activeModal, unlockScroll]);
+
+  const openModal = (b) => {
+    lockScroll();
+    setActiveModal(b);
+  };
+
+  // Close on Escape key
+  useEffect(() => {
+    if (!activeModal) return;
+    const onKey = (e) => {
+      if (e.key === 'Escape') closeModal();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [activeModal, closeModal]);
+
+  // Cleanup on unmount in case modal was open
+  useEffect(() => {
+    return () => {
+      if (activeModal) unlockScroll();
+    };
+  }, [activeModal, unlockScroll]);
 
   return (
     <section className="brochures section" data-scroll-section id="brochures">
@@ -28,7 +60,7 @@ export default function Brochures() {
               <div className="brochure-card__badge">{b.tag}</div>
               <div
                 className="brochure-card__img-wrap"
-                onClick={() => setActiveModal(b)}
+                onClick={() => openModal(b)}
                 data-cursor="hover"
                 title="Click to zoom brochure"
               >
@@ -50,7 +82,7 @@ export default function Brochures() {
                 <div className="brochure-card__actions">
                   <button
                     className="btn btn--secondary btn--sm"
-                    onClick={() => setActiveModal(b)}
+                    onClick={() => openModal(b)}
                     data-cursor="hover"
                   >
                     View Brochure
@@ -94,19 +126,22 @@ export default function Brochures() {
         </div>
       </div>
 
-      {/* Fullscreen Lightbox Modal */}
-      {activeModal && (
+      {/* Fullscreen Lightbox Modal mounted directly to document.body via Portal */}
+      {activeModal && typeof document !== 'undefined' && createPortal(
         <div
           className="brochure-modal"
-          onClick={() => setActiveModal(null)}
+          onClick={closeModal}
           role="dialog"
           aria-modal="true"
           aria-label={activeModal.title}
         >
-          <div className="brochure-modal__backdrop" />
+          <div className="brochure-modal__backdrop" aria-hidden="true" />
           <div className="brochure-modal__content" onClick={(e) => e.stopPropagation()}>
             <div className="brochure-modal__head">
-              <h4>{activeModal.title}</h4>
+              <div className="brochure-modal__title-box">
+                <h4>{activeModal.title}</h4>
+                <span className="brochure-modal__tag">{activeModal.tag}</span>
+              </div>
               <div className="brochure-modal__btns">
                 <a
                   href={activeModal.src}
@@ -116,10 +151,17 @@ export default function Brochures() {
                 >
                   Open in New Tab
                 </a>
+                <a
+                  href={activeModal.src}
+                  download
+                  className="btn btn--primary btn--sm"
+                >
+                  Download
+                </a>
                 <button
-                  className="round-btn"
-                  onClick={() => setActiveModal(null)}
-                  aria-label="Close modal"
+                  className="round-btn brochure-modal__close"
+                  onClick={closeModal}
+                  aria-label="Close brochure modal"
                 >
                   ✕
                 </button>
@@ -129,7 +171,8 @@ export default function Brochures() {
               <img src={activeModal.src} alt={activeModal.title} />
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </section>
   );

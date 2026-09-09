@@ -10,16 +10,16 @@ export default function Services() {
     <section className="services section" data-scroll-section id="services">
       <div className="container">
         <SectionHeader
-          eyebrow="Departments"
-          segments={[{ t: 'Every specialty, ' }, { t: 'one calm roof.', em: true }]}
+          eyebrow="Therapy Programs"
+          segments={[{ t: 'Comprehensive care, ' }, { t: 'one nurturing center.', em: true }]}
           side={
             <>
               <p>
-                No bouncing between hospitals for scans, specialists and labs.
-                Walk in with a worry; walk out with a plan.
+                Individualized 1-on-1 therapy programs designed to help every child
+                reach their unique developmental milestones with confidence.
               </p>
               <button className="link-arrow" onClick={() => scrollTo('#visit')} data-cursor="hover">
-                Plan your visit <Icon name="arrowR" size={15} strokeWidth={2.2} />
+                Visit our center <Icon name="arrowR" size={15} strokeWidth={2.2} />
               </button>
             </>
           }
@@ -30,33 +30,40 @@ export default function Services() {
             <article
               key={s.id}
               className={`svc-card ${s.featured ? 'svc-card--featured' : ''}`}
+              onClick={() => openBooking(s.title)}
+              data-cursor="hover"
               data-reveal
+              tabIndex={0}
+              role="button"
+              aria-label={`Book appointment for ${s.title}`}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  openBooking(s.title);
+                }
+              }}
             >
               <div className="svc-card__top">
-                <span className="svc-card__icon"><Icon name={s.icon} size={26} /></span>
-                {s.featured && <span className="svc-card__badge">Most booked</span>}
+                <span className="svc-card__icon"><Icon name={s.icon} size={26} strokeWidth={2} /></span>
+                {s.featured && <span className="svc-card__badge">Core Therapy</span>}
               </div>
 
               <h3 className="svc-card__title">{s.title}</h3>
+              {s.tamilTitle && <p className="svc-card__tamil">{s.tamilTitle}</p>}
               <p className="svc-card__desc">{s.desc}</p>
 
               <div className="svc-card__chips">
                 {s.chips.map((c) => (
-                  <span className={`chip ${c.includes('Mind') || c.includes('Psychology') ? 'chip--red' : ''}`} key={c}>{c}</span>
+                  <span className="chip" key={c}>{c}</span>
                 ))}
               </div>
 
               {s.meta && <p className="svc-card__meta">{s.meta}</p>}
 
-              <button
-                className="svc-card__cta"
-                onClick={() => openBooking(s.title)}
-                data-cursor="hover"
-                aria-label={`Book ${s.title}`}
-              >
-                <span>{s.featured ? 'Book a health check' : 'Book now'}</span>
+              <div className="svc-card__cta">
+                <span>Book consultation</span>
                 <span className="svc-card__arrow"><Icon name="arrowR" size={15} strokeWidth={2.2} /></span>
-              </button>
+              </div>
             </article>
           ))}
         </div>

@@ -26,16 +26,6 @@ export const BROCHURE_IMAGES = [
 
 export const SERVICES = [
   {
-    id: 'speech-therapy',
-    featured: true,
-    icon: 'steth',
-    title: 'Speech Therapy',
-    tamilTitle: 'பேச்சு மற்றும் மொழி சிகிச்சை',
-    desc: 'Helping children communicate better and express themselves. Tailored for speech delays, articulation, stuttering, and language development.',
-    chips: ['Expressive Speech', 'Language Delay', 'Articulation', 'Communication'],
-    meta: 'Speech & Language',
-  },
-  {
     id: 'occupational-therapy',
     featured: true,
     icon: 'sparkle',
@@ -46,8 +36,18 @@ export const SERVICES = [
     meta: 'Core OT Program',
   },
   {
+    id: 'speech-therapy',
+    featured: false,
+    icon: 'steth',
+    title: 'Speech Therapy',
+    tamilTitle: 'பேச்சு மற்றும் மொழி சிகிச்சை',
+    desc: 'Helping children communicate better and express themselves. Tailored for speech delays, articulation, stuttering, and language development.',
+    chips: ['Expressive Speech', 'Language Delay', 'Articulation', 'Communication'],
+    meta: 'Speech & Language',
+  },
+  {
     id: 'physiotherapy',
-    featured: true,
+    featured: false,
     icon: 'pulse',
     title: 'Physiotherapy',
     tamilTitle: 'உடற் சிகிச்சை',

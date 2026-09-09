@@ -15,18 +15,17 @@ export default function CtaBanner() {
           <span className="ctab__ring" aria-hidden="true" />
 
           <p className="eyebrow eyebrow--light" data-reveal>
-            <span className="pulse-dot pulse-dot--light" aria-hidden="true" /> Same-day slots usually fill by noon
+            <span className="pulse-dot pulse-dot--light" aria-hidden="true" /> Same-day evaluation slots available
           </p>
 
           <MaskText
             as="h2"
             className="ctab__title"
-            segments={[{ t: 'Your health shouldn’t ' }, { t: 'have to wait.', em: true }]}
+            segments={[{ t: 'Your child’s growth ' }, { t: 'shouldn’t have to wait.', em: true }]}
           />
 
           <p className="ctab__sub" data-reveal>
-            Book now — it takes 30 seconds, rescheduling is free, and a real
-            human confirms your slot within 15 minutes.
+            Book an assessment now — it takes 30 seconds, rescheduling is free, and our clinical team confirms your slot promptly.
           </p>
 
           <div className="ctab__actions" data-reveal>

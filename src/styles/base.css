@@ -93,11 +93,12 @@ address { font-style: normal; }
   clip-path: inset(50%); overflow: hidden; white-space: nowrap;
 }
 
-/* custom cursor hides the native one on interactive bits (not in inputs) */
-html.has-cursor body,
+/* Keep the real native OS cursor always visible everywhere */
+html.has-cursor body { cursor: auto; }
 html.has-cursor a,
 html.has-cursor button,
-html.has-cursor [data-cursor] { cursor: none; }
+html.has-cursor [role="button"],
+html.has-cursor [data-cursor] { cursor: pointer; }
 
 /* set by ScrollProvider's lockScroll() on natively-scrolling (mobile) viewports.
    body gets position/top inline so the reading position survives the lock. */
@@ -109,7 +110,7 @@ html.is-scroll-locked body { overflow: hidden; }
 
 /* ── layout utilities ──────────────────────────────────────── */
 .container { width: min(1220px, 100% - 44px); margin-inline: auto; }
-.section { padding-block: clamp(84px, 9vw, 136px); }
+.section { padding-block: clamp(38px, 4.2vw, 64px); }
 
 .h2 {
   font: 420 clamp(2.15rem, 4.6vw, 3.7rem)/1.06 var(--font-serif);
@@ -229,13 +230,26 @@ html.is-scroll-locked body { overflow: hidden; }
 .btn--ghost .btn__ic { background: rgba(21, 36, 32, 0.06); }
 .btn--ghost:hover { border-color: var(--ink); background: rgba(21, 36, 32, 0.035); }
 
-.btn--light { background: var(--bg); color: var(--teal); }
-.btn--light .btn__ic { background: rgba(15, 76, 66, 0.1); }
-.btn--light:hover { background: var(--white); }
+.btn--light {
+  background: #FFFFFF;
+  color: #5B21B6;
+  font-weight: 800;
+  box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.25);
+}
+.btn--light .btn__ic { background: #F3E8FF; color: #5B21B6; }
+.btn--light:hover { background: #FAF5FF; color: #4C1D95; transform: translateY(-2px); }
 
-.btn--outline-light { border-color: rgba(246, 243, 236, 0.38); color: var(--bg); }
-.btn--outline-light .btn__ic { background: rgba(246, 243, 236, 0.14); }
-.btn--outline-light:hover { background: rgba(246, 243, 236, 0.1); }
+.btn--outline-light {
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #FFFFFF;
+  font-weight: 700;
+}
+.btn--outline-light .btn__ic { background: rgba(255, 255, 255, 0.15); color: #FFFFFF; }
+.btn--outline-light:hover {
+  border-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.14);
+  color: #FFFFFF;
+}
 
 .btn--wa { background: var(--wa); color: #fff; }
 .btn--wa:hover { background: #0F8A4B; }
@@ -247,20 +261,38 @@ html.is-scroll-locked body { overflow: hidden; }
 
 .magnetic { display: inline-block; }
 
-/* ── custom cursor ─────────────────────────────────────────── */
+/* ── custom cursor (always on top of every element & modal) ── */
 .cursor-dot, .cursor-ring {
-  position: fixed; top: 0; left: 0; z-index: 300;
-  pointer-events: none; border-radius: 50%;
+  position: fixed; top: 0; left: 0;
+  z-index: 2147483647 !important;
+  pointer-events: none !important;
+  border-radius: 50%;
   opacity: 0; visibility: hidden;
+  will-change: transform;
 }
-.cursor-dot { width: 8px; height: 8px; margin: -4px 0 0 -4px; background: var(--teal); }
+.cursor-dot {
+  width: 8px; height: 8px; margin: -4px 0 0 -4px;
+  background: var(--teal, #6D28D9);
+  transition: background-color 0.25s, box-shadow 0.25s;
+}
 .cursor-ring {
   width: 38px; height: 38px; margin: -19px 0 0 -19px;
-  border: 1.5px solid rgba(15, 76, 66, 0.45);
-  background: rgba(15, 76, 66, 0);
+  border: 1.5px solid rgba(109, 40, 217, 0.45);
+  background: rgba(109, 40, 217, 0);
+  transition: border-color 0.25s, background-color 0.25s;
 }
+
+/* White cursor mode when entering purple or dark backgrounds */
+.cursor-dot--white {
+  background: #FFFFFF !important;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.95) !important;
+}
+.cursor-ring--white {
+  border-color: rgba(255, 255, 255, 0.85) !important;
+}
+
 @media (hover: none), (pointer: coarse) {
-  .cursor-dot, .cursor-ring { display: none; }
+  .cursor-dot, .cursor-ring { display: none !important; }
 }
 
 /* ── preloader ─────────────────────────────────────────────── */
@@ -616,9 +648,9 @@ html.is-scroll-locked body { overflow: hidden; }
 .bform__success-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
 
 /* ── shared section header ─────────────────────────────────── */
-.shead { margin-bottom: clamp(40px, 5vw, 64px); }
-.shead .eyebrow { margin-bottom: 18px; }
-.shead__row { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; }
+.shead { margin-bottom: clamp(22px, 2.8vw, 38px); }
+.shead .eyebrow { margin-bottom: 12px; }
+.shead__row { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; }
 .shead__side { max-width: 340px; font-size: 15.5px; color: var(--ink-2); line-height: 1.6; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
 @media (max-width: 860px) {
   .shead__row { flex-direction: column; align-items: flex-start; gap: 20px; }

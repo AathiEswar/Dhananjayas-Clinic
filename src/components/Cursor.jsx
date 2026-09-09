@@ -23,7 +23,13 @@ export default function Cursor() {
     const rx = gsap.quickTo(ring, 'x', { duration: 0.45, ease: 'power3.out' });
     const ry = gsap.quickTo(ring, 'y', { duration: 0.45, ease: 'power3.out' });
 
+    const DARK_SELECTOR = '.ctab__panel, .footer, .svc-card--featured, .brochure-modal, [data-dark-bg]';
+    const INTERACTIVE = 'a, button, [data-cursor="hover"], input, select, textarea, [role="button"]';
+
     let shown = false;
+    let wasDark = false;
+    let isHoveringInteractive = false;
+
     const move = (e) => {
       if (!shown) {
         shown = true;
@@ -31,18 +37,53 @@ export default function Cursor() {
       }
       dx(e.clientX); dy(e.clientY);
       rx(e.clientX); ry(e.clientY);
+
+      // Check if cursor is over dark card / background
+      const isDark = Boolean(e.target?.closest?.(DARK_SELECTOR));
+      if (isDark !== wasDark) {
+        wasDark = isDark;
+        dot.classList.toggle('cursor-dot--white', isDark);
+        ring.classList.toggle('cursor-ring--white', isDark);
+
+        if (!isHoveringInteractive) {
+          gsap.to(ring, {
+            borderColor: isDark ? 'rgba(255, 255, 255, 0.85)' : 'rgba(109, 40, 217, 0.45)',
+            backgroundColor: 'rgba(0, 0, 0, 0)',
+            duration: 0.25,
+          });
+        } else {
+          gsap.to(ring, {
+            borderColor: isDark ? '#FFFFFF' : 'rgba(109, 40, 217, 0.65)',
+            backgroundColor: isDark ? 'rgba(255, 255, 255, 0.22)' : 'rgba(109, 40, 217, 0.12)',
+            duration: 0.25,
+          });
+        }
+      }
     };
 
-    const INTERACTIVE = 'a, button, [data-cursor="hover"], input, select, textarea, [role="button"]';
     const over = (e) => {
       if (e.target.closest?.(INTERACTIVE)) {
-        gsap.to(ring, { scale: 1.9, backgroundColor: 'rgba(15,76,66,0.08)', duration: 0.3 });
+        isHoveringInteractive = true;
+        const isDark = Boolean(e.target?.closest?.(DARK_SELECTOR));
+        gsap.to(ring, {
+          scale: 1.9,
+          backgroundColor: isDark ? 'rgba(255, 255, 255, 0.22)' : 'rgba(109, 40, 217, 0.12)',
+          borderColor: isDark ? '#FFFFFF' : 'rgba(109, 40, 217, 0.65)',
+          duration: 0.3,
+        });
         gsap.to(dot, { scale: 0.4, duration: 0.3 });
       }
     };
     const out = (e) => {
       if (e.target.closest?.(INTERACTIVE)) {
-        gsap.to(ring, { scale: 1, backgroundColor: 'rgba(15,76,66,0)', duration: 0.3 });
+        isHoveringInteractive = false;
+        const isDark = Boolean(e.target?.closest?.(DARK_SELECTOR));
+        gsap.to(ring, {
+          scale: 1,
+          backgroundColor: 'rgba(0, 0, 0, 0)',
+          borderColor: isDark ? 'rgba(255, 255, 255, 0.85)' : 'rgba(109, 40, 217, 0.45)',
+          duration: 0.3,
+        });
         gsap.to(dot, { scale: 1, duration: 0.3 });
       }
     };
