@@ -11,15 +11,15 @@ export default function Footer() {
     <footer className="footer" data-scroll-section>
       <div className="container">
         <div className="footer__top">
-          <p className="footer__tag" data-reveal>Care that puts you at ease.</p>
+          <p className="footer__tag" data-reveal>Nurturing every step of your child’s development.</p>
           <h2 className="footer__wordmark" aria-label={CLINIC.name}>
             <span className="footer__wordmark-line">
-              {"Care and Cure".split('').map((ch, i) => (
+              {"Healing Hands".split('').map((ch, i) => (
                 <span key={`l1-${i}`} style={{ '--i': i }}>{ch === ' ' ? '\u00A0' : ch}</span>
               ))}
             </span>
             <span className="footer__wordmark-line">
-              {"Homoeopathic Clinic".split('').map((ch, i) => (
+              {"Child Development Centre".split('').map((ch, i) => (
                 <span key={`l2-${i}`} style={{ '--i': i + 13 }}>{ch === ' ' ? '\u00A0' : ch}</span>
               ))}
             </span>
@@ -29,8 +29,8 @@ export default function Footer() {
         <div className="footer__grid">
           <div className="footer__col footer__col--brand">
             <p>
-              A trusted General Practice & Family Physician clinic in {CLINIC.city} where
-              consultations are never rushed and care comes first.
+              A specialized Child Development Centre in {CLINIC.city} providing expert Occupational,
+              Speech, Behavior, and Physical therapy for children.
             </p>
             <button className="btn btn--primary btn--sm" onClick={() => openBooking()} data-cursor="hover">
               <span className="btn__solo">Book consultation</span>

@@ -24,30 +24,30 @@ export default function About() {
                 <path id="circlePath" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" />
               </defs>
               <text>
-                <textPath href="#circlePath">CARE &amp; CURE HOMOEOPATHIC CLINIC · GUDUVANCHERY ·&nbsp;</textPath>
+                <textPath href="#circlePath">HEALING HANDS · CHILD DEVELOPMENT CENTRE · THIRUVERKADU ·&nbsp;</textPath>
               </text>
             </svg>
             <span className="about__badge-core"><Icon name="sparkle" size={20} /></span>
           </div>
 
           <div className="about__exp" data-scroll data-scroll-speed="0.5">
-            <strong>12+</strong>
-            <span>years of<br />natural healing</span>
+            <strong>3+</strong>
+            <span>years of<br />child development</span>
           </div>
         </div>
 
         <div className="about__content">
           <SectionHeader
-            eyebrow="Why Care & Cure Homoeopathy"
+            eyebrow="Why Healing Hands CDC"
             segments={[
-              { t: 'Healing that respects your body, ' },
-              { t: 'your health, and your peace of mind.', em: true },
+              { t: 'Therapy that respects your child, ' },
+              { t: 'their growth, and your family trust.', em: true },
             ]}
           />
           <p className="about__lead" data-reveal>
-            Homeopathic care in Guduvanchery should be gentle, root-cause focused, and deeply comforting.
-            Care and Cure Homoeopathic Clinic was established to provide patient-first holistic medicine
-            where remedies are natural, non-addictive, and personalized for your long-term wellness.
+            Pediatric therapy in Thiruverkadu should be engaging, scientifically structured, and deeply supportive.
+            Healing Hands Child Development Centre was established to provide individualized Occupational Therapy,
+            Speech Therapy, and Behavior Therapy to nurture every child's full potential.
           </p>
 
           <ul className="about__list">
@@ -60,8 +60,8 @@ export default function About() {
           </ul>
 
           <blockquote className="about__sign" data-reveal>
-            “True homeopathic healing addresses the individual as a whole — restoring natural balance and vitality safely and gently.”
-            <cite>— Senior Homeopathic Physician (BHMS)</cite>
+            “Every child develops at their own unique pace. Our mission is to empower them with confidence, independence, and essential life skills.”
+            <cite>— K. Preethi, MOT (Occupational Therapist & Mental Health Specialist)</cite>
           </blockquote>
 
           <button className="link-arrow" onClick={() => scrollTo('#doctors')} data-cursor="hover" data-reveal>

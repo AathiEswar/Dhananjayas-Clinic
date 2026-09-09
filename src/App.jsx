@@ -10,6 +10,7 @@ import BookingModal from './components/BookingModal';
 import Hero from './sections/Hero';
 import TrustStats from './sections/TrustStats';
 import Services from './sections/Services';
+import Brochures from './sections/Brochures';
 import About from './sections/About';
 import Doctors from './sections/Doctors';
 import Process from './sections/Process';
@@ -59,6 +60,7 @@ function Site() {
             <Hero />
             <TrustStats />
             <Services />
+            <Brochures />
             {/* <About /> */}
             <Doctors />
             <Process />

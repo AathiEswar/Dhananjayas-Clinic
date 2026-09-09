@@ -14,7 +14,7 @@ export default function TrustStats() {
           ))}
         </div>
         <p className="stats__caption" data-reveal>
-          Trusted by families across Guduvanchery & Nandivaram for natural homeopathy, skin, hair & holistic care.
+          Trusted by parents across Thiruverkadu & Chennai for pediatric therapy, speech, occupational & behavior development.
         </p>
       </div>
     </section>

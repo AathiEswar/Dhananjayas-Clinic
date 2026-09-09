@@ -1,33 +1,37 @@
 /**
  * ─────────────────────────────────────────────────────────────
- *  CLINIC CONFIG — Care and Cure Homoeopathic Clinic
+ *  CLINIC CONFIG — Healing Hands Child Development Centre (CDC)
  *  All CTAs (call / WhatsApp / maps / hours) read from this file.
  * ─────────────────────────────────────────────────────────────
  */
 export const CLINIC = {
-  name: 'Care and Cure Homoeopathic Clinic',
-  tagline: 'Natural Homeopathic Healing & Holistic Care · Guduvanchery',
-  city: 'Nandivaram · Guduvanchery',
+  name: 'Healing Hands Child Development Centre',
+  shortName: 'Healing Hands CDC',
+  tagline: 'Nurturing Abilities, Empowering Futures · Thiruverkadu',
+  slogan: 'Small Steps Today, Bright Futures Tomorrow.',
+  motto: 'Every Child Deserves the Opportunity to Shine!',
+  tamilTagline: 'அன்பான கைகள்... சிறந்த நாளைக்காக...',
+  city: 'Thiruverkadu · Chennai-77',
 
   // Phone shown to users + the tel: link
-  phoneDisplay: '+91 97899 20400',
-  phoneHref: 'tel:+919789920400',
+  phoneDisplay: '+91 70108 85386',
+  phoneHref: 'tel:+917010885386',
 
   // WhatsApp number in international format (used in wa.me links)
-  whatsapp: '919789920400',
+  whatsapp: '917598907494',
 
-  email: 'careandcure.homeopathy@gmail.com',
-  address: 'Plot No. 102, Rajaji Nagar Main Road, Thangappapuram, Perumattunallur Village, Nandivaram, Guduvanchery - 603202',
-  landmark: 'Rajaji Nagar Main Road, Thangappapuram, Nandivaram',
-  mapsUrl: 'https://maps.app.goo.gl/Ggg9BiPjneMbDPTF6',
+  email: 'preethimariyappan00@gmail.com',
+  address: '34A, RPS Complex, Therodum Veedhi, Thiruverkadu, Chennai - 600077',
+  landmark: 'Opposite to Udhavum Karangal School',
+  mapsUrl: 'https://maps.google.com/?q=34A+RPS+Complex+Therodum+Veedhi+Thiruverkadu+Chennai+600077',
 
   rating: '4.9',
-  reviewCount: '180+',
+  reviewCount: '120+',
 
   hours: [
-    { days: 'Mon – Sun (Morning)', time: '10:00 AM – 2:00 PM' },
-    { days: 'Mon – Sun (Evening)', time: '5:00 PM – 10:00 PM' },
-    { days: 'Sunday OPD', time: '10:00 AM – 10:00 PM' },
+    { days: 'Monday – Friday', time: '9:00 AM – 7:00 PM' },
+    { days: 'Saturday', time: '9:00 AM – 1:00 PM' },
+    { days: 'Sunday', time: 'Closed (Emergency On-call)' },
   ],
 };
 
@@ -37,5 +41,5 @@ export function waLink(message) {
 }
 
 export const WA_DEFAULT = waLink(
-  `Hi ${CLINIC.name}! I'd like to consult the doctor for a homeopathic consultation. Please let me know available slots.`
+  `Hi ${CLINIC.name}! I would like to enquire about child therapy services and book an assessment slot.`
 );

@@ -66,16 +66,25 @@ export default function Navbar() {
         <div className="nav__inner">
           <a className="nav__brand" href="#top" onClick={go('#top')} aria-label={`${CLINIC.name} — home`} data-cursor="hover">
             <span className="nav__mark" aria-hidden="true">
-              <svg viewBox="0 0 64 64" width="38" height="38">
-                <rect width="64" height="64" rx="16" fill="var(--teal, #059669)" />
-                <circle cx="32" cy="32" r="23" fill="#FFFFFF" />
-                <path d="M32 15 C24 23 20 29 20 35 C20 42 25 47 32 47 C39 47 44 42 44 35 C44 29 40 23 32 15 Z" fill="var(--teal, #059669)" />
-                <path d="M32 23 C32 23 27 31 27 36 C27 39 29.2 41 32 41 C34.8 41 37 39 37 36 C37 31 32 23 32 23 Z" fill="var(--gold, #D97706)" />
+              <svg viewBox="0 0 80 80" width="40" height="40">
+                <rect width="80" height="80" rx="18" fill="#FAF5FF" />
+                <path d="M40 25 C34 16 24 17 24 26 C24 33 35 42 40 45 C45 42 56 33 56 26 C56 17 46 16 40 25 Z" fill="#E11D48" />
+                <text x="40" y="32" fontFamily="system-ui, sans-serif" fontWeight="900" fontSize="11" fill="#FFFFFF" textAnchor="middle">OT</text>
+                <path d="M37 46 C34 43 36 41 38 41 C39 43 38 45 37 46 Z" fill="#16A34A" />
+                <path d="M43 46 C46 43 44 41 42 41 C41 43 42 45 43 46 Z" fill="#16A34A" />
+                <path d="M36 70 C24 66 18 52 20 38 C21 33 25 35 25 39 C23 50 28 61 36 65 C38 66 38 69 36 70 Z" fill="#6B21A8" />
+                <path d="M29 64 C23 56 23 44 26 36 C27 34 30 36 29 39 C27 46 27 54 31 60 C32 62 31 63 29 64 Z" fill="#7C3AED" />
+                <path d="M44 70 C56 66 62 52 60 38 C59 33 55 35 55 39 C57 50 52 61 44 65 C42 66 42 69 44 70 Z" fill="#16A34A" />
+                <path d="M51 64 C57 56 57 44 54 36 C53 34 50 36 51 39 C53 46 53 54 49 60 C48 62 49 63 51 64 Z" fill="#22C55E" />
+                <circle cx="34" cy="49" r="3" fill="#EC4899" />
+                <path d="M32 53 C34 51 38 52 38 57 C38 62 31 63 32 53 Z" fill="#EC4899" />
+                <circle cx="45" cy="48" r="3.4" fill="#F59E0B" />
+                <path d="M42 52 C45 50 49 51 48 57 C48 62 41 62 42 52 Z" fill="#F59E0B" />
               </svg>
             </span>
             <span className="nav__brand-txt">
-              <strong>Care &amp; Cure</strong>
-              <em>Homoeopathic Clinic</em>
+              <strong><span style={{ color: 'var(--ink)' }}>Healing</span> <span style={{ color: 'var(--sage)' }}>Hands</span></strong>
+              <em>Child Development Centre</em>
             </span>
           </a>
 

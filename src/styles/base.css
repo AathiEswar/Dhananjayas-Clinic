@@ -4,46 +4,46 @@
 
 :root {
   /* ════════════════════════════════════════════════════════════
-     CARE & CURE HOMOEOPATHIC CLINIC BRAND THEME SYSTEM
-     Palette:
-     - Botanical Emerald Green: Primary Accent (#059669)
-     - Deep Forest Navy: Deep Brand (#047857 / #064E3B)
-     - Healing Mint Soft: Soft Tint (#ECFDF5)
-     - Amber Gold: Remedy Highlight (#D97706)
+     HEALING HANDS CDC BRAND THEME SYSTEM (Brochure Palette)
+     - Royal Violet / Purple: Primary Accent (#6D28D9)
+     - Leaf Green: Growth & Healing Accent (#16A34A)
+     - Caring Heart Magenta: OT Accent (#E11D48)
+     - Soft Lavender: Clean, comforting child-friendly background (#FAF5FF)
+     - Warm Amber: Energy & Joy (#F59E0B)
      ════════════════════════════════════════════════════════════ */
 
   /* Raw Brand Colors */
-  --oviam-blue: #059669;
-  --oviam-blue-deep: #064E3B;
-  --oviam-blue-soft: #ECFDF5;
+  --oviam-blue: #6D28D9;
+  --oviam-blue-deep: #4C1D95;
+  --oviam-blue-soft: #FAF5FF;
   
-  --oviam-gold: #D97706;
-  --oviam-gold-dark: #B45309;
+  --oviam-gold: #F59E0B;
+  --oviam-gold-dark: #D97706;
   --oviam-gold-soft: #FFFBEB;
 
-  --oviam-red: #059669;
-  --oviam-red-soft: #ECFDF5;
+  --oviam-red: #E11D48;
+  --oviam-red-soft: #FFE4E6;
 
   /* Mapped UI Tokens */
-  --bg: #F4FAF7;
-  --bg-soft: #E6F4EE;
+  --bg: #FAF5FF;
+  --bg-soft: #F3E8FF;
   --surface: #FFFFFF;
   --white: #FFFFFF;
 
-  --ink: #064E3B;
-  --ink-2: #334155;
+  --ink: #1E1B4B;
+  --ink-2: #4338CA;
 
-  --teal: #059669;                     /* Main Brand Accent (Botanical Emerald) */
-  --teal-deep: #064E3B;                /* Deep Forest Shade */
-  --sage: #D97706;                     /* Secondary Accent (Amber Gold) */
-  --sage-soft: #ECFDF5;                /* Soft Mint Tint */
-  --gold: #D97706;                     /* Gold Highlight */
-  --red: #059669;                      /* Primary Accent */
+  --teal: #6D28D9;                     /* Main Brand Accent (Royal Purple) */
+  --teal-deep: #4C1D95;                /* Deep Violet Shade */
+  --sage: #16A34A;                     /* Secondary Accent (Leaf Green) */
+  --sage-soft: #F0FDF4;                /* Soft Leaf Mint Tint */
+  --gold: #F59E0B;                     /* Warm Amber Gold */
+  --red: #E11D48;                      /* Heart Accent */
   --wa: #128C7E;                       /* WhatsApp Green */
 
-  --error: #DC2626;
-  --line: rgba(5, 150, 105, 0.15);
-  --line-soft: rgba(5, 150, 105, 0.08);
+  --error: #E11D48;
+  --line: rgba(109, 40, 217, 0.14);
+  --line-soft: rgba(109, 40, 217, 0.08);
 
   --font-serif: 'Fraunces', 'Iowan Old Style', Georgia, serif;
   --font-sans: 'Manrope', -apple-system, 'Segoe UI', sans-serif;

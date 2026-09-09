@@ -34,11 +34,11 @@ export default function Hero() {
       <div className="hero__inner container">
         <div className="hero__copy">
           <h1 className="hero__title">
-            Natural homeopathic healing for your <em>whole family.</em>
+            Specialized therapy for your <em>child’s growth &amp; development.</em>
           </h1>
 
           <p className="hero__sub">
-            12+ years of trusted constitutional homeopathic care, skin &amp; hair treatments, and chronic disease remedies in <strong className="hero__sub-highlight">Guduvanchery</strong>. Gentle care with zero harmful side effects.
+            3+ years of specialized Occupational Therapy, Speech Therapy, Behavior Therapy, and Pediatric Mental Health support in <strong className="hero__sub-highlight">Thiruverkadu</strong>, Chennai. Compassionate care tailored for your child.
           </p>
 
           <div className="hero__ctas">
@@ -46,7 +46,7 @@ export default function Hero() {
               Book a consultation
             </Button>
             <Button variant="ghost" icon="phone" href={CLINIC.phoneHref}>
-              Call the clinic
+              Call the center
             </Button>
           </div>
 
@@ -56,23 +56,37 @@ export default function Hero() {
               <strong>{CLINIC.rating}</strong> · {CLINIC.reviewCount} reviews
             </span>
             <span className="hero__proof-sep" aria-hidden="true" />
-            <span className="hero__proof-item"><strong>100%</strong> Natural Care</span>
+            <span className="hero__proof-item"><strong>100%</strong> Dedicated Care</span>
             <span className="hero__proof-sep" aria-hidden="true" />
-            <span className="hero__proof-item"><strong>12+</strong> years exp.</span>
+            <span className="hero__proof-item"><strong>3+</strong> years exp.</span>
           </div>
         </div>
 
         <div className="hero__visual" aria-hidden="false">
-          <div className="hero__arch" data-scroll data-scroll-speed="-0.5" aria-hidden="true">
-            <span className="hero__arch-ring" />
-            <span className="hero__arch-sun" />
-            <svg className="hero__ecg" viewBox="0 0 320 80" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M0 46 H70 l12-26 16 44 12-30 10 12 h34 l10-18 14 30 10-12 h122" fill="none" />
-            </svg>
+          {/* Main Hero Visual: Child Development & Therapy Showcase Card */}
+          <div className="hero__main-card" data-scroll data-scroll-speed="-0.3">
+            <div className="hero__img-frame">
+              <img
+                src="/hero-child-stacking.jpg"
+                alt="Child engaged in learning and occupational therapy at Healing Hands CDC"
+                className="hero__main-img"
+              />
+              <div className="hero__img-badge">
+                <span className="hero__img-badge-dot" />
+                <span>Play &amp; Sensory Learning</span>
+              </div>
+              <div className="hero__img-caption">
+                <p className="hero__img-quote">“Small Steps Today, Bright Futures Tomorrow.”</p>
+                <span className="hero__img-sub">Individualized 1-on-1 Child Therapy</span>
+              </div>
+            </div>
+            <span className="hero__floating-heart" title="Occupational Therapy">
+              OT
+            </span>
           </div>
 
           <div className="hero__card hero__card--slot" data-scroll data-scroll-speed="0.6">
-            <p className="hero__card-eyebrow"><span className="pulse-dot" aria-hidden="true" /> Next available</p>
+            <p className="hero__card-eyebrow"><span className="pulse-dot" aria-hidden="true" /> Next evaluation slot</p>
             <p className="hero__card-doc">{nextDoc.name}</p>
             <p className="hero__card-dept">{nextDoc.dept}</p>
             <p className="hero__card-time"><Icon name="clock" size={14} /> {nextDoc.slot}</p>
@@ -81,18 +95,18 @@ export default function Hero() {
               onClick={() => openBooking(nextDoc.dept, nextDoc.slot)}
               data-cursor="hover"
             >
-              Consult today <Icon name="arrowR" size={14} strokeWidth={2.2} />
+              Book session <Icon name="arrowR" size={14} strokeWidth={2.2} />
             </button>
           </div>
 
           <div className="hero__card hero__card--rating" data-scroll data-scroll-speed="1.1">
             <Stars />
-            <p><strong>{CLINIC.rating}</strong> on Google Maps</p>
-            <span>{CLINIC.reviewCount} patient reviews</span>
+            <p><strong>{CLINIC.rating}</strong> Parent Rating</p>
+            <span>{CLINIC.reviewCount} parent reviews</span>
           </div>
 
           <div className="hero__chip" data-scroll data-scroll-speed="0.9">
-            <Icon name="pin" size={15} /> Rajaji Nagar Main Road, Guduvanchery
+            <Icon name="pin" size={15} /> Opp. Udhavum Karangal School, Thiruverkadu
           </div>
         </div>
       </div>
