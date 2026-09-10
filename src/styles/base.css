@@ -595,27 +595,24 @@ html.is-scroll-locked body { overflow: hidden; }
   .fab__btn--phone, .fab__btn--wa { height: 46px; padding: 0 16px; font-size: 13.5px; }
 }
 
-/* Mobile Sticky Dock: Icons only, no words */
+/* ── mobile sticky dock (Call · WhatsApp · Book now) ──────── */
 .dock {
   position: fixed;
   left: 50%;
-  bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+  bottom: calc(10px + env(safe-area-inset-bottom, 0px));
   z-index: 70;
   display: none;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 8px 14px;
-  width: auto;
-  max-width: calc(100% - 24px);
+  gap: 8px;
+  padding: 8px;
+  width: min(480px, calc(100% - 24px));
   background: rgba(255, 255, 255, 0.94);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   border: 1px solid var(--line);
-  border-radius: 999px;
-  box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.22);
+  border-radius: 20px;
+  box-shadow: 0 20px 48px -12px rgba(15, 23, 42, 0.25);
   transform: translateX(-50%) translateY(140%);
-  transition: transform 0.45s var(--ease-out), opacity 0.3s ease;
+  transition: transform 0.5s var(--ease-out);
 }
 .dock.is-in {
   transform: translateX(-50%) translateY(0);
@@ -627,56 +624,37 @@ html.is-scroll-locked .dock {
   opacity: 0;
 }
 .dock__item {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
+  flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--ink);
-  background: var(--bg-soft);
+  gap: 4px;
+  padding: 9px 6px;
+  border-radius: 14px;
   text-decoration: none;
-  border: 1px solid transparent;
-  transition: background 0.25s, transform 0.15s, box-shadow 0.25s;
-  flex: none;
+  font: 700 12px/1 var(--font-sans);
+  color: var(--ink);
+  white-space: nowrap;
+  transition: background 0.3s, transform 0.15s;
   -webkit-tap-highlight-color: transparent;
-}
-.dock__item span {
-  display: none !important;
 }
 .dock__item svg {
   flex-shrink: 0;
 }
 .dock__item:active {
-  transform: scale(0.92);
-}
-.dock__item--phone {
-  background: #F3E8FF;
-  color: #6D28D9;
-  border-color: rgba(109, 40, 217, 0.18);
-}
-.dock__item--phone:active {
-  background: #E9D5FF;
-}
-.dock__item--wa {
-  background: rgba(37, 211, 102, 0.16);
-  color: #128C7E;
-  border-color: rgba(37, 211, 102, 0.28);
-}
-.dock__item--wa:active {
-  background: rgba(37, 211, 102, 0.28);
+  background: var(--bg-soft);
+  transform: scale(0.96);
 }
 .dock__item--main {
-  width: 48px;
-  height: 48px;
   background: var(--oviam-red, #DC2626);
   color: #FFFFFF;
+  flex: 1.4;
   border: none;
-  box-shadow: 0 6px 18px -2px rgba(220, 38, 38, 0.45);
+  box-shadow: 0 6px 16px -4px rgba(220, 38, 38, 0.45);
 }
 .dock__item--main:active {
   background: #B91C1C;
-  transform: scale(0.92);
 }
 
 @media (max-width: 1024px) {
@@ -686,16 +664,19 @@ html.is-scroll-locked .dock {
 
 @media (max-width: 360px) {
   .dock {
-    gap: 8px;
-    padding: 6px 10px;
+    width: calc(100% - 16px);
+    gap: 6px;
+    padding: 6px;
+    border-radius: 16px;
   }
   .dock__item {
-    width: 40px;
-    height: 40px;
+    padding: 7px 3px;
+    font-size: 11px;
+    gap: 3px;
   }
-  .dock__item--main {
-    width: 44px;
-    height: 44px;
+  .dock__item svg {
+    width: 17px;
+    height: 17px;
   }
 }
 
