@@ -32,12 +32,19 @@ export default function Navbar() {
     return unlockScroll;
   }, [menuOpen, lockScroll, unlockScroll]);
 
+  useEffect(() => {
+    document.documentElement.classList.toggle('is-menu-open', menuOpen);
+    return () => {
+      document.documentElement.classList.remove('is-menu-open');
+    };
+  }, [menuOpen]);
+
   // Esc closes; so does growing past the burger breakpoint — otherwise a
   // rotate/resize would leave an off-screen menu holding the scroll lock.
   useEffect(() => {
     if (!menuOpen) return;
     const onKey = (e) => { if (e.key === 'Escape') setMenuOpen(false); };
-    const mq = window.matchMedia('(min-width: 961px)');
+    const mq = window.matchMedia('(min-width: 1025px)');
     const onWide = (e) => { if (e.matches) setMenuOpen(false); };
     window.addEventListener('keydown', onKey);
     mq.addEventListener('change', onWide);
@@ -97,12 +104,12 @@ export default function Navbar() {
           </nav>
 
           <div className="nav__actions">
-            <a className="nav__phone" href={CLINIC.phoneHref} data-cursor="hover" aria-label={`Call ${CLINIC.phoneDisplay}`}>
-              <Icon name="phone" size={16} />
+            <a className="nav__phone" href={CLINIC.phoneHref} data-cursor="hover" aria-label={`Call ${CLINIC.phoneDisplay}`} title={`Call ${CLINIC.phoneDisplay}`}>
+              <Icon name="phone" size={18} strokeWidth={2} />
               <span>{CLINIC.phoneDisplay}</span>
             </a>
-            <a className="nav__wa" href={WA_DEFAULT} target="_blank" rel="noreferrer" data-cursor="hover" aria-label={`WhatsApp ${CLINIC.name}`}>
-              <Icon name="whatsapp" size={17} />
+            <a className="nav__wa" href={WA_DEFAULT} target="_blank" rel="noreferrer" data-cursor="hover" aria-label={`WhatsApp ${CLINIC.name}`} title="Chat on WhatsApp">
+              <Icon name="whatsapp" size={18} />
               <span>WhatsApp</span>
             </a>
             <Button variant="primary" className="btn--sm nav__cta" onClick={() => openBooking()} icon="calendar">

@@ -58,16 +58,16 @@ export default function FloatingDock() {
 
       {/* Mobile sticky dock */}
       <nav className={`dock ${shown ? 'is-in' : ''}`} aria-label="Quick actions">
-        <a className="dock__item" href={CLINIC.phoneHref} aria-label={`Call ${CLINIC.name}`}>
-          <Icon name="phone" size={19} />
+        <a className="dock__item dock__item--phone" href={CLINIC.phoneHref} aria-label={`Call ${CLINIC.name}`} title="Call clinic">
+          <Icon name="phone" size={20} strokeWidth={2} />
           <span>Call</span>
         </a>
-        <a className="dock__item" href={WA_DEFAULT} target="_blank" rel="noreferrer" aria-label="WhatsApp consultation">
-          <Icon name="whatsapp" size={19} />
+        <a className="dock__item dock__item--wa" href={WA_DEFAULT} target="_blank" rel="noreferrer" aria-label="WhatsApp consultation" title="Chat on WhatsApp">
+          <Icon name="whatsapp" size={20} />
           <span>WhatsApp</span>
         </a>
-        <button className="dock__item dock__item--main" onClick={() => openBooking()} aria-label="Book appointment">
-          <Icon name="calendar" size={19} strokeWidth={2} />
+        <button className="dock__item dock__item--main" onClick={() => openBooking()} aria-label="Book appointment" title="Book appointment">
+          <Icon name="calendar" size={20} strokeWidth={2} />
           <span>Book now</span>
         </button>
       </nav>
