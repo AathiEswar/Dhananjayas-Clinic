@@ -39,19 +39,18 @@ export default function Brochures() {
   }, [activeModal, unlockScroll]);
 
   return (
-    <section className="brochures section" data-scroll-section id="brochures">
+    <section className="brochures section" data-scroll-section id="facilities">
       <div className="container">
         <SectionHeader
-          eyebrow="Official Brochure & Guidance"
+          eyebrow="Clinical Facilities & Diagnostics"
           segments={[
-            { t: 'Explore our complete ' },
-            { t: 'center brochure & services.', em: true },
+            { t: 'Modern infrastructure, ' },
+            { t: 'hygienic diagnostics & consultation.', em: true },
           ]}
         />
 
         <p className="brochures__intro" data-reveal>
-          Download or view our official English &amp; Tamil brochures detailing our specialized therapy programs,
-          child-friendly environment, and developmental milestones.
+          Explore our spacious patient lounge, private consultation chambers, and on-site sample collection diagnostic facilities located in Guduvanchery on GST Road.
         </p>
 
         <div className="brochures__grid">
@@ -62,7 +61,7 @@ export default function Brochures() {
                 className="brochure-card__img-wrap"
                 onClick={() => openModal(b)}
                 data-cursor="hover"
-                title="Click to zoom brochure"
+                title="Click to view full size"
               >
                 <img
                   src={b.src}
@@ -72,7 +71,7 @@ export default function Brochures() {
                 />
                 <div className="brochure-card__overlay">
                   <span className="brochure-card__zoom-btn">
-                    <Icon name="search" size={20} /> Click to View Full Size
+                    <Icon name="search" size={20} /> Click to View Photo
                   </span>
                 </div>
               </div>
@@ -85,17 +84,16 @@ export default function Brochures() {
                     onClick={() => openModal(b)}
                     data-cursor="hover"
                   >
-                    View Brochure
+                    View Photo
                   </button>
                   <a
                     className="btn btn--ghost btn--sm"
                     href={b.src}
                     target="_blank"
                     rel="noreferrer"
-                    download
                     data-cursor="hover"
                   >
-                    Download Copy
+                    Open Image
                   </a>
                 </div>
               </div>
@@ -103,11 +101,11 @@ export default function Brochures() {
           ))}
         </div>
 
-        {/* Additional Programs Highlight from Brochure */}
+        {/* Additional Programs Highlight */}
         <div className="brochures__extras" data-reveal>
           <div className="extras__head">
             <span className="chip chip--purple">We Also Provide</span>
-            <h3>Early Milestones &amp; Family Guidance</h3>
+            <h3>Preventive Health Checkups &amp; Lab Screening</h3>
           </div>
           <div className="extras__grid">
             {ADDITIONAL_PROGRAMS.map((prog, idx) => (

@@ -11,16 +11,16 @@ export default function Footer() {
     <footer className="footer" data-scroll-section>
       <div className="container">
         <div className="footer__top">
-          <p className="footer__tag" data-reveal>Nurturing every step of your child’s development.</p>
+          <p className="footer__tag" data-reveal>Comprehensive Healthcare For Your Whole Family.</p>
           <h2 className="footer__wordmark" aria-label={CLINIC.name}>
             <span className="footer__wordmark-line">
-              {"Healing Hands".split('').map((ch, i) => (
+              {"Sai Multispeciality".split('').map((ch, i) => (
                 <span key={`l1-${i}`} style={{ '--i': i }}>{ch === ' ' ? '\u00A0' : ch}</span>
               ))}
             </span>
             <span className="footer__wordmark-line">
-              {"Child Development Centre".split('').map((ch, i) => (
-                <span key={`l2-${i}`} style={{ '--i': i + 13 }}>{ch === ' ' ? '\u00A0' : ch}</span>
+              {"Klinic · Guduvanchery".split('').map((ch, i) => (
+                <span key={`l2-${i}`} style={{ '--i': i + 18 }}>{ch === ' ' ? '\u00A0' : ch}</span>
               ))}
             </span>
           </h2>
@@ -29,8 +29,7 @@ export default function Footer() {
         <div className="footer__grid">
           <div className="footer__col footer__col--brand">
             <p>
-              A specialized Child Development Centre in {CLINIC.city} providing expert Occupational,
-              Speech, Behavior, and Physical therapy for children.
+              A premier multi-speciality medical clinic in {CLINIC.city} providing expert consultations across Dermatology, Gynaecology, Orthopaedics, Pulmonology, General Medicine &amp; emergency triage.
             </p>
             <button className="btn btn--primary btn--sm" onClick={() => openBooking()} data-cursor="hover">
               <span className="btn__solo">Book consultation</span>
@@ -58,7 +57,7 @@ export default function Footer() {
             <p className="footer__landmark" style={{ fontSize: '0.85rem', opacity: 0.8, marginTop: '4px' }}>Landmark: {CLINIC.landmark}</p>
             <a href={CLINIC.phoneHref} data-cursor="hover">{CLINIC.phoneDisplay}</a>
             <a href={`mailto:${CLINIC.email}`} data-cursor="hover">{CLINIC.email}</a>
-            <p className="footer__hours">Mon–Sat 9:30 AM–1:30 PM & 5 PM–9 PM</p>
+            <p className="footer__hours">Facility Open 24/7 · Specialist OPD 9 AM–1 PM &amp; 5 PM–9 PM</p>
           </div>
         </div>
 

@@ -10,16 +10,16 @@ export default function Services() {
     <section className="services section" data-scroll-section id="services">
       <div className="container">
         <SectionHeader
-          eyebrow="Therapy Programs"
-          segments={[{ t: 'Comprehensive care, ' }, { t: 'one nurturing center.', em: true }]}
+          eyebrow="Clinical Specialties & OPD Departments"
+          segments={[{ t: 'Comprehensive healthcare, ' }, { t: 'one trusted polyclinic.', em: true }]}
           side={
             <>
               <p>
-                Individualized 1-on-1 therapy programs designed to help every child
-                reach their unique developmental milestones with confidence.
+                From routine viral illnesses to specialized dermatology, orthopaedics, and women’s health,
+                our departments are equipped for dedicated diagnosis and evidence-based treatment.
               </p>
               <button className="link-arrow" onClick={() => scrollTo('#visit')} data-cursor="hover">
-                Visit our center <Icon name="arrowR" size={15} strokeWidth={2.2} />
+                Visit our clinic <Icon name="arrowR" size={15} strokeWidth={2.2} />
               </button>
             </>
           }
@@ -45,7 +45,7 @@ export default function Services() {
             >
               <div className="svc-card__top">
                 <span className="svc-card__icon"><Icon name={s.icon} size={26} strokeWidth={2} /></span>
-                {s.featured && <span className="svc-card__badge">Core Therapy</span>}
+                {s.featured && <span className="svc-card__badge">Priority OPD</span>}
               </div>
 
               <h3 className="svc-card__title">{s.title}</h3>

@@ -15,17 +15,17 @@ export default function CtaBanner() {
           <span className="ctab__ring" aria-hidden="true" />
 
           <p className="eyebrow eyebrow--light" data-reveal>
-            <span className="pulse-dot pulse-dot--light" aria-hidden="true" /> Same-day evaluation slots available
+            <span className="pulse-dot pulse-dot--light" aria-hidden="true" /> Same-day specialist &amp; OPD slots available
           </p>
 
           <MaskText
             as="h2"
             className="ctab__title"
-            segments={[{ t: 'Your child’s growth ' }, { t: 'shouldn’t have to wait.', em: true }]}
+            segments={[{ t: 'Your family’s health ' }, { t: 'shouldn’t have to wait.', em: true }]}
           />
 
           <p className="ctab__sub" data-reveal>
-            Book an assessment now — it takes 30 seconds, rescheduling is free, and our clinical team confirms your slot promptly.
+            Book a doctor consultation now — it takes 30 seconds, walk-ins are welcomed, and our clinical team confirms your slot promptly.
           </p>
 
           <div className="ctab__actions" data-reveal>

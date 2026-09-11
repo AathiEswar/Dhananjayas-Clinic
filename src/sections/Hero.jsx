@@ -34,19 +34,19 @@ export default function Hero() {
       <div className="hero__inner container">
         <div className="hero__copy">
           <h1 className="hero__title">
-            Specialized therapy for your <em>child’s growth &amp; development.</em>
+            Expert multi-speciality healthcare <em>for your whole family.</em>
           </h1>
 
           <p className="hero__sub">
-            3+ years of specialized Occupational Therapy, Speech Therapy, Behavior Therapy, and Pediatric Mental Health support in <strong className="hero__sub-highlight">Thiruverkadu</strong>, Chennai. Compassionate care tailored for your child.
+            8+ years of multi-disciplinary medical excellence in <strong className="hero__sub-highlight">Guduvanchery</strong>, Chennai. Experienced consultants in Dermatology, Gynaecology, Orthopaedics, Pulmonology, General Medicine &amp; Psychiatry.
           </p>
 
           <div className="hero__ctas">
             <Button magnetic icon="calendar" onClick={() => openBooking()} aria-label="Book a consultation">
-              Book a consultation
+              Book doctor appointment
             </Button>
             <Button variant="ghost" icon="phone" href={CLINIC.phoneHref}>
-              Call the center
+              Call {CLINIC.phoneDisplay}
             </Button>
           </div>
 
@@ -56,37 +56,37 @@ export default function Hero() {
               <strong>{CLINIC.rating}</strong> · {CLINIC.reviewCount} reviews
             </span>
             <span className="hero__proof-sep" aria-hidden="true" />
-            <span className="hero__proof-item"><strong>100%</strong> Dedicated Care</span>
+            <span className="hero__proof-item"><strong>15+</strong> Doctors</span>
             <span className="hero__proof-sep" aria-hidden="true" />
-            <span className="hero__proof-item"><strong>3+</strong> years exp.</span>
+            <span className="hero__proof-item"><strong>24/7</strong> Intake &amp; Triage</span>
           </div>
         </div>
 
         <div className="hero__visual" aria-hidden="false">
-          {/* Main Hero Visual: Child Development & Therapy Showcase Card */}
+          {/* Main Hero Visual: Outpatient Clinical Consultation */}
           <div className="hero__main-card" data-scroll data-scroll-speed="-0.3">
             <div className="hero__img-frame">
               <img
-                src="/hero-child-stacking.jpg"
-                alt="Child engaged in learning and occupational therapy at Healing Hands CDC"
+                src="/clinic-hero-consultation.jpg"
+                alt="Doctor consultation at Sai Multispeciality Klinic Guduvanchery"
                 className="hero__main-img"
               />
               <div className="hero__img-badge">
                 <span className="hero__img-badge-dot" />
-                <span>Play &amp; Sensory Learning</span>
+                <span>Doctor Consultation · OPD</span>
               </div>
               <div className="hero__img-caption">
-                <p className="hero__img-quote">“Small Steps Today, Bright Futures Tomorrow.”</p>
-                <span className="hero__img-sub">Individualized 1-on-1 Child Therapy</span>
+                <p className="hero__img-quote">“Comprehensive Healthcare For Your Whole Family.”</p>
+                <span className="hero__img-sub">VOC Street, NGO Colony, Guduvanchery (Opp. Chellamani &amp; Co)</span>
               </div>
             </div>
-            <span className="hero__floating-heart" title="Occupational Therapy">
-              OT
+            <span className="hero__floating-heart" title="Multi-Speciality Healthcare">
+              +
             </span>
           </div>
 
           <div className="hero__card hero__card--slot" data-scroll data-scroll-speed="0.6">
-            <p className="hero__card-eyebrow"><span className="pulse-dot" aria-hidden="true" /> Next evaluation slot</p>
+            <p className="hero__card-eyebrow"><span className="pulse-dot" aria-hidden="true" /> Next OPD Consultation</p>
             <p className="hero__card-doc">{nextDoc.name}</p>
             <p className="hero__card-dept">{nextDoc.dept}</p>
             <p className="hero__card-time"><Icon name="clock" size={14} /> {nextDoc.slot}</p>
@@ -95,18 +95,18 @@ export default function Hero() {
               onClick={() => openBooking(nextDoc.dept, nextDoc.slot)}
               data-cursor="hover"
             >
-              Book session <Icon name="arrowR" size={14} strokeWidth={2.2} />
+              Book consultation <Icon name="arrowR" size={14} strokeWidth={2.2} />
             </button>
           </div>
 
           <div className="hero__card hero__card--rating" data-scroll data-scroll-speed="1.1">
             <Stars />
-            <p><strong>{CLINIC.rating}</strong> Parent Rating</p>
-            <span>{CLINIC.reviewCount} parent reviews</span>
+            <p><strong>{CLINIC.rating}</strong> Google &amp; Practo</p>
+            <span>{CLINIC.reviewCount} verified reviews</span>
           </div>
 
           <div className="hero__chip" data-scroll data-scroll-speed="0.9">
-            <Icon name="pin" size={15} /> Opp. Udhavum Karangal School, Thiruverkadu
+            <Icon name="pin" size={15} /> Opp. Chellamani &amp; Co, Guduvanchery
           </div>
         </div>
       </div>

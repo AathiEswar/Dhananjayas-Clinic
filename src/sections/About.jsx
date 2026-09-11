@@ -24,30 +24,30 @@ export default function About() {
                 <path id="circlePath" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" />
               </defs>
               <text>
-                <textPath href="#circlePath">HEALING HANDS · CHILD DEVELOPMENT CENTRE · THIRUVERKADU ·&nbsp;</textPath>
+                <textPath href="#circlePath">SAI MULTISPECIALITY KLINIC · GUDUVANCHERY · EST. 2017 ·&nbsp;</textPath>
               </text>
             </svg>
             <span className="about__badge-core"><Icon name="sparkle" size={20} /></span>
           </div>
 
           <div className="about__exp" data-scroll data-scroll-speed="0.5">
-            <strong>3+</strong>
-            <span>years of<br />child development</span>
+            <strong>8+</strong>
+            <span>years of<br />clinical trust</span>
           </div>
         </div>
 
         <div className="about__content">
           <SectionHeader
-            eyebrow="Why Healing Hands CDC"
+            eyebrow="Why Choose Sai Multispeciality Klinic"
             segments={[
-              { t: 'Therapy that respects your child, ' },
-              { t: 'their growth, and your family trust.', em: true },
+              { t: 'Healthcare that prioritizes your wellness, ' },
+              { t: 'time, and family peace of mind.', em: true },
             ]}
           />
           <p className="about__lead" data-reveal>
-            Pediatric therapy in Thiruverkadu should be engaging, scientifically structured, and deeply supportive.
-            Healing Hands Child Development Centre was established to provide individualized Occupational Therapy,
-            Speech Therapy, and Behavior Therapy to nurture every child's full potential.
+            Quality healthcare in Guduvanchery should be accessible, transparent, and multi-disciplinary.
+            Established in 2017, Sai Multispeciality Klinic brings together experienced consultants across Dermatology,
+            Gynaecology, Orthopaedics, Pulmonology, Psychiatry, and General Medicine under one patient-first facility on GST Road.
           </p>
 
           <ul className="about__list">
@@ -60,12 +60,12 @@ export default function About() {
           </ul>
 
           <blockquote className="about__sign" data-reveal>
-            “Every child develops at their own unique pace. Our mission is to empower them with confidence, independence, and essential life skills.”
-            <cite>— K. Preethi, MOT (Occupational Therapist & Mental Health Specialist)</cite>
+            “Our commitment is to offer thorough, compassionate outpatient diagnosis and personalized care with complete medical integrity.”
+            <cite>— Clinical Team, Sai Multispeciality Klinic (Guduvanchery)</cite>
           </blockquote>
 
           <button className="link-arrow" onClick={() => scrollTo('#doctors')} data-cursor="hover" data-reveal>
-            Learn about our doctor <Icon name="arrowR" size={15} strokeWidth={2.2} />
+            Meet our specialists <Icon name="arrowR" size={15} strokeWidth={2.2} />
           </button>
         </div>
       </div>

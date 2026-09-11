@@ -73,11 +73,11 @@ export default function Doctors() {
     <section className="doctors section" data-scroll-section id="doctors">
       <div className="container">
         <SectionHeader
-          eyebrow="Our Doctor"
-          segments={[{ t: 'Expert physician who ' }, { t: 'listens first.', em: true }]}
+          eyebrow="Our Medical Specialists"
+          segments={[{ t: 'Experienced consultants across ' }, { t: 'key clinical specialties.', em: true }]}
           side={
             <>
-              <p>Experienced alumnus of Madras Medical College (MMC) with DNB specialization in Family Medicine — dedicated to compassionate, evidence-based care.</p>
+              <p>A multi-disciplinary panel of trusted clinicians across Dermatology, Gynaecology, Orthopaedics, Pulmonology, Psychiatry, and General Medicine providing patient-first care on GST Road, Guduvanchery.</p>
             </>
           }
         />
@@ -99,14 +99,14 @@ export default function Doctors() {
                   <span className="chip">{d.exp}</span>
                 </div>
                 <p className="doc-card__slot">
-                  <span className="pulse-dot" aria-hidden="true" /> Next: {d.slot}
+                  <span className="pulse-dot" aria-hidden="true" /> OPD: {d.slot}
                 </p>
                 <button
                   className="doc-card__btn"
                   onClick={() => openBooking(d.dept, d.slot)}
                   data-cursor="hover"
                 >
-                  Book with {d.name.split(' ')[1]} <Icon name="arrowR" size={14} strokeWidth={2.2} />
+                  Book Consultation <Icon name="arrowR" size={14} strokeWidth={2.2} />
                 </button>
               </div>
             </article>

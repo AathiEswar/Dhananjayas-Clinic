@@ -8,8 +8,8 @@ export default function Contact() {
     <section className="contact section" data-scroll-section id="visit">
       <div className="container">
         <SectionHeader
-          eyebrow="Visit Healing Hands CDC"
-          segments={[{ t: 'Located in RPS Complex, ' }, { t: 'Thiruverkadu, Chennai.', em: true }]}
+          eyebrow="Visit Sai Multispeciality Klinic"
+          segments={[{ t: 'Conveniently located on VOC Street, ' }, { t: 'Guduvanchery (off GST Road).', em: true }]}
         />
 
         <div className="contact__grid">
@@ -19,7 +19,7 @@ export default function Contact() {
               href={CLINIC.mapsUrl}
               target="_blank"
               rel="noreferrer"
-              aria-label="Open Healing Hands Child Development Centre location in Google Maps"
+              aria-label="Open Sai Multispeciality Klinic location in Google Maps"
               data-cursor="hover"
               data-reveal
             >
@@ -34,7 +34,7 @@ export default function Contact() {
                 <g stroke="#fff" strokeWidth="2.5" strokeLinecap="round" opacity="0.9">
                   <path d="M40 -10 V250" /><path d="M180 -10 V250" /><path d="M320 -10 V250" /><path d="M-10 60 H410" />
                 </g>
-                <circle cx="200" cy="118" r="34" fill="#0F4C42" opacity="0.08" />
+                <circle cx="200" cy="118" r="34" fill="#007791" opacity="0.12" />
               </svg>
               <span className="contact__pin" aria-hidden="true">
                 <Icon name="pin" size={22} strokeWidth={2} />
@@ -48,7 +48,7 @@ export default function Contact() {
             <address className="contact__addr" data-reveal>
               <h3>{CLINIC.name}</h3>
               <p>{CLINIC.address}</p>
-              <p className="contact__landmark" style={{ color: 'var(--c-accent, #C89B5A)', fontWeight: '600', marginTop: '6px' }}>Landmark: {CLINIC.landmark}</p>
+              <p className="contact__landmark" style={{ color: 'var(--teal)', fontWeight: '600', marginTop: '6px' }}>Landmark: {CLINIC.landmark}</p>
             </address>
 
             <div className="contact__hours" data-reveal>
@@ -77,8 +77,8 @@ export default function Contact() {
 
           <div className="contact__form" data-reveal>
             <div className="contact__form-head">
-              <h3>Book your visit</h3>
-              <p><span className="pulse-dot" aria-hidden="true" /> Confirmed within 15 minutes, 8 AM – 9 PM</p>
+              <h3>Book your consultation</h3>
+              <p><span className="pulse-dot" aria-hidden="true" /> Confirmed quickly · Walk-ins &amp; Appointments welcome</p>
             </div>
             <BookingForm />
           </div>

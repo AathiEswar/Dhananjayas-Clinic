@@ -4,53 +4,54 @@
 
 :root {
   /* ════════════════════════════════════════════════════════════
-     HEALING HANDS CDC BRAND THEME SYSTEM (Brochure Palette)
-     - Royal Violet / Purple: Primary Accent (#6D28D9)
-     - Leaf Green: Growth & Healing Accent (#16A34A)
-     - Caring Heart Magenta: OT Accent (#E11D48)
-     - Soft Lavender: Clean, comforting child-friendly background (#FAF5FF)
-     - Warm Amber: Energy & Joy (#F59E0B)
+     SAI MULTISPECIALITY KLINIC BRAND THEME SYSTEM
+     - Clinical Ocean Teal: Primary Medical Accent (#007791 / #0891B2)
+     - Navy Sapphire & Slate: Clinical Authority & Trust (#0F172A / #1E293B)
+     - Healthcare Mint: Healing & Wellness (#0D9488 / #10B981)
+     - Soft Hospital White / Slate: Clean, comforting clinical ambiance (#F8FAFC)
+     - Amber Gold: Verified Ratings & Precision (#D97706)
+     - Emergency Red: Priority & Triage (#E11D48)
      ════════════════════════════════════════════════════════════ */
 
   /* Raw Brand Colors */
-  --oviam-blue: #6D28D9;
-  --oviam-blue-deep: #4C1D95;
-  --oviam-blue-soft: #FAF5FF;
+  --oviam-blue: #007791;
+  --oviam-blue-deep: #083344;
+  --oviam-blue-soft: #F0F9FF;
   
-  --oviam-gold: #F59E0B;
-  --oviam-gold-dark: #D97706;
+  --oviam-gold: #D97706;
+  --oviam-gold-dark: #B45309;
   --oviam-gold-soft: #FFFBEB;
 
   --oviam-red: #E11D48;
   --oviam-red-soft: #FFE4E6;
 
   /* Mapped UI Tokens */
-  --bg: #FAF5FF;
-  --bg-soft: #F3E8FF;
+  --bg: #F8FAFC;
+  --bg-soft: #F1F5F9;
   --surface: #FFFFFF;
   --white: #FFFFFF;
 
-  --ink: #1E1B4B;
-  --ink-2: #4338CA;
+  --ink: #0F172A;
+  --ink-2: #334155;
 
-  --teal: #6D28D9;                     /* Main Brand Accent (Royal Purple) */
-  --teal-deep: #4C1D95;                /* Deep Violet Shade */
-  --sage: #16A34A;                     /* Secondary Accent (Leaf Green) */
-  --sage-soft: #F0FDF4;                /* Soft Leaf Mint Tint */
-  --gold: #F59E0B;                     /* Warm Amber Gold */
-  --red: #E11D48;                      /* Heart Accent */
+  --teal: #007791;                     /* Main Clinical Teal */
+  --teal-deep: #083344;                /* Deep Navy Slate */
+  --sage: #0D9488;                     /* Healthcare Mint Accent */
+  --sage-soft: #F0FDFA;                /* Soft Healthcare Mint Tint */
+  --gold: #D97706;                     /* Amber Gold */
+  --red: #E11D48;                      /* Emergency Red */
   --wa: #128C7E;                       /* WhatsApp Green */
 
   --error: #E11D48;
-  --line: rgba(109, 40, 217, 0.14);
-  --line-soft: rgba(109, 40, 217, 0.08);
+  --line: rgba(14, 116, 144, 0.14);
+  --line-soft: rgba(14, 116, 144, 0.08);
 
   --font-serif: 'Fraunces', 'Iowan Old Style', Georgia, serif;
   --font-sans: 'Manrope', -apple-system, 'Segoe UI', sans-serif;
 
-  --radius: 22px;
-  --shadow: 0 20px 48px -18px rgba(29, 53, 125, 0.2);
-  --shadow-soft: 0 10px 30px -14px rgba(29, 53, 125, 0.14);
+  --radius: 20px;
+  --shadow: 0 20px 48px -18px rgba(15, 23, 42, 0.12);
+  --shadow-soft: 0 10px 30px -14px rgba(15, 23, 42, 0.08);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-inout: cubic-bezier(0.76, 0, 0.24, 1);
 }
