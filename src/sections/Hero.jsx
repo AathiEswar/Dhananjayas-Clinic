@@ -34,21 +34,52 @@ export default function Hero() {
       <div className="hero__inner container">
         <div className="hero__copy">
           <h1 className="hero__title">
-            Expert multi-speciality healthcare <em>for your whole family.</em>
+            Classical acupuncture &amp; natural pain relief <em>without side effects.</em>
           </h1>
 
           <p className="hero__sub">
-            8+ years of multi-disciplinary medical excellence in <strong className="hero__sub-highlight">Guduvanchery</strong>, Chennai. Experienced consultants in Dermatology, Gynaecology, Orthopaedics, Pulmonology, General Medicine &amp; Psychiatry.
+            Root-cause meridian healing in <strong className="hero__sub-highlight">Kannivakkam</strong>, Guduvanchery. Specialized non-surgical relief for chronic L4-L5 spine disc pain, sciatica, frozen shoulder, migraine, and women’s health.
           </p>
 
           <div className="hero__ctas">
             <Button magnetic icon="calendar" onClick={() => openBooking()} aria-label="Book a consultation">
-              Book doctor appointment
+              Book healer consultation
             </Button>
             <Button variant="ghost" icon="phone" href={CLINIC.phoneHref}>
               Call {CLINIC.phoneDisplay}
             </Button>
           </div>
+
+          <a
+            className="hero__yt-badge"
+            href={CLINIC.youtube}
+            target="_blank"
+            rel="noreferrer"
+            data-cursor="hover"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              fontSize: '13px',
+              fontWeight: '700',
+              color: '#CC0000',
+              background: 'rgba(204, 0, 0, 0.08)',
+              padding: '7px 14px',
+              borderRadius: '999px',
+              marginTop: '4px',
+              width: 'fit-content',
+              maxWidth: '100%',
+              boxSizing: 'border-box',
+              textDecoration: 'none',
+              border: '1px solid rgba(204, 0, 0, 0.15)',
+            }}
+          >
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style={{ flexShrink: 0 }}>
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+            <span>Watch patient recoveries on YouTube @MOUNAA369</span>
+            <Icon name="arrowR" size={13} strokeWidth={2.2} />
+          </a>
 
           <div className="hero__proof">
             <span className="hero__proof-item">
@@ -56,37 +87,37 @@ export default function Hero() {
               <strong>{CLINIC.rating}</strong> · {CLINIC.reviewCount} reviews
             </span>
             <span className="hero__proof-sep" aria-hidden="true" />
-            <span className="hero__proof-item"><strong>15+</strong> Doctors</span>
+            <span className="hero__proof-item"><strong>1,200+</strong> Relieved</span>
             <span className="hero__proof-sep" aria-hidden="true" />
-            <span className="hero__proof-item"><strong>24/7</strong> Intake &amp; Triage</span>
+            <span className="hero__proof-item"><strong>100%</strong> Drugless &amp; Natural</span>
           </div>
         </div>
 
         <div className="hero__visual" aria-hidden="false">
-          {/* Main Hero Visual: Outpatient Clinical Consultation */}
+          {/* Main Hero Visual: Classical Acupuncture Therapy */}
           <div className="hero__main-card" data-scroll data-scroll-speed="-0.3">
             <div className="hero__img-frame">
               <img
-                src="/clinic-hero-consultation.jpg"
-                alt="Doctor consultation at Sai Multispeciality Klinic Guduvanchery"
+                src="/mounaa-acupuncture-hero.jpg"
+                alt="Classical acupuncture and pain relief therapy at MOUNAA HEALTH CENTER Kannivakkam"
                 className="hero__main-img"
               />
               <div className="hero__img-badge">
                 <span className="hero__img-badge-dot" />
-                <span>Doctor Consultation · OPD</span>
+                <span>Classical Acupuncture &amp; Hijama</span>
               </div>
               <div className="hero__img-caption">
-                <p className="hero__img-quote">“Comprehensive Healthcare For Your Whole Family.”</p>
-                <span className="hero__img-sub">VOC Street, NGO Colony, Guduvanchery (Opp. Chellamani &amp; Co)</span>
+                <p className="hero__img-quote">“Natural Pain Relief &amp; Holistic Wellness Without Side Effects.”</p>
+                <span className="hero__img-sub">First Floor, Kannivakkam Bus Stop, Guduvanchery – Arungal Road</span>
               </div>
             </div>
-            <span className="hero__floating-heart" title="Multi-Speciality Healthcare">
-              +
+            <span className="hero__floating-heart" title="Holistic Acupuncture &amp; Natural Healing">
+              ✦
             </span>
           </div>
 
           <div className="hero__card hero__card--slot" data-scroll data-scroll-speed="0.6">
-            <p className="hero__card-eyebrow"><span className="pulse-dot" aria-hidden="true" /> Next OPD Consultation</p>
+            <p className="hero__card-eyebrow"><span className="pulse-dot" aria-hidden="true" /> Next Consultation Slot</p>
             <p className="hero__card-doc">{nextDoc.name}</p>
             <p className="hero__card-dept">{nextDoc.dept}</p>
             <p className="hero__card-time"><Icon name="clock" size={14} /> {nextDoc.slot}</p>
@@ -101,12 +132,12 @@ export default function Hero() {
 
           <div className="hero__card hero__card--rating" data-scroll data-scroll-speed="1.1">
             <Stars />
-            <p><strong>{CLINIC.rating}</strong> Google &amp; Practo</p>
-            <span>{CLINIC.reviewCount} verified reviews</span>
+            <p><strong>{CLINIC.rating}</strong> Google Verified</p>
+            <span>{CLINIC.reviewCount} verified 5-star reviews</span>
           </div>
 
           <div className="hero__chip" data-scroll data-scroll-speed="0.9">
-            <Icon name="pin" size={15} /> Opp. Chellamani &amp; Co, Guduvanchery
+            <Icon name="pin" size={15} /> Kannivakkam Bus Stop, Guduvanchery
           </div>
         </div>
       </div>

@@ -73,11 +73,11 @@ export default function Doctors() {
     <section className="doctors section" data-scroll-section id="doctors">
       <div className="container">
         <SectionHeader
-          eyebrow="Our Medical Specialists"
-          segments={[{ t: 'Experienced consultants across ' }, { t: 'key clinical specialties.', em: true }]}
+          eyebrow="Our Natural Healers &amp; Specialists"
+          segments={[{ t: 'Dedicated holistic healers, ' }, { t: 'root-cause pain practitioners.', em: true }]}
           side={
             <>
-              <p>A multi-disciplinary panel of trusted clinicians across Dermatology, Gynaecology, Orthopaedics, Pulmonology, Psychiatry, and General Medicine providing patient-first care on GST Road, Guduvanchery.</p>
+              <p>Meet our compassionate panel of certified classical acupuncturists, Hijama cupping therapists, naturopaths, and homeopathic practitioners committed to gentle, drugless healing at Kannivakkam.</p>
             </>
           }
         />

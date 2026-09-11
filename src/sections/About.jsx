@@ -24,30 +24,30 @@ export default function About() {
                 <path id="circlePath" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" />
               </defs>
               <text>
-                <textPath href="#circlePath">SAI MULTISPECIALITY KLINIC · GUDUVANCHERY · EST. 2017 ·&nbsp;</textPath>
+                <textPath href="#circlePath">MOUNAA HEALTH CENTER · KANNIVAKKAM · 5.0 RATED ·&nbsp;</textPath>
               </text>
             </svg>
             <span className="about__badge-core"><Icon name="sparkle" size={20} /></span>
           </div>
 
           <div className="about__exp" data-scroll data-scroll-speed="0.5">
-            <strong>8+</strong>
-            <span>years of<br />clinical trust</span>
+            <strong>5.0★</strong>
+            <span>Google<br />Verified</span>
           </div>
         </div>
 
         <div className="about__content">
           <SectionHeader
-            eyebrow="Why Choose Sai Multispeciality Klinic"
+            eyebrow="Why Choose MOUNAA HEALTH CENTER"
             segments={[
-              { t: 'Healthcare that prioritizes your wellness, ' },
-              { t: 'time, and family peace of mind.', em: true },
+              { t: 'Natural healing that restores your wellness, ' },
+              { t: 'vitality, and peaceful living.', em: true },
             ]}
           />
           <p className="about__lead" data-reveal>
-            Quality healthcare in Guduvanchery should be accessible, transparent, and multi-disciplinary.
-            Established in 2017, Sai Multispeciality Klinic brings together experienced consultants across Dermatology,
-            Gynaecology, Orthopaedics, Pulmonology, Psychiatry, and General Medicine under one patient-first facility on GST Road.
+            Root-cause healing in Kannivakkam, Guduvanchery should be natural, compassionate, and side-effect-free.
+            MOUNAA HEALTH CENTER (The Temple of Silence) integrates Classical Acupuncture, clinical Hijama cupping,
+            and gentle natural medicine under one serene sanctuary to alleviate chronic pain and restore balance.
           </p>
 
           <ul className="about__list">
@@ -60,8 +60,8 @@ export default function About() {
           </ul>
 
           <blockquote className="about__sign" data-reveal>
-            “Our commitment is to offer thorough, compassionate outpatient diagnosis and personalized care with complete medical integrity.”
-            <cite>— Clinical Team, Sai Multispeciality Klinic (Guduvanchery)</cite>
+            “Our mission is to activate your body’s innate self-healing intelligence without aggressive chemicals or surgeries.”
+            <cite>— Healer Vinithraj &amp; Team, MOUNAA HEALTH CENTER</cite>
           </blockquote>
 
           <button className="link-arrow" onClick={() => scrollTo('#doctors')} data-cursor="hover" data-reveal>

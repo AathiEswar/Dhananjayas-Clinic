@@ -42,15 +42,15 @@ export default function Brochures() {
     <section className="brochures section" data-scroll-section id="facilities">
       <div className="container">
         <SectionHeader
-          eyebrow="Clinical Facilities & Diagnostics"
+          eyebrow="Healing Chambers &amp; Modalities"
           segments={[
-            { t: 'Modern infrastructure, ' },
-            { t: 'hygienic diagnostics & consultation.', em: true },
+            { t: 'Serene ambiance, ' },
+            { t: 'sterile cupping &amp; acupuncture suites.', em: true },
           ]}
         />
 
         <p className="brochures__intro" data-reveal>
-          Explore our spacious patient lounge, private consultation chambers, and on-site sample collection diagnostic facilities located in Guduvanchery on GST Road.
+          Explore our serene acupuncture treatment suites, clinical-grade sterile Hijama cupping setup, and holistic pulse diagnosis chambers located in Kannivakkam, Guduvanchery.
         </p>
 
         <div className="brochures__grid">

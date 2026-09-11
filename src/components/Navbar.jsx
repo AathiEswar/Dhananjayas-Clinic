@@ -44,7 +44,7 @@ export default function Navbar() {
   useEffect(() => {
     if (!menuOpen) return;
     const onKey = (e) => { if (e.key === 'Escape') setMenuOpen(false); };
-    const mq = window.matchMedia('(min-width: 1025px)');
+    const mq = window.matchMedia('(min-width: 1141px)');
     const onWide = (e) => { if (e.matches) setMenuOpen(false); };
     window.addEventListener('keydown', onKey);
     mq.addEventListener('change', onWide);
@@ -74,15 +74,20 @@ export default function Navbar() {
           <a className="nav__brand" href="#top" onClick={go('#top')} aria-label={`${CLINIC.name} — home`} data-cursor="hover">
             <span className="nav__mark" aria-hidden="true">
               <svg viewBox="0 0 80 80" width="40" height="40">
-                <rect width="80" height="80" rx="18" fill="var(--bg-soft, #F1F5F9)" />
-                <path d="M40 16 V64 M16 40 H64" stroke="var(--teal, #007791)" strokeWidth="9" strokeLinecap="round" />
-                <circle cx="40" cy="40" r="10" fill="#FFFFFF" />
-                <circle cx="40" cy="40" r="4.5" fill="var(--sage, #0D9488)" />
+                <rect width="80" height="80" rx="18" fill="var(--bg-soft, #F2EFE9)" />
+                {/* Central acupuncture / meridian balance needle & lotus motif */}
+                <circle cx="40" cy="40" r="26" fill="none" stroke="var(--gold, #C69255)" strokeWidth="2.5" opacity="0.4" />
+                <path d="M40 12 V68" stroke="var(--teal, #0F4C3A)" strokeWidth="4.5" strokeLinecap="round" />
+                <circle cx="40" cy="12" r="3.5" fill="var(--gold, #C69255)" />
+                {/* Zen Lotus petals */}
+                <path d="M40 40 C32 26 20 34 26 48 C32 58 40 40 40 40 Z" fill="var(--teal, #0F4C3A)" opacity="0.85" />
+                <path d="M40 40 C48 26 60 34 54 48 C48 58 40 40 40 40 Z" fill="var(--teal, #0F4C3A)" opacity="0.85" />
+                <circle cx="40" cy="40" r="5" fill="#FFFFFF" />
+                <circle cx="40" cy="40" r="2.5" fill="var(--gold, #C69255)" />
               </svg>
             </span>
             <span className="nav__brand-txt">
-              <strong><span style={{ color: 'var(--ink)' }}>Sai</span> <span style={{ color: 'var(--teal)' }}>Multispeciality</span> <span style={{ color: 'var(--sage)', fontWeight: '700' }}>Klinic</span></strong>
-              <em>Guduvanchery · Multi-Speciality OPD</em>
+              <strong><span style={{ color: 'var(--ink)' }}>MOUNAA</span> <span style={{ color: 'var(--teal)' }}>HEALTH</span></strong>
             </span>
           </a>
 
@@ -144,7 +149,7 @@ export default function Navbar() {
               <span className="btn__ic"><Icon name="whatsapp" size={15} strokeWidth={2} /></span>
             </a>
           </div>
-          <p className="menu__hours">Facility Open 24/7 · Specialist OPD 9 AM – 9 PM</p>
+          <p className="menu__hours">Mon – Sat: 9:00 AM – 8:30 PM · Sunday by Appointment</p>
         </div>
       </div>
     </>

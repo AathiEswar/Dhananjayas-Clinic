@@ -1,40 +1,47 @@
 /**
  * ─────────────────────────────────────────────────────────────
- *  CLINIC CONFIG — Sai Multispeciality Klinic (Guduvanchery, Chennai)
- *  All CTAs (call / WhatsApp / maps / hours) read from this file.
+ *  CLINIC CONFIG — MOUNAA HEALTH CENTER (Kannivakkam, Guduvanchery)
+ *  Acupuncture, Hijama Cupping, Spine & Natural Healing
+ *  All CTAs (call / WhatsApp / YouTube / maps / hours) read from here.
  * ─────────────────────────────────────────────────────────────
  */
 export const CLINIC = {
-  name: 'Sai Multispeciality Klinic',
-  shortName: 'Sai Multispeciality',
-  tagline: 'Advanced Healthcare & Multi-Disciplinary Excellence · Guduvanchery',
-  slogan: 'Comprehensive Healthcare For Your Whole Family.',
-  motto: 'Dedicated Specialists, Modern Care, Trusted by Generations.',
-  tamilTagline: 'உங்கள் குடும்பத்தின் ஆரோக்கியத்திற்கு முழுமையான மருத்துவ சிகிச்சை',
-  city: 'Guduvanchery · Chengalpattu / Chennai',
+  name: 'MOUNAA HEALTH CENTER',
+  shortName: 'Mounaa Health',
+  altName: 'Mounalaya Health Center · The Temple of Silence',
+  tagline: 'Classical Acupuncture, Hijama Cupping & Holistic Spine Care · Kannivakkam',
+  slogan: 'Natural Pain Relief & Holistic Wellness Without Side Effects.',
+  motto: 'Root-Cause Healing through Acupuncture, Cupping & Natural Medicine.',
+  tamilTagline: 'பக்கவிளைவுகளற்ற பாரம்பரிய அக்குபஞ்சர் மற்றும் இயற்கை மருத்துவ சிகிச்சை',
+  city: 'Kannivakkam · Guduvanchery, Chengalpattu / Chennai',
 
   // Phone shown to users + the tel: link
-  phoneDisplay: '+91 89048 72002',
-  phoneHref: 'tel:+918904872002',
-  phoneAltDisplay: '+91 99411 30300',
-  phoneAltHref: 'tel:+919941130300',
+  phoneDisplay: '+91 93456 64749',
+  phoneHref: 'tel:+919345664749',
+  phoneAltDisplay: '+91 93456 64749',
+  phoneAltHref: 'tel:+919345664749',
 
-  // WhatsApp number in international format (used in wa.me links)
-  whatsapp: '918904872002',
+  // WhatsApp number in international format
+  whatsapp: '919345664749',
 
-  email: 'info@saimultispecialityklinic.com',
-  address: 'Survey No. 94/2, 94/9A, Door No. 45/1 (Ground Floor, No. 54), VOC Street, N.G.O. Colony, Srinivasapuram, Guduvanchery, Chengalpattu District, Tamil Nadu - 603202',
-  landmark: 'Opposite Chellamani & Co, Near Sri Rani Mahal, off GST Road',
-  mapsUrl: 'https://maps.app.goo.gl/9y7hCQ5e9FYwfZcB9',
+  // YouTube Channel & Featured Video
+  youtube: 'https://www.youtube.com/@MOUNAA369',
+  youtubeHandle: '@MOUNAA369',
+  featuredVideoId: 'XfGf8UB9jU0',
+  featuredVideoUrl: 'https://www.youtube.com/watch?v=XfGf8UB9jU0',
 
-  rating: '4.7',
-  reviewCount: '180+',
+  email: 'mounaahealthcenter@gmail.com',
+  address: 'First Floor, Kannivakkam Bus Stop, Guduvanchery, Chengalpattu District, Tamil Nadu - 603202',
+  landmark: 'First Floor, Above Shops at Kannivakkam Bus Stop, Guduvanchery – Arungal Road',
+  mapsUrl: 'https://maps.app.goo.gl/qGjnwPSkBSdWXnhR6',
+
+  rating: '5.0',
+  reviewCount: '20+',
 
   hours: [
-    { days: 'Facility & Triage', time: 'Open 24 Hours / 7 Days' },
-    { days: 'Morning OPD Slots', time: '9:00 AM – 1:00 PM' },
-    { days: 'Evening OPD Slots', time: '5:00 PM – 9:00 PM' },
-    { days: 'Sunday Specialty OPD', time: '9:30 AM – 1:30 PM (On Call)' },
+    { days: 'Monday – Saturday', time: '9:00 AM – 8:30 PM' },
+    { days: 'Sunday Clinic', time: '9:30 AM – 2:00 PM (By Appointment)' },
+    { days: 'Acute Pain Relief', time: 'Helpline & Consultation Available' },
   ],
 };
 
@@ -44,5 +51,5 @@ export function waLink(message) {
 }
 
 export const WA_DEFAULT = waLink(
-  `Hi ${CLINIC.name}! I would like to enquire about doctor consultation slots and book an appointment.`
+  `Hi ${CLINIC.name}! I would like to enquire about acupuncture / cupping therapy consultation slots and book an appointment.`
 );

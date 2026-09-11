@@ -8,8 +8,8 @@ export default function Contact() {
     <section className="contact section" data-scroll-section id="visit">
       <div className="container">
         <SectionHeader
-          eyebrow="Visit Sai Multispeciality Klinic"
-          segments={[{ t: 'Conveniently located on VOC Street, ' }, { t: 'Guduvanchery (off GST Road).', em: true }]}
+          eyebrow="Visit MOUNAA HEALTH CENTER"
+          segments={[{ t: 'Conveniently located at Kannivakkam Bus Stop, ' }, { t: 'Guduvanchery – Arungal Road.', em: true }]}
         />
 
         <div className="contact__grid">
@@ -19,14 +19,14 @@ export default function Contact() {
               href={CLINIC.mapsUrl}
               target="_blank"
               rel="noreferrer"
-              aria-label="Open Sai Multispeciality Klinic location in Google Maps"
+              aria-label="Open MOUNAA HEALTH CENTER location in Google Maps"
               data-cursor="hover"
               data-reveal
             >
               <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                <rect width="400" height="240" fill="#E8EFE6" />
-                <path d="M-10 190 C80 150 140 230 230 196 S380 150 420 176" fill="none" stroke="#CBDCD2" strokeWidth="26" strokeLinecap="round" />
-                <g stroke="#D8D2C2" strokeWidth="7" strokeLinecap="round">
+                <rect width="400" height="240" fill="#EBF2EE" />
+                <path d="M-10 190 C80 150 140 230 230 196 S380 150 420 176" fill="none" stroke="#D1E2D8" strokeWidth="26" strokeLinecap="round" />
+                <g stroke="#DDD6C8" strokeWidth="7" strokeLinecap="round">
                   <path d="M40 -10 V250" /><path d="M110 -10 V250" /><path d="M180 -10 V250" />
                   <path d="M250 -10 V250" /><path d="M320 -10 V250" />
                   <path d="M-10 60 H410" /><path d="M-10 130 H410" />
@@ -34,7 +34,7 @@ export default function Contact() {
                 <g stroke="#fff" strokeWidth="2.5" strokeLinecap="round" opacity="0.9">
                   <path d="M40 -10 V250" /><path d="M180 -10 V250" /><path d="M320 -10 V250" /><path d="M-10 60 H410" />
                 </g>
-                <circle cx="200" cy="118" r="34" fill="#007791" opacity="0.12" />
+                <circle cx="200" cy="118" r="34" fill="#0F4C3A" opacity="0.14" />
               </svg>
               <span className="contact__pin" aria-hidden="true">
                 <Icon name="pin" size={22} strokeWidth={2} />
@@ -68,6 +68,14 @@ export default function Contact() {
               <a className="btn btn--wa" href={WA_DEFAULT} target="_blank" rel="noreferrer" data-cursor="hover">
                 <span className="btn__solo">Chat on WhatsApp</span>
                 <span className="btn__ic"><Icon name="whatsapp" size={15} strokeWidth={2} /></span>
+              </a>
+              <a className="btn btn--ghost" href={CLINIC.youtube} target="_blank" rel="noreferrer" data-cursor="hover" title="Watch on YouTube">
+                <span className="btn__solo">{CLINIC.youtubeHandle}</span>
+                <span className="btn__ic" style={{ color: '#CC0000' }}>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                </span>
               </a>
               <a className="contact__mail" href={`mailto:${CLINIC.email}`} data-cursor="hover">
                 <Icon name="mail" size={15} /> {CLINIC.email}

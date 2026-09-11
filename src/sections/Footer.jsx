@@ -11,16 +11,16 @@ export default function Footer() {
     <footer className="footer" data-scroll-section>
       <div className="container">
         <div className="footer__top">
-          <p className="footer__tag" data-reveal>Comprehensive Healthcare For Your Whole Family.</p>
+          <p className="footer__tag" data-reveal>Natural Pain Relief &amp; Holistic Wellness Without Side Effects.</p>
           <h2 className="footer__wordmark" aria-label={CLINIC.name}>
             <span className="footer__wordmark-line">
-              {"Sai Multispeciality".split('').map((ch, i) => (
+              {"MOUNAA HEALTH".split('').map((ch, i) => (
                 <span key={`l1-${i}`} style={{ '--i': i }}>{ch === ' ' ? '\u00A0' : ch}</span>
               ))}
             </span>
             <span className="footer__wordmark-line">
-              {"Klinic · Guduvanchery".split('').map((ch, i) => (
-                <span key={`l2-${i}`} style={{ '--i': i + 18 }}>{ch === ' ' ? '\u00A0' : ch}</span>
+              {"CENTER · KANNIVAKKAM".split('').map((ch, i) => (
+                <span key={`l2-${i}`} style={{ '--i': i + 14 }}>{ch === ' ' ? '\u00A0' : ch}</span>
               ))}
             </span>
           </h2>
@@ -29,7 +29,7 @@ export default function Footer() {
         <div className="footer__grid">
           <div className="footer__col footer__col--brand">
             <p>
-              A premier multi-speciality medical clinic in {CLINIC.city} providing expert consultations across Dermatology, Gynaecology, Orthopaedics, Pulmonology, General Medicine &amp; emergency triage.
+              A premier Classical Acupuncture, Hijama Cupping &amp; Natural Healing sanctuary in {CLINIC.city}. Specializing in non-surgical L4-L5 spine disc decompression, sciatica relief, and drugless healing.
             </p>
             <button className="btn btn--primary btn--sm" onClick={() => openBooking()} data-cursor="hover">
               <span className="btn__solo">Book consultation</span>
@@ -44,20 +44,23 @@ export default function Footer() {
             ))}
           </nav>
 
-          <nav className="footer__col" aria-label="Services">
-            <h4>Services</h4>
+          <nav className="footer__col" aria-label="Treatments">
+            <h4>Treatments</h4>
             {SERVICES.slice(0, 5).map((s) => (
               <a key={s.id} href="#services" onClick={go('#services')} data-cursor="hover">{s.title}</a>
             ))}
           </nav>
 
           <div className="footer__col" aria-label="Contact">
-            <h4>Contact & Visit</h4>
+            <h4>Contact &amp; Visit</h4>
             <p>{CLINIC.address}</p>
             <p className="footer__landmark" style={{ fontSize: '0.85rem', opacity: 0.8, marginTop: '4px' }}>Landmark: {CLINIC.landmark}</p>
             <a href={CLINIC.phoneHref} data-cursor="hover">{CLINIC.phoneDisplay}</a>
+            <a href={CLINIC.youtube} target="_blank" rel="noreferrer" data-cursor="hover" style={{ color: '#CC0000', fontWeight: '600' }}>
+              YouTube: {CLINIC.youtubeHandle}
+            </a>
             <a href={`mailto:${CLINIC.email}`} data-cursor="hover">{CLINIC.email}</a>
-            <p className="footer__hours">Facility Open 24/7 · Specialist OPD 9 AM–1 PM &amp; 5 PM–9 PM</p>
+            <p className="footer__hours">Mon – Sat: 9:00 AM – 8:30 PM · Sunday by Appointment</p>
           </div>
         </div>
 

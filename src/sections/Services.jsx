@@ -10,16 +10,16 @@ export default function Services() {
     <section className="services section" data-scroll-section id="services">
       <div className="container">
         <SectionHeader
-          eyebrow="Clinical Specialties & OPD Departments"
-          segments={[{ t: 'Comprehensive healthcare, ' }, { t: 'one trusted polyclinic.', em: true }]}
+          eyebrow="Holistic Healing &amp; Natural Pain Therapies"
+          segments={[{ t: 'Ancient meridian therapies, ' }, { t: 'side-effect-free recovery.', em: true }]}
           side={
             <>
               <p>
-                From routine viral illnesses to specialized dermatology, orthopaedics, and women’s health,
-                our departments are equipped for dedicated diagnosis and evidence-based treatment.
+                Natural healing modalities targeting root energy blockages — from chronic L4-L5 spine disc compression
+                and sciatica to frozen shoulder, migraine, and hormonal imbalances.
               </p>
-              <button className="link-arrow" onClick={() => scrollTo('#visit')} data-cursor="hover">
-                Visit our clinic <Icon name="arrowR" size={15} strokeWidth={2.2} />
+              <button className="link-arrow" onClick={() => scrollTo('#videos')} data-cursor="hover">
+                Watch recovery videos <Icon name="arrowR" size={15} strokeWidth={2.2} />
               </button>
             </>
           }

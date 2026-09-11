@@ -14,7 +14,7 @@ export default function TrustStats() {
           ))}
         </div>
         <p className="stats__caption" data-reveal>
-          Trusted by families across Guduvanchery, Urapakkam &amp; Chengalpattu for expert multi-speciality consultations, dermatology, gynaecology &amp; outpatient care.
+          Trusted by patients across Kannivakkam, Guduvanchery, Chengalpattu &amp; Chennai for root-cause pain relief, Classical Acupuncture, and clinical Hijama cupping.
         </p>
       </div>
     </section>

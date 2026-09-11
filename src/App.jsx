@@ -11,6 +11,7 @@ import Hero from './sections/Hero';
 import TrustStats from './sections/TrustStats';
 import Services from './sections/Services';
 import Brochures from './sections/Brochures';
+import VideoGallery from './sections/VideoGallery';
 import About from './sections/About';
 import Doctors from './sections/Doctors';
 import Process from './sections/Process';
@@ -61,6 +62,7 @@ function Site() {
             <TrustStats />
             <Services />
             <Brochures />
+            <VideoGallery />
             {/* <About /> */}
             <Doctors />
             <Process />
