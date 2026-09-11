@@ -25,9 +25,9 @@ export default function Process() {
         </ol>
 
         <p className="process__cta" data-reveal>
-          Not sure which therapy is best for your condition?{' '}
-          <button className="link-arrow" onClick={() => openBooking('Classical Acupuncture & Acupressure')} data-cursor="hover">
-            Start with Classical Acupuncture <Icon name="arrowR" size={15} strokeWidth={2.2} />
+          Not sure which procedure is appropriate for your condition?{' '}
+          <button className="link-arrow" onClick={() => openBooking('Piles & Fistula Consultation')} data-cursor="hover">
+            Book a confidential evaluation with Dr. Dhananjaya <Icon name="arrowR" size={15} strokeWidth={2.2} />
           </button>
         </p>
       </div>

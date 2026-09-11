@@ -10,16 +10,15 @@ export default function Services() {
     <section className="services section" data-scroll-section id="services">
       <div className="container">
         <SectionHeader
-          eyebrow="Holistic Healing &amp; Natural Pain Therapies"
-          segments={[{ t: 'Ancient meridian therapies, ' }, { t: 'side-effect-free recovery.', em: true }]}
+          eyebrow="Specialized Proctology &amp; Anorectal Treatments"
+          segments={[{ t: 'Advanced minimally invasive care, ' }, { t: 'permanent recurrence-free relief.', em: true }]}
           side={
             <>
               <p>
-                Natural healing modalities targeting root energy blockages — from chronic L4-L5 spine disc compression
-                and sciatica to frozen shoulder, migraine, and hormonal imbalances.
+                Comprehensive proctology solutions specializing in laser piles ablation, authentic Kshara Sutra therapy for anal fistula, chronic fissure repair, and pilonidal sinus management with zero sphincter damage.
               </p>
-              <button className="link-arrow" onClick={() => scrollTo('#videos')} data-cursor="hover">
-                Watch recovery videos <Icon name="arrowR" size={15} strokeWidth={2.2} />
+              <button className="link-arrow" onClick={() => scrollTo('#procedure-guide')} data-cursor="hover">
+                Compare surgery vs. Kshara Sutra <Icon name="arrowR" size={15} strokeWidth={2.2} />
               </button>
             </>
           }

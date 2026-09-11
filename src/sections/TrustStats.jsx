@@ -14,7 +14,7 @@ export default function TrustStats() {
           ))}
         </div>
         <p className="stats__caption" data-reveal>
-          Trusted by patients across Kannivakkam, Guduvanchery, Chengalpattu &amp; Chennai for root-cause pain relief, Classical Acupuncture, and clinical Hijama cupping.
+          Trusted by over 10,000+ patients across New Perungalathur, Tambaram, Chromepet, Guduvanchery &amp; Chennai for permanent piles, fistula, and fissure relief.
         </p>
       </div>
     </section>

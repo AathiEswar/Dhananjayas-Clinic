@@ -73,11 +73,11 @@ export default function Doctors() {
     <section className="doctors section" data-scroll-section id="doctors">
       <div className="container">
         <SectionHeader
-          eyebrow="Our Natural Healers &amp; Specialists"
-          segments={[{ t: 'Dedicated holistic healers, ' }, { t: 'root-cause pain practitioners.', em: true }]}
+          eyebrow="Chief Proctology Specialists &amp; Surgeons"
+          segments={[{ t: 'Pioneers in Kshara Sutra, ' }, { t: 'minimally invasive proctology.', em: true }]}
           side={
             <>
-              <p>Meet our compassionate panel of certified classical acupuncturists, Hijama cupping therapists, naturopaths, and homeopathic practitioners committed to gentle, drugless healing at Kannivakkam.</p>
+              <p>Meet our experienced surgical team led by Dr. Dhananjaya (25+ years experience) and Dr. Venkhatesan, dedicated to permanent, sphincter-preserving cures for piles, fistula, and fissure at New Perungalathur, Tambaram.</p>
             </>
           }
         />

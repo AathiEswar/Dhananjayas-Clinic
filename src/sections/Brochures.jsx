@@ -42,15 +42,15 @@ export default function Brochures() {
     <section className="brochures section" data-scroll-section id="facilities">
       <div className="container">
         <SectionHeader
-          eyebrow="Healing Chambers &amp; Modalities"
+          eyebrow="Clinical Facilities &amp; Diagnostic Suite"
           segments={[
-            { t: 'Serene ambiance, ' },
-            { t: 'sterile cupping &amp; acupuncture suites.', em: true },
+            { t: 'Modern proctology setup, ' },
+            { t: 'sterile minor OT &amp; consultation chambers.', em: true },
           ]}
         />
 
         <p className="brochures__intro" data-reveal>
-          Explore our serene acupuncture treatment suites, clinical-grade sterile Hijama cupping setup, and holistic pulse diagnosis chambers located in Kannivakkam, Guduvanchery.
+          Explore our anorectal diagnostic suite, sterile minor OT setup for Kshara Sutra and laser procedures, and private consultation chambers located at NGO Nagar, New Perungalathur (Near Tambaram).
         </p>
 
         <div className="brochures__grid">
@@ -104,8 +104,8 @@ export default function Brochures() {
         {/* Additional Programs Highlight */}
         <div className="brochures__extras" data-reveal>
           <div className="extras__head">
-            <span className="chip chip--purple">We Also Provide</span>
-            <h3>Preventive Health Checkups &amp; Lab Screening</h3>
+            <span className="chip chip--purple">Clinical Protocol</span>
+            <h3>Comprehensive Diagnostic Grading &amp; Permanent Follow-Up</h3>
           </div>
           <div className="extras__grid">
             {ADDITIONAL_PROGRAMS.map((prog, idx) => (

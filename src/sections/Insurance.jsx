@@ -28,7 +28,7 @@ export default function Insurance() {
         <a
           className="link-arrow"
           data-reveal
-          href={waLink('Hi Solace Health! Could you check if my insurance policy is covered for cashless treatment?')}
+          href={waLink(`Hi ${CLINIC.name}! Could you check if my insurance / mediclaim policy is covered for daycare proctology treatment?`)}
           target="_blank"
           rel="noreferrer"
           data-cursor="hover"

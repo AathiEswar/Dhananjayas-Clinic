@@ -74,20 +74,14 @@ export default function Navbar() {
           <a className="nav__brand" href="#top" onClick={go('#top')} aria-label={`${CLINIC.name} — home`} data-cursor="hover">
             <span className="nav__mark" aria-hidden="true">
               <svg viewBox="0 0 80 80" width="40" height="40">
-                <rect width="80" height="80" rx="18" fill="var(--bg-soft, #F2EFE9)" />
-                {/* Central acupuncture / meridian balance needle & lotus motif */}
-                <circle cx="40" cy="40" r="26" fill="none" stroke="var(--gold, #C69255)" strokeWidth="2.5" opacity="0.4" />
-                <path d="M40 12 V68" stroke="var(--teal, #0F4C3A)" strokeWidth="4.5" strokeLinecap="round" />
-                <circle cx="40" cy="12" r="3.5" fill="var(--gold, #C69255)" />
-                {/* Zen Lotus petals */}
-                <path d="M40 40 C32 26 20 34 26 48 C32 58 40 40 40 40 Z" fill="var(--teal, #0F4C3A)" opacity="0.85" />
-                <path d="M40 40 C48 26 60 34 54 48 C48 58 40 40 40 40 Z" fill="var(--teal, #0F4C3A)" opacity="0.85" />
-                <circle cx="40" cy="40" r="5" fill="#FFFFFF" />
-                <circle cx="40" cy="40" r="2.5" fill="var(--gold, #C69255)" />
+                <rect width="80" height="80" rx="18" fill="var(--bg-soft, #F1F5F9)" />
+                <path d="M40 18 V62" stroke="var(--teal, #086375)" strokeWidth="6" strokeLinecap="round" />
+                <path d="M18 40 H62" stroke="var(--teal, #086375)" strokeWidth="6" strokeLinecap="round" />
+                <circle cx="40" cy="40" r="10" fill="var(--surface, #FFFFFF)" stroke="var(--gold, #E07A5F)" strokeWidth="3.5" />
               </svg>
             </span>
             <span className="nav__brand-txt">
-              <strong><span style={{ color: 'var(--ink)' }}>MOUNAA</span> <span style={{ color: 'var(--teal)' }}>HEALTH</span></strong>
+              <strong><span style={{ color: 'var(--ink)' }}>DR.</span> <span style={{ color: 'var(--teal)' }}>DHANANJAYA</span></strong>
             </span>
           </a>
 

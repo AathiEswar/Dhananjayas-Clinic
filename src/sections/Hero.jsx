@@ -34,16 +34,16 @@ export default function Hero() {
       <div className="hero__inner container">
         <div className="hero__copy">
           <h1 className="hero__title">
-            Classical acupuncture &amp; natural pain relief <em>without side effects.</em>
+            Advanced Piles, Fistula &amp; Fissure Care. <em>Minimally invasive &amp; virtually painless.</em>
           </h1>
 
           <p className="hero__sub">
-            Root-cause meridian healing in <strong className="hero__sub-highlight">Kannivakkam</strong>, Guduvanchery. Specialized non-surgical relief for chronic L4-L5 spine disc pain, sciatica, frozen shoulder, migraine, and women’s health.
+            25+ years of specialized proctology &amp; Kshara Sutra excellence in <strong className="hero__sub-highlight">New Perungalathur</strong>, Tambaram. 30-minute day-care procedures, same-day walk-home discharge, and 100% sphincter preservation.
           </p>
 
           <div className="hero__ctas">
             <Button magnetic icon="calendar" onClick={() => openBooking()} aria-label="Book a consultation">
-              Book healer consultation
+              Book consultation
             </Button>
             <Button variant="ghost" icon="phone" href={CLINIC.phoneHref}>
               Call {CLINIC.phoneDisplay}
@@ -52,9 +52,7 @@ export default function Hero() {
 
           <a
             className="hero__yt-badge"
-            href={CLINIC.youtube}
-            target="_blank"
-            rel="noreferrer"
+            href="#procedure-guide"
             data-cursor="hover"
             style={{
               display: 'inline-flex',
@@ -62,8 +60,8 @@ export default function Hero() {
               gap: '8px',
               fontSize: '13px',
               fontWeight: '700',
-              color: '#CC0000',
-              background: 'rgba(204, 0, 0, 0.08)',
+              color: 'var(--teal)',
+              background: 'var(--teal-mist)',
               padding: '7px 14px',
               borderRadius: '999px',
               marginTop: '4px',
@@ -71,13 +69,11 @@ export default function Hero() {
               maxWidth: '100%',
               boxSizing: 'border-box',
               textDecoration: 'none',
-              border: '1px solid rgba(204, 0, 0, 0.15)',
+              border: '1px solid var(--border)',
             }}
           >
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style={{ flexShrink: 0 }}>
-              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-            </svg>
-            <span>Watch patient recoveries on YouTube @MOUNAA369</span>
+            <span className="pulse-dot" aria-hidden="true" />
+            <span>30-Min Day-Care · Same-Day Walk-Home Discharge</span>
             <Icon name="arrowR" size={13} strokeWidth={2.2} />
           </a>
 
@@ -87,31 +83,31 @@ export default function Hero() {
               <strong>{CLINIC.rating}</strong> · {CLINIC.reviewCount} reviews
             </span>
             <span className="hero__proof-sep" aria-hidden="true" />
-            <span className="hero__proof-item"><strong>1,200+</strong> Relieved</span>
+            <span className="hero__proof-item"><strong>10,000+</strong> Relieved</span>
             <span className="hero__proof-sep" aria-hidden="true" />
-            <span className="hero__proof-item"><strong>100%</strong> Drugless &amp; Natural</span>
+            <span className="hero__proof-item"><strong>100%</strong> Continence Preserved</span>
           </div>
         </div>
 
         <div className="hero__visual" aria-hidden="false">
-          {/* Main Hero Visual: Classical Acupuncture Therapy */}
+          {/* Main Hero Visual: Dr. Dhananjaya Proctology Clinic */}
           <div className="hero__main-card" data-scroll data-scroll-speed="-0.3">
             <div className="hero__img-frame">
               <img
-                src="/mounaa-acupuncture-hero.jpg"
-                alt="Classical acupuncture and pain relief therapy at MOUNAA HEALTH CENTER Kannivakkam"
+                src="/dr-dhananjaya-hero.jpg"
+                alt="Dr. Dhananjaya - Advanced Piles, Fistula and Fissure Specialist Clinic in New Perungalathur, Tambaram"
                 className="hero__main-img"
               />
               <div className="hero__img-badge">
                 <span className="hero__img-badge-dot" />
-                <span>Classical Acupuncture &amp; Hijama</span>
+                <span>Laser Piles &amp; Kshara Sutra Clinic</span>
               </div>
               <div className="hero__img-caption">
-                <p className="hero__img-quote">“Natural Pain Relief &amp; Holistic Wellness Without Side Effects.”</p>
-                <span className="hero__img-sub">First Floor, Kannivakkam Bus Stop, Guduvanchery – Arungal Road</span>
+                <p className="hero__img-quote">“30-Minute Day-Care Relief. Same-Day Discharge Without Painful Cuts.”</p>
+                <span className="hero__img-sub">G.R. Complex, NGO Nagar Main Road, New Perungalathur (Tambaram)</span>
               </div>
             </div>
-            <span className="hero__floating-heart" title="Holistic Acupuncture &amp; Natural Healing">
+            <span className="hero__floating-heart" title="Sphincter-Preserving Laser &amp; Kshara Sutra Surgery">
               ✦
             </span>
           </div>
@@ -133,11 +129,11 @@ export default function Hero() {
           <div className="hero__card hero__card--rating" data-scroll data-scroll-speed="1.1">
             <Stars />
             <p><strong>{CLINIC.rating}</strong> Google Verified</p>
-            <span>{CLINIC.reviewCount} verified 5-star reviews</span>
+            <span>{CLINIC.reviewCount} verified patient reviews</span>
           </div>
 
           <div className="hero__chip" data-scroll data-scroll-speed="0.9">
-            <Icon name="pin" size={15} /> Kannivakkam Bus Stop, Guduvanchery
+            <Icon name="pin" size={15} /> NGO Nagar, New Perungalathur (Tambaram)
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@ import Hero from './sections/Hero';
 import TrustStats from './sections/TrustStats';
 import Services from './sections/Services';
 import Brochures from './sections/Brochures';
-import VideoGallery from './sections/VideoGallery';
+import ProcedureGuide from './sections/ProcedureGuide';
 import About from './sections/About';
 import Doctors from './sections/Doctors';
 import Process from './sections/Process';
@@ -61,9 +61,9 @@ function Site() {
             <Hero />
             <TrustStats />
             <Services />
+            <ProcedureGuide />
             <Brochures />
-            <VideoGallery />
-            {/* <About /> */}
+            <About />
             <Doctors />
             <Process />
             <Testimonials />

@@ -15,17 +15,17 @@ export default function CtaBanner() {
           <span className="ctab__ring" aria-hidden="true" />
 
           <p className="eyebrow eyebrow--light" data-reveal>
-            <span className="pulse-dot pulse-dot--light" aria-hidden="true" /> Same-day acupuncture &amp; cupping consultation slots available
+            <span className="pulse-dot pulse-dot--light" aria-hidden="true" /> Same-day confidential proctology consultations available
           </p>
 
           <MaskText
             as="h2"
             className="ctab__title"
-            segments={[{ t: 'Natural pain relief ' }, { t: 'shouldn’t have to wait.', em: true }]}
+            segments={[{ t: 'Permanent relief from piles &amp; fistula ' }, { t: 'shouldn’t have to wait.', em: true }]}
           />
 
           <p className="ctab__sub" data-reveal>
-            Book a holistic healer consultation now — it takes 30 seconds, walk-ins are welcomed, and our healing team confirms your slot promptly.
+            Book a confidential evaluation with Dr. Dhananjaya now — 30-minute daycare procedures, same-day discharge, and walk-home recovery.
           </p>
 
           <div className="ctab__actions" data-reveal>

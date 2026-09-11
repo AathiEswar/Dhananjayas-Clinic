@@ -11,15 +11,15 @@ export default function Footer() {
     <footer className="footer" data-scroll-section>
       <div className="container">
         <div className="footer__top">
-          <p className="footer__tag" data-reveal>Natural Pain Relief &amp; Holistic Wellness Without Side Effects.</p>
+          <p className="footer__tag" data-reveal>Advanced Piles, Fistula &amp; Fissure Care · 25+ Years Surgical Mastery</p>
           <h2 className="footer__wordmark" aria-label={CLINIC.name}>
             <span className="footer__wordmark-line">
-              {"MOUNAA HEALTH".split('').map((ch, i) => (
+              {"DR. DHANANJAYA".split('').map((ch, i) => (
                 <span key={`l1-${i}`} style={{ '--i': i }}>{ch === ' ' ? '\u00A0' : ch}</span>
               ))}
             </span>
             <span className="footer__wordmark-line">
-              {"CENTER · KANNIVAKKAM".split('').map((ch, i) => (
+              {"CLINIC · TAMBARAM".split('').map((ch, i) => (
                 <span key={`l2-${i}`} style={{ '--i': i + 14 }}>{ch === ' ' ? '\u00A0' : ch}</span>
               ))}
             </span>
@@ -29,7 +29,7 @@ export default function Footer() {
         <div className="footer__grid">
           <div className="footer__col footer__col--brand">
             <p>
-              A premier Classical Acupuncture, Hijama Cupping &amp; Natural Healing sanctuary in {CLINIC.city}. Specializing in non-surgical L4-L5 spine disc decompression, sciatica relief, and drugless healing.
+              A premier Proctology, Laser Piles &amp; Kshara Sutra healing center in {CLINIC.city}. Specializing in 30-minute minimally invasive day-care procedures with zero sphincter damage and near-zero recurrence.
             </p>
             <button className="btn btn--primary btn--sm" onClick={() => openBooking()} data-cursor="hover">
               <span className="btn__solo">Book consultation</span>
@@ -56,8 +56,8 @@ export default function Footer() {
             <p>{CLINIC.address}</p>
             <p className="footer__landmark" style={{ fontSize: '0.85rem', opacity: 0.8, marginTop: '4px' }}>Landmark: {CLINIC.landmark}</p>
             <a href={CLINIC.phoneHref} data-cursor="hover">{CLINIC.phoneDisplay}</a>
-            <a href={CLINIC.youtube} target="_blank" rel="noreferrer" data-cursor="hover" style={{ color: '#CC0000', fontWeight: '600' }}>
-              YouTube: {CLINIC.youtubeHandle}
+            <a href={CLINIC.website} target="_blank" rel="noreferrer" data-cursor="hover" style={{ color: 'var(--teal)', fontWeight: '600' }}>
+              Official Website: fistulaandpiles.com
             </a>
             <a href={`mailto:${CLINIC.email}`} data-cursor="hover">{CLINIC.email}</a>
             <p className="footer__hours">Mon – Sat: 9:00 AM – 8:30 PM · Sunday by Appointment</p>

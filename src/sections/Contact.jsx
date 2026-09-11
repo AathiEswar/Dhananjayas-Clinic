@@ -8,8 +8,8 @@ export default function Contact() {
     <section className="contact section" data-scroll-section id="visit">
       <div className="container">
         <SectionHeader
-          eyebrow="Visit MOUNAA HEALTH CENTER"
-          segments={[{ t: 'Conveniently located at Kannivakkam Bus Stop, ' }, { t: 'Guduvanchery – Arungal Road.', em: true }]}
+          eyebrow="Visit DR. Dhananjayas Clinic"
+          segments={[{ t: 'Conveniently located at G.R. Complex, ' }, { t: 'NGO Nagar, New Perungalathur (Tambaram).', em: true }]}
         />
 
         <div className="contact__grid">
@@ -19,7 +19,7 @@ export default function Contact() {
               href={CLINIC.mapsUrl}
               target="_blank"
               rel="noreferrer"
-              aria-label="Open MOUNAA HEALTH CENTER location in Google Maps"
+              aria-label="Open DR. Dhananjayas Clinic location in Google Maps"
               data-cursor="hover"
               data-reveal
             >
@@ -69,12 +69,10 @@ export default function Contact() {
                 <span className="btn__solo">Chat on WhatsApp</span>
                 <span className="btn__ic"><Icon name="whatsapp" size={15} strokeWidth={2} /></span>
               </a>
-              <a className="btn btn--ghost" href={CLINIC.youtube} target="_blank" rel="noreferrer" data-cursor="hover" title="Watch on YouTube">
-                <span className="btn__solo">{CLINIC.youtubeHandle}</span>
-                <span className="btn__ic" style={{ color: '#CC0000' }}>
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                  </svg>
+              <a className="btn btn--ghost" href={CLINIC.website} target="_blank" rel="noreferrer" data-cursor="hover" title="Visit Official Website">
+                <span className="btn__solo">Official Website</span>
+                <span className="btn__ic" style={{ color: 'var(--teal)' }}>
+                  <Icon name="arrow" size={14} strokeWidth={2.2} />
                 </span>
               </a>
               <a className="contact__mail" href={`mailto:${CLINIC.email}`} data-cursor="hover">

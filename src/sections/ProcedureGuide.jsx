@@ -1,0 +1,223 @@
+import { useState } from 'react';
+import SectionHeader from '../components/SectionHeader';
+import { CLINIC, WA_DEFAULT } from '../config';
+import { useScroll } from '../context/ScrollContext';
+import Icon from '../lib/Icons';
+
+const CONDITIONS = [
+  {
+    id: 'piles',
+    name: 'Piles (Hemorrhoids)',
+    tamil: 'மூல நோய்',
+    desc: 'Swollen veins in the lower rectum and anus causing painful defecation, bright red bleeding, itching, and tissue prolapse.',
+    causes: 'Chronic constipation, prolonged sitting, straining, low-fiber diet.',
+    solution: 'Minimally invasive day-care procedure sealing hemorrhoidal vessels without painful incisions.',
+    badge: '70% Population Affected',
+  },
+  {
+    id: 'fistula',
+    name: 'Anal Fistula (Bhagandara)',
+    tamil: 'பௌத்திரம்',
+    desc: 'An infected abnormal tunnel connecting the anal canal to the perianal skin, causing continuous foul discharge, pain, and recurring boils.',
+    causes: 'Untreated perianal abscess, clogged anal crypt glands, infection.',
+    solution: 'Authentic Kshara Sutra therapy: medicated seton gently cuts and heals the tract with zero sphincter damage.',
+    badge: 'Gold Standard Cure',
+  },
+  {
+    id: 'fissure',
+    name: 'Anal Fissure (Parikartika)',
+    tamil: 'ஆசனவாய் வெடிப்பு',
+    desc: 'A sharp tear or crack in the sensitive lining of the anal canal causing excruciating razor-sharp burning pain and drops of blood during stool passing.',
+    causes: 'Passing hard stools, severe straining, internal sphincter muscle spasm.',
+    solution: 'Medical spasm relaxation, gentle dilation, and non-surgical mucosal repair for immediate pain relief.',
+    badge: 'Instant Pain Relief',
+  },
+  {
+    id: 'pilonidal',
+    name: 'Pilonidal Sinus (Nadivrana)',
+    tamil: 'வால் எலும்பு சீழ் கட்டி',
+    desc: 'Infected tunnel or cavity at the tailbone cleft filled with hair and debris, causing recurrent abscesses and pain while sitting.',
+    causes: 'Ingrown hair, prolonged driving/sitting, friction.',
+    solution: 'Medicated track excision and antiseptic cleansing with minimal tissue loss and fast healing.',
+    badge: 'Minimally Invasive',
+  },
+];
+
+const COMPARISONS = [
+  {
+    feature: 'Pain & Discomfort',
+    conventional: 'Severe post-op pain requiring heavy analgesics and daily painful dressing changes',
+    dhananjaya: 'Virtually painless; performed under gentle local anesthesia with minimal discomfort',
+    advantage: true,
+  },
+  {
+    feature: 'Hospital Stay',
+    conventional: '3 to 5 days hospitalization; general anesthesia required',
+    dhananjaya: '30-minute day-care procedure; walk home comfortably the same day',
+    advantage: true,
+  },
+  {
+    feature: 'Anal Sphincter & Continence',
+    conventional: 'Cutting sphincter muscles carries risk of permanent bowel incontinence',
+    dhananjaya: '100% sphincter muscle preservation; zero risk of incontinence or leakage',
+    advantage: true,
+  },
+  {
+    feature: 'Recurrence Rate',
+    conventional: 'High recurrence (up to 20%–40% in complex or high fistulas)',
+    dhananjaya: 'Near-zero recurrence (< 1.5%) validated by clinical trials and 25+ years experience',
+    advantage: true,
+  },
+  {
+    feature: 'Return to Work / Activity',
+    conventional: '4 to 6 weeks of bed rest and restricted physical mobility',
+    dhananjaya: 'Walk immediately after procedure; resume normal desk work in 24 to 48 hours',
+    advantage: true,
+  },
+];
+
+export default function ProcedureGuide() {
+  const [activeCondition, setActiveCondition] = useState(CONDITIONS[0]);
+  const { openBooking } = useScroll();
+
+  return (
+    <section className="proc-guide section" data-scroll-section id="procedure-guide">
+      <div className="container">
+        <SectionHeader
+          eyebrow="Kshara Sutra &amp; Modern Proctology Guide"
+          segments={[
+            { t: 'Permanent root-cause relief, ' },
+            { t: 'zero sphincter damage.', em: true },
+          ]}
+          side={
+            <>
+              <p>
+                Dr. Dhananjayas Clinic combines 25+ years of specialized anorectal surgery with authentic Kshara Sutra
+                and minimally invasive day-care techniques for permanent, recurrence-free healing in Chennai.
+              </p>
+              <button className="link-arrow" onClick={() => openBooking()} data-cursor="hover">
+                Book confidential consultation <Icon name="arrowR" size={15} strokeWidth={2.2} />
+              </button>
+            </>
+          }
+        />
+
+        {/* Condition Selector Tabs */}
+        <div className="proc-tabs" data-reveal>
+          <div className="proc-tabs__nav" role="tablist" aria-label="Anorectal conditions">
+            {CONDITIONS.map((c) => (
+              <button
+                key={c.id}
+                className={`proc-tab-btn ${activeCondition.id === c.id ? 'is-active' : ''}`}
+                onClick={() => setActiveCondition(c)}
+                role="tab"
+                aria-selected={activeCondition.id === c.id}
+                data-cursor="hover"
+              >
+                <span className="proc-tab-btn__name">{c.name}</span>
+                <span className="proc-tab-btn__tamil">{c.tamil}</span>
+              </button>
+            ))}
+          </div>
+
+          <div className="proc-tab-card" role="tabpanel">
+            <div className="proc-tab-card__header">
+              <span className="chip chip--tint">{activeCondition.badge}</span>
+              <span className="proc-tab-card__sub">{activeCondition.tamil}</span>
+            </div>
+            <h3 className="proc-tab-card__title">{activeCondition.name}</h3>
+            <p className="proc-tab-card__desc">{activeCondition.desc}</p>
+            
+            <div className="proc-tab-card__grid">
+              <div className="proc-tab-card__col">
+                <h4><Icon name="pulse" size={16} /> Common Causes</h4>
+                <p>{activeCondition.causes}</p>
+              </div>
+              <div className="proc-tab-card__col proc-tab-card__col--solution">
+                <h4><Icon name="sparkle" size={16} /> Dr. Dhananjaya Solution</h4>
+                <p>{activeCondition.solution}</p>
+              </div>
+            </div>
+
+            <div className="proc-tab-card__actions">
+              <button className="btn btn--primary btn--sm" onClick={() => openBooking(activeCondition.name)} data-cursor="hover">
+                Consult for {activeCondition.name}
+              </button>
+              <a className="btn btn--wa btn--sm" href={WA_DEFAULT} target="_blank" rel="noreferrer" data-cursor="hover">
+                WhatsApp Quick Enquiry
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Kshara Sutra vs Conventional Surgery Comparison Table */}
+        <div className="proc-compare" data-reveal>
+          <div className="proc-compare__head">
+            <span className="chip chip--tint">Treatment Comparison</span>
+            <h3>Why Choose Kshara Sutra &amp; Day-Care Proctology Over Open Surgery?</h3>
+            <p>
+              Understanding the clinical benefits of Dr. Dhananjaya’s specialized protocol compared to traditional open surgical cutting:
+            </p>
+          </div>
+
+          <div className="proc-table-wrap">
+            <table className="proc-table">
+              <thead>
+                <tr>
+                  <th scope="col">Clinical Parameter</th>
+                  <th scope="col" className="col--conventional">Conventional Open Surgery</th>
+                  <th scope="col" className="col--dhananjaya">Dr. Dhananjaya’s Protocol (Kshara Sutra / Laser)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {COMPARISONS.map((row) => (
+                  <tr key={row.feature}>
+                    <td className="cell--feature">
+                      <strong>{row.feature}</strong>
+                    </td>
+                    <td className="cell--conventional">
+                      <span className="cell__badge cell__badge--neg">
+                        <Icon name="plus" size={13} className="rot--45" /> Conventional
+                      </span>
+                      <p>{row.conventional}</p>
+                    </td>
+                    <td className="cell--dhananjaya">
+                      <span className="cell__badge cell__badge--pos">
+                        <Icon name="check" size={13} strokeWidth={2.4} /> Recommended
+                      </span>
+                      <p>{row.dhananjaya}</p>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Free Consultation Callout Banner */}
+        <div className="proc-banner" data-reveal>
+          <div className="proc-banner__content">
+            <div className="proc-banner__badge">
+              <Icon name="phone" size={28} strokeWidth={2} />
+            </div>
+            <div>
+              <h3>Confidential Anorectal Health Helpline</h3>
+              <p>
+                Suffering from piles, severe fissure pain, or fistula discharge? Speak directly with our medical team.
+                Your consultation is 100% dignified and strictly confidential.
+              </p>
+            </div>
+          </div>
+          <div className="proc-banner__actions">
+            <a className="btn btn--light" href={CLINIC.phoneHref} data-cursor="hover">
+              Call {CLINIC.phoneDisplay}
+            </a>
+            <button className="btn btn--outline-light" onClick={() => openBooking()} data-cursor="hover">
+              Book Appointment
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
