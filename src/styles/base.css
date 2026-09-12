@@ -59,7 +59,6 @@
 /* ── reset ─────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html {
-  scroll-behavior: smooth;
   scroll-padding-top: clamp(84px, 10vh, 120px);
   overflow-x: hidden;
   max-width: 100%;
@@ -349,16 +348,16 @@ html.is-scroll-locked body { overflow: hidden; }
 /* ── navbar ────────────────────────────────────────────────── */
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 90;
-  transform: translateY(-110%);
-  transition: transform 0.55s var(--ease-out), background 0.4s, box-shadow 0.4s;
-  background: transparent;
+  transform: none !important;
+  background: rgba(248, 250, 252, 0.94);
+  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 2px 14px rgba(8, 99, 117, 0.06);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
-.nav.is-in { transform: translateY(0); }
-.nav.is-hidden { transform: translateY(-110%); }
 .nav.is-scrolled {
-  background: rgba(246, 243, 236, 0.86);
-  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
-  box-shadow: 0 1px 0 var(--line-soft);
+  background: rgba(248, 250, 252, 0.98);
+  box-shadow: 0 4px 20px rgba(8, 99, 117, 0.1);
 }
 .nav__inner {
   width: min(1360px, 100% - 36px); margin-inline: auto;

@@ -1,52 +1,36 @@
-import { useState, useCallback, useRef } from 'react';
-import { ScrollProvider, useScroll, useAnim, ScrollTrigger, skipReveal } from './context/ScrollContext';
+import { useState, useCallback, useRef, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { ScrollProvider, useScroll } from './context/ScrollContext';
 
 import Preloader from './components/Preloader';
 import Cursor from './components/Cursor';
 import Navbar from './components/Navbar';
 import FloatingDock from './components/FloatingDock';
 import BookingModal from './components/BookingModal';
+import ScrollToTop from './components/ScrollToTop';
 
-import Hero from './sections/Hero';
-import TrustStats from './sections/TrustStats';
-import Services from './sections/Services';
-import Brochures from './sections/Brochures';
-import ProcedureGuide from './sections/ProcedureGuide';
-import About from './sections/About';
-import Doctors from './sections/Doctors';
-import Process from './sections/Process';
-import Testimonials from './sections/Testimonials';
-import Faq from './sections/Faq';
-import CtaBanner from './sections/CtaBanner';
-import Contact from './sections/Contact';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import TreatmentsPage from './pages/TreatmentsPage';
+import GalleryPage from './pages/GalleryPage';
+import TestimonialsPage from './pages/TestimonialsPage';
+import ContactPage from './pages/ContactPage';
 import Footer from './sections/Footer';
 
 function Site() {
   const { containerRef } = useScroll();
   const scope = useRef(null);
+  const location = useLocation();
 
-  /* one global reveal system for [data-reveal] elements — desktop only */
-  useAnim(scope, (gsap) => {
-    if (skipReveal()) return;
-
-    const items = gsap.utils.toArray('[data-reveal]');
-    gsap.set(items, { y: 30, autoAlpha: 0 });
-    ScrollTrigger.batch(items, {
-      start: 'top 88%',
-      once: true,
-      onEnter: (batch) =>
-        gsap.to(batch, {
-          y: 0,
-          autoAlpha: 1,
-          duration: 0.9,
-          ease: 'power3.out',
-          stagger: 0.08,
-          overwrite: true,
-        }),
+  /* Ensure all content is immediately and reliably visible with zero blank white spaces */
+  useEffect(() => {
+    const items = document.querySelectorAll('[data-reveal]');
+    items.forEach((el) => {
+      el.style.opacity = '1';
+      el.style.visibility = 'visible';
+      el.style.transform = 'none';
     });
-    /* safety: reveal anything ScrollTrigger might have missed (e.g. above fold) */
-    ScrollTrigger.refresh();
-  });
+  }, [location.pathname]);
 
   return (
     <>
@@ -54,22 +38,20 @@ function Site() {
       <Navbar />
       <FloatingDock />
       <BookingModal />
+      <ScrollToTop />
 
-      <div className="scroll-container" data-scroll-container ref={containerRef}>
+      <div className="scroll-container" ref={containerRef}>
         <div ref={scope}>
           <main>
-            <Hero />
-            <TrustStats />
-            <Services />
-            <ProcedureGuide />
-            <Brochures />
-            <About />
-            <Doctors />
-            <Process />
-            <Testimonials />
-            <Faq />
-            <CtaBanner />
-            <Contact />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about-us" element={<AboutPage />} />
+              <Route path="/treatments" element={<TreatmentsPage />} />
+              <Route path="/gallery" element={<GalleryPage />} />
+              <Route path="/testimonials" element={<TestimonialsPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="*" element={<HomePage />} />
+            </Routes>
           </main>
           <Footer />
         </div>

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useScroll } from '../context/ScrollContext';
 import { CLINIC, WA_DEFAULT } from '../config';
 import { NAV_LINKS } from '../data';
@@ -6,22 +7,17 @@ import Icon from '../lib/Icons';
 import Button from './Button';
 
 export default function Navbar() {
-  const { onScroll, scrollTo, openBooking, loaded, lockScroll, unlockScroll } = useScroll();
+  const { onScroll, scrollTo, openBooking, lockScroll, unlockScroll } = useScroll();
   const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
   const [progress, setProgress] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
-  const lastY = useRef(0);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     return onScroll((y, limit) => {
-      setScrolled(y > 32);
-      setProgress(Math.min(1, y / limit));
-      const goingDown = y > lastY.current + 4;
-      const goingUp = y < lastY.current - 4;
-      if (y > 480 && goingDown) setHidden(true);
-      else if (goingUp || y <= 480) setHidden(false);
-      lastY.current = y;
+      setScrolled(y > 20);
+      setProgress(Math.min(1, y / Math.max(1, limit)));
     });
   }, [onScroll]);
 
@@ -39,8 +35,7 @@ export default function Navbar() {
     };
   }, [menuOpen]);
 
-  // Esc closes; so does growing past the burger breakpoint — otherwise a
-  // rotate/resize would leave an off-screen menu holding the scroll lock.
+  // Esc closes
   useEffect(() => {
     if (!menuOpen) return;
     const onKey = (e) => { if (e.key === 'Escape') setMenuOpen(false); };
@@ -54,24 +49,38 @@ export default function Navbar() {
     };
   }, [menuOpen]);
 
-  const go = (target) => (e) => {
-    e.preventDefault();
-    if (!menuOpen) {
-      scrollTo(target);
-      return;
+  const handleNavClick = (path) => (e) => {
+    if (menuOpen) setMenuOpen(false);
+    if (path.startsWith('#')) {
+      e.preventDefault();
+      if (location.pathname !== '/') {
+        navigate('/' + path);
+      } else {
+        scrollTo(path);
+      }
+    } else {
+      // route navigation
+      if (location.pathname === path) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        window.scrollTo(0, 0);
+      }
     }
-    setMenuOpen(false);
-    // let the panel start sliding clear before the page moves underneath it
-    setTimeout(() => scrollTo(target), 260);
   };
 
   return (
     <>
-      <header
-        className={`nav ${scrolled ? 'is-scrolled' : ''} ${hidden && !menuOpen ? 'is-hidden' : ''} ${loaded ? 'is-in' : ''}`}
-      >
+      <header className={`nav ${scrolled ? 'is-scrolled' : ''}`}>
         <div className="nav__inner">
-          <a className="nav__brand" href="#top" onClick={go('#top')} aria-label={`${CLINIC.name} — home`} data-cursor="hover">
+          <Link
+            className="nav__brand"
+            to="/"
+            onClick={handleNavClick('/')}
+            aria-label={`${CLINIC.name} — home`}
+            data-cursor="hover"
+          >
             <span className="nav__mark" aria-hidden="true">
               <svg viewBox="0 0 80 80" width="40" height="40">
                 <rect width="80" height="80" rx="18" fill="var(--bg-soft, #F1F5F9)" />
@@ -83,13 +92,19 @@ export default function Navbar() {
             <span className="nav__brand-txt">
               <strong><span style={{ color: 'var(--ink)' }}>DR.</span> <span style={{ color: 'var(--teal)' }}>DHANANJAYA</span></strong>
             </span>
-          </a>
+          </Link>
 
           <nav className="nav__links" aria-label="Primary">
             {NAV_LINKS.map((l) => (
-              <a key={l.target} href={l.target} onClick={go(l.target)} className="nav__link" data-cursor="hover">
+              <Link
+                key={l.path || l.label}
+                to={l.path}
+                onClick={handleNavClick(l.path)}
+                className={`nav__link ${location.pathname === l.path ? 'is-active' : ''}`}
+                data-cursor="hover"
+              >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -122,10 +137,16 @@ export default function Navbar() {
       <div className={`menu ${menuOpen ? 'is-open' : ''}`} aria-hidden={!menuOpen}>
         <nav className="menu__links" aria-label="Mobile">
           {NAV_LINKS.map((l, i) => (
-            <a key={l.target} href={l.target} onClick={go(l.target)} style={{ '--i': i }} className="menu__link">
+            <Link
+              key={l.path || l.label}
+              to={l.path}
+              onClick={handleNavClick(l.path)}
+              style={{ '--i': i }}
+              className={`menu__link ${location.pathname === l.path ? 'is-active' : ''}`}
+            >
               <span>{l.label}</span>
               <Icon name="arrow" size={22} />
-            </a>
+            </Link>
           ))}
         </nav>
         <div className="menu__foot">

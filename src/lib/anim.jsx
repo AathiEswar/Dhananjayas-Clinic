@@ -2,21 +2,17 @@ import { useEffect, useRef } from 'react';
 import { useScroll, useAnim, gsap, prefersReducedMotion, skipReveal } from '../context/ScrollContext';
 
 /**
- * <MaskText/> — award-style masked word reveal.
- * Splits text into per-word masks and staggers them up on scroll
- * (or when `play` turns true, e.g. after the preloader).
- * Disabled on viewports ≤1024px so copy stays visible.
- *
- *   segments: [{ t: 'Care that puts you ', em: false }, { t: 'at ease.', em: true }]
+ * <MaskText/> — clean headline presentation with smooth entrance.
+ * Ensures text is NEVER stuck or hidden into blank spaces across page navigations.
  */
 export function MaskText({
   as: Tag = 'h2',
   segments,
   text,
   className = '',
-  play,            // undefined → reveal on scroll; boolean → manual control
+  play,
   delay = 0,
-  stagger = 0.045,
+  stagger = 0.035,
   ...rest
 }) {
   const ref = useRef(null);
@@ -28,25 +24,29 @@ export function MaskText({
     if (!ready || !el || skipReveal()) return;
 
     const words = el.querySelectorAll('.w-in');
+    if (!words.length) return;
+
     const ctx = gsap.context(() => {
-      gsap.set(words, { yPercent: 120, rotate: 2.5 });
       const vars = {
-        yPercent: 0,
-        rotate: 0,
-        duration: 1.1,
-        ease: 'power4.out',
+        yPercent: 80,
+        opacity: 0,
+        duration: 0.75,
+        ease: 'power3.out',
         stagger,
         delay,
+        clearProps: 'all', // Clears all inline styles once done so text can never get stuck!
       };
+
       if (play === undefined) {
-        gsap.to(words, {
+        gsap.from(words, {
           ...vars,
-          scrollTrigger: { trigger: el, start: 'top 88%', once: true },
+          scrollTrigger: { trigger: el, start: 'top 92%', once: true },
         });
       } else if (play) {
-        gsap.to(words, vars);
+        gsap.from(words, vars);
       }
     }, el);
+
     return () => ctx.revert();
   }, [ready, play]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -67,10 +67,9 @@ export function MaskText({
 }
 
 /** <Counter/> — animated number that counts up when scrolled into view. */
-export function Counter({ to, suffix = '', decimals = 0, duration = 1.6, className = '' }) {
+export function Counter({ to, suffix = '', decimals = 0, duration = 1.4, className = '' }) {
   const ref = useRef(null);
   const scope = useRef(null);
-  const staticValue = skipReveal();
 
   useAnim(scope, (gsap) => {
     if (skipReveal()) return;
@@ -79,7 +78,7 @@ export function Counter({ to, suffix = '', decimals = 0, duration = 1.6, classNa
       v: to,
       duration,
       ease: 'power2.out',
-      scrollTrigger: { trigger: scope.current, start: 'top 90%', once: true },
+      scrollTrigger: { trigger: scope.current, start: 'top 92%', once: true },
       onUpdate: () => {
         if (ref.current) ref.current.textContent = obj.v.toFixed(decimals);
       },
@@ -88,7 +87,7 @@ export function Counter({ to, suffix = '', decimals = 0, duration = 1.6, classNa
 
   return (
     <span ref={scope} className={`counter ${className}`}>
-      <span ref={ref}>{staticValue || prefersReducedMotion() ? to : 0}</span>
+      <span ref={ref}>{to}</span>
       <span className="counter__suffix">{suffix}</span>
     </span>
   );

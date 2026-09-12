@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useScroll } from '../context/ScrollContext';
 import { CLINIC } from '../config';
 import { NAV_LINKS, SERVICES } from '../data';
@@ -5,22 +6,27 @@ import Icon from '../lib/Icons';
 
 export default function Footer() {
   const { scrollTo, openBooking } = useScroll();
-  const go = (target) => (e) => { e.preventDefault(); scrollTo(target); };
 
   return (
     <footer className="footer" data-scroll-section>
       <div className="container">
         <div className="footer__top">
-          <p className="footer__tag" data-reveal>Advanced Piles, Fistula &amp; Fissure Care · 25+ Years Surgical Mastery</p>
+          <p className="footer__tag" data-reveal>
+            Advanced Piles, Fistula &amp; Fissure Care · 25+ Years Surgical Mastery
+          </p>
           <h2 className="footer__wordmark" aria-label={CLINIC.name}>
             <span className="footer__wordmark-line">
               {"DR. DHANANJAYA".split('').map((ch, i) => (
-                <span key={`l1-${i}`} style={{ '--i': i }}>{ch === ' ' ? '\u00A0' : ch}</span>
+                <span key={`l1-${i}`} style={{ '--i': i }}>
+                  {ch === ' ' ? '\u00A0' : ch}
+                </span>
               ))}
             </span>
             <span className="footer__wordmark-line">
-              {"CLINIC · TAMBARAM".split('').map((ch, i) => (
-                <span key={`l2-${i}`} style={{ '--i': i + 14 }}>{ch === ' ' ? '\u00A0' : ch}</span>
+              {"HOSPITALS · CHENNAI".split('').map((ch, i) => (
+                <span key={`l2-${i}`} style={{ '--i': i + 14 }}>
+                  {ch === ' ' ? '\u00A0' : ch}
+                </span>
               ))}
             </span>
           </h2>
@@ -40,37 +46,66 @@ export default function Footer() {
           <nav className="footer__col" aria-label="Explore">
             <h4>Explore</h4>
             {NAV_LINKS.map((l) => (
-              <a key={l.target} href={l.target} onClick={go(l.target)} data-cursor="hover">{l.label}</a>
+              <Link key={l.path} to={l.path} data-cursor="hover">
+                {l.label}
+              </Link>
             ))}
           </nav>
 
           <nav className="footer__col" aria-label="Treatments">
             <h4>Treatments</h4>
             {SERVICES.slice(0, 5).map((s) => (
-              <a key={s.id} href="#services" onClick={go('#services')} data-cursor="hover">{s.title}</a>
+              <Link key={s.id} to="/treatments" data-cursor="hover">
+                {s.title.split('(')[0]}
+              </Link>
             ))}
+            <Link to="/treatments" data-cursor="hover" style={{ color: 'var(--teal)', fontWeight: '600' }}>
+              View All Treatments →
+            </Link>
           </nav>
 
           <div className="footer__col" aria-label="Contact">
-            <h4>Contact &amp; Visit</h4>
-            <p>{CLINIC.address}</p>
-            <p className="footer__landmark" style={{ fontSize: '0.85rem', opacity: 0.8, marginTop: '4px' }}>Landmark: {CLINIC.landmark}</p>
-            <a href={CLINIC.phoneHref} data-cursor="hover">{CLINIC.phoneDisplay}</a>
-            <a href={CLINIC.website} target="_blank" rel="noreferrer" data-cursor="hover" style={{ color: 'var(--teal)', fontWeight: '600' }}>
-              Official Website: fistulaandpiles.com
-            </a>
-            <a href={`mailto:${CLINIC.email}`} data-cursor="hover">{CLINIC.email}</a>
-            <p className="footer__hours">Mon – Sat: 9:00 AM – 8:30 PM · Sunday by Appointment</p>
+            <h4>Hospital Branches</h4>
+            <div style={{ marginBottom: '12px' }}>
+              <strong style={{ color: '#fff', fontSize: '0.9rem' }}>1. Main Center (Tambaram):</strong>
+              <p style={{ fontSize: '0.85rem', margin: '2px 0 6px' }}>
+                First Floor, No. 3, G.R. Complex, NGO Nagar Main Road, New Perungalathur, Chennai – 600063
+              </p>
+              <a href="tel:7358361723" data-cursor="hover">Tel: +91 73583 61723</a>
+            </div>
+
+            <div style={{ marginBottom: '12px' }}>
+              <strong style={{ color: '#fff', fontSize: '0.9rem' }}>2. Porur Branch:</strong>
+              <p style={{ fontSize: '0.85rem', margin: '2px 0 6px' }}>
+                6, Pillayar Koil St, Astalakshmi Nagar, Porur, Chennai – 600116
+              </p>
+              <a href="tel:9790747350" data-cursor="hover">Tel: +91 97907 47350</a>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginTop: '6px' }}>
+              <a href={CLINIC.website} target="_blank" rel="noreferrer" data-cursor="hover" style={{ color: 'var(--teal)', fontSize: '0.85rem' }}>
+                fistulapileshospitalchennai.com ↗
+              </a>
+              <a href={CLINIC.secondaryWebsite} target="_blank" rel="noreferrer" data-cursor="hover" style={{ color: 'var(--teal)', fontSize: '0.85rem' }}>
+                thefistula.com ↗
+              </a>
+            </div>
           </div>
         </div>
 
         <div className="footer__bottom">
           <p>© 2026 {CLINIC.name}. All rights reserved.</p>
           <p className="footer__legal">
-            <a href="#top" onClick={(e) => e.preventDefault()} data-cursor="hover">Privacy</a>
-            <a href="#top" onClick={(e) => e.preventDefault()} data-cursor="hover">Terms</a>
+            <Link to="/about-us" data-cursor="hover">About Doctors</Link>
+            <Link to="/gallery" data-cursor="hover">Facility Gallery</Link>
+            <Link to="/contact" data-cursor="hover">Locations</Link>
           </p>
-          <button className="footer__up round-btn" onClick={() => scrollTo('#top', { offset: 0 })} aria-label="Back to top" data-cursor="hover">
+          <button
+            className="footer__up round-btn"
+            onClick={() => scrollTo(0, { duration: 0 })}
+            aria-label="Back to top"
+            data-cursor="hover"
+          >
             <Icon name="arrowR" size={16} strokeWidth={2} className="rot--90" />
           </button>
         </div>

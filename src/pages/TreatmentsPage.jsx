@@ -1,0 +1,153 @@
+import { useState } from 'react';
+import { SERVICES, MEDICAL_ARTICLES } from '../data';
+import { CLINIC, WA_DEFAULT } from '../config';
+import { useScroll } from '../context/ScrollContext';
+import Icon from '../lib/Icons';
+import Button from '../components/Button';
+import ProcedureGuide from '../sections/ProcedureGuide';
+
+export default function TreatmentsPage() {
+  const { openBooking } = useScroll();
+  const [selectedService, setSelectedService] = useState(SERVICES[0]);
+
+  return (
+    <div className="page-view treatments-page">
+      {/* Page Header */}
+      <section className="page-header" style={{ backgroundImage: 'linear-gradient(135deg, rgba(8, 48, 58, 0.94), rgba(15, 23, 42, 0.95)), url(/clinic-assets/hero-bg-54.png)' }}>
+        <div className="container">
+          <span className="chip chip--light">Specialized Anorectal Proctology</span>
+          <h1 className="page-header__title">
+            Advanced Treatments For <em>Piles, Fistula &amp; Fissure.</em>
+          </h1>
+          <p className="page-header__sub">
+            Scientific, minimally invasive procedures performed under gentle local anesthesia. 30-minute day-care relief with zero damage to anal sphincter muscles and same-day walk-home discharge.
+          </p>
+        </div>
+      </section>
+
+      {/* Treatments Detail Navigator */}
+      <section className="section treatments-detail">
+        <div className="container">
+          <div className="section-head text-center" style={{ marginBottom: '40px' }}>
+            <span className="eyebrow"><span className="eyebrow__dot" /> Clinical Modalities</span>
+            <h2 className="h2">Select a Condition to Explore Treatment Details</h2>
+          </div>
+
+          <div className="treatments-layout">
+            {/* Left Nav Pill List */}
+            <div className="treatments-nav-list">
+              {SERVICES.map((s) => (
+                <button
+                  key={s.id}
+                  className={`treatments-nav-btn ${selectedService.id === s.id ? 'is-active' : ''}`}
+                  onClick={() => setSelectedService(s)}
+                  data-cursor="hover"
+                >
+                  <span className="treatments-nav-btn__ic"><Icon name={s.icon} size={20} /></span>
+                  <div className="treatments-nav-btn__text">
+                    <strong>{s.title.split('(')[0]}</strong>
+                    <span>{s.tamilTitle}</span>
+                  </div>
+                </button>
+              ))}
+            </div>
+
+            {/* Right Detailed Article Box */}
+            <div className="treatments-detail-card">
+              <div className="treatments-detail-card__head">
+                <span className="chip chip--purple">{selectedService.meta}</span>
+                <h2>{selectedService.title}</h2>
+                <p className="treatments-detail-card__tamil">{selectedService.tamilTitle}</p>
+              </div>
+
+              <div className="treatments-detail-card__body">
+                <p className="lead">{selectedService.desc}</p>
+                <p>{selectedService.longDesc}</p>
+
+                <div className="treatments-chips-row">
+                  {selectedService.chips.map((c) => (
+                    <span className="chip" key={c}>✓ {c}</span>
+                  ))}
+                </div>
+
+                <div className="treatments-detail-card__actions">
+                  <Button variant="primary" icon="calendar" onClick={() => openBooking(selectedService.title)}>
+                    Book treatment consultation
+                  </Button>
+                  <a
+                    className="btn btn--wa"
+                    href={WA_DEFAULT}
+                    target="_blank"
+                    rel="noreferrer"
+                    data-cursor="hover"
+                  >
+                    <Icon name="whatsapp" size={17} /> Chat on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Medical Articles / Diagnostic Differences */}
+      <section className="section medical-articles" style={{ background: 'var(--bg-soft)' }}>
+        <div className="container">
+          <div className="section-head text-center" style={{ marginBottom: '48px' }}>
+            <span className="eyebrow"><span className="eyebrow__dot" /> Clinical Guidance</span>
+            <h2 className="h2">Understanding Your Symptoms: Clinical Guides</h2>
+            <p style={{ maxWidth: '640px', margin: '12px auto 0', color: 'var(--ink-2)' }}>
+              Detailed explanations from Dr. Dhananjaya on how to distinguish between common anorectal diseases.
+            </p>
+          </div>
+
+          <div className="articles-grid">
+            {MEDICAL_ARTICLES.map((art) => (
+              <article className="med-art-card" key={art.id}>
+                <span className="chip chip--tint">Specialist Guide</span>
+                <h3>{art.title}</h3>
+                <p className="med-art-card__sub">{art.subtitle}</p>
+                <p className="med-art-card__sum">{art.summary}</p>
+
+                {art.points && (
+                  <ul className="med-art-card__list">
+                    {art.points.map((pt, i) => (
+                      <li key={i}>
+                        <span className="med-art-card__check"><Icon name="check" size={13} strokeWidth={3} /></span>
+                        <span>{pt}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {art.comparison && (
+                  <div className="med-art-card__table-wrap">
+                    <table className="med-art-table">
+                      <thead>
+                        <tr>
+                          <th>Condition</th>
+                          <th>Key Distinguishing Symptoms</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {art.comparison.map((row, i) => (
+                          <tr key={i}>
+                            <td><strong>{row.condition}</strong></td>
+                            <td>{row.symptoms}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Procedure Guide & Comparative Surgery Table */}
+      <ProcedureGuide />
+    </div>
+  );
+}
