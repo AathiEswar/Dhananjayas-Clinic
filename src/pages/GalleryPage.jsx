@@ -44,7 +44,7 @@ export default function GalleryPage() {
         <div className="container">
           <span className="chip chip--light">Hospital Tour &amp; Clinical Facilities</span>
           <h1 className="page-header__title">
-            Authentic Clinic &amp; Surgical <em>Photo Gallery.</em>
+            Authentic Ayurvedic Clinic <em>Photo Gallery.</em>
           </h1>
           <p className="page-header__sub">
             Take a visual tour of our sterile day-care minor OT setups, private consultation rooms, diagnostic assessment suites, and comfortable patient recovery lounges.

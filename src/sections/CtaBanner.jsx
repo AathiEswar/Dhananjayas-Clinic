@@ -25,7 +25,7 @@ export default function CtaBanner() {
           />
 
           <p className="ctab__sub" data-reveal>
-            Book a confidential evaluation with Dr. Dhananjaya now — 30-minute daycare procedures, same-day discharge, and walk-home recovery.
+            Book a confidential evaluation for Piles, Fistula or Fissure—gentle Ayurvedic care without major operations.
           </p>
 
           <div className="ctab__actions" data-reveal>

@@ -73,11 +73,11 @@ export default function Doctors() {
     <section className="doctors section" data-scroll-section id="doctors">
       <div className="container">
         <SectionHeader
-          eyebrow="Chief Proctology Specialists &amp; Surgeons"
-          segments={[{ t: 'Pioneers in Kshara Sutra, ' }, { t: 'minimally invasive proctology.', em: true }]}
+          eyebrow="Ayurvedic Proctology Specialists"
+          segments={[{ t: 'Focused care for Piles, Fistula & Fissure, ' }, { t: 'without major operations.', em: true }]}
           side={
             <>
-              <p>Meet our experienced surgical team led by Dr. Dhananjaya (25+ years experience) and Dr. Venkhatesan, dedicated to permanent, sphincter-preserving cures for piles, fistula, and fissure at New Perungalathur, Tambaram.</p>
+              <p>Meet our experienced Ayurvedic clinical team, led by Dr. Dhananjaya and Dr. Venkhatesan, dedicated exclusively to gentle, confidential care for Piles, Fistula and Fissure.</p>
             </>
           }
         />

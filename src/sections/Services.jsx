@@ -10,15 +10,15 @@ export default function Services() {
     <section className="services section" data-scroll-section id="services">
       <div className="container">
         <SectionHeader
-          eyebrow="Specialized Proctology &amp; Anorectal Treatments"
-          segments={[{ t: 'Advanced minimally invasive care, ' }, { t: 'permanent recurrence-free relief.', em: true }]}
+          eyebrow="Three Focused Ayurvedic Treatments"
+          segments={[{ t: 'Piles, Fistula & Fissure care, ' }, { t: 'without major operations.', em: true }]}
           side={
             <>
               <p>
-                Comprehensive proctology solutions specializing in laser piles ablation, authentic Kshara Sutra therapy for anal fistula, chronic fissure repair, and pilonidal sinus management with zero sphincter damage.
+                Our clinic focuses only on Piles, Fistula and Fissure, using personalized Ayurvedic medicines, local care, lifestyle guidance, and authentic Kshara Sutra when clinically appropriate.
               </p>
               <button className="link-arrow" onClick={() => scrollTo('#procedure-guide')} data-cursor="hover">
-                Compare surgery vs. Kshara Sutra <Icon name="arrowR" size={15} strokeWidth={2.2} />
+                Explore our gentle approach <Icon name="arrowR" size={15} strokeWidth={2.2} />
               </button>
             </>
           }
@@ -42,9 +42,18 @@ export default function Services() {
                 }
               }}
             >
+              <div className="svc-card__image-wrap">
+                <img
+                  className="svc-card__image"
+                  src={s.image}
+                  alt={s.imageAlt}
+                  loading="lazy"
+                />
+              </div>
+
               <div className="svc-card__top">
                 <span className="svc-card__icon"><Icon name={s.icon} size={26} strokeWidth={2} /></span>
-                {s.featured && <span className="svc-card__badge">Priority OPD</span>}
+                <span className="svc-card__badge">Ayurvedic Care</span>
               </div>
 
               <h3 className="svc-card__title">{s.title}</h3>

@@ -11,7 +11,7 @@ const CONDITIONS = [
     tamil: 'மூல நோய்',
     desc: 'Swollen veins in the lower rectum and anus causing painful defecation, bright red bleeding, itching, and tissue prolapse.',
     causes: 'Chronic constipation, prolonged sitting, straining, low-fiber diet.',
-    solution: 'Minimally invasive day-care procedure sealing hemorrhoidal vessels without painful incisions.',
+    solution: 'Individualized Ayurvedic medicines, local care, diet correction, and gentle Kshara Karma when clinically appropriate.',
     badge: '70% Population Affected',
   },
   {
@@ -20,7 +20,7 @@ const CONDITIONS = [
     tamil: 'பௌத்திரம்',
     desc: 'An infected abnormal tunnel connecting the anal canal to the perianal skin, causing continuous foul discharge, pain, and recurring boils.',
     causes: 'Untreated perianal abscess, clogged anal crypt glands, infection.',
-    solution: 'Authentic Kshara Sutra therapy: medicated seton gently cuts and heals the tract with zero sphincter damage.',
+    solution: 'Authentic Ayurvedic Kshara Sutra care using a medicated herbal thread to support gradual tract healing.',
     badge: 'Gold Standard Cure',
   },
   {
@@ -29,17 +29,8 @@ const CONDITIONS = [
     tamil: 'ஆசனவாய் வெடிப்பு',
     desc: 'A sharp tear or crack in the sensitive lining of the anal canal causing excruciating razor-sharp burning pain and drops of blood during stool passing.',
     causes: 'Passing hard stools, severe straining, internal sphincter muscle spasm.',
-    solution: 'Medical spasm relaxation, gentle dilation, and non-surgical mucosal repair for immediate pain relief.',
+    solution: 'Ayurvedic medicines, soothing local care, and bowel-habit correction to ease spasm and support healing.',
     badge: 'Instant Pain Relief',
-  },
-  {
-    id: 'pilonidal',
-    name: 'Pilonidal Sinus (Nadivrana)',
-    tamil: 'வால் எலும்பு சீழ் கட்டி',
-    desc: 'Infected tunnel or cavity at the tailbone cleft filled with hair and debris, causing recurrent abscesses and pain while sitting.',
-    causes: 'Ingrown hair, prolonged driving/sitting, friction.',
-    solution: 'Medicated track excision and antiseptic cleansing with minimal tissue loss and fast healing.',
-    badge: 'Minimally Invasive',
   },
 ];
 
@@ -84,16 +75,16 @@ export default function ProcedureGuide() {
     <section className="proc-guide section" data-scroll-section id="procedure-guide">
       <div className="container">
         <SectionHeader
-          eyebrow="Kshara Sutra &amp; Modern Proctology Guide"
+          eyebrow="Ayurvedic Piles, Fistula &amp; Fissure Guide"
           segments={[
-            { t: 'Permanent root-cause relief, ' },
-            { t: 'zero sphincter damage.', em: true },
+            { t: 'Three focused treatments, ' },
+            { t: 'without major operations.', em: true },
           ]}
           side={
             <>
               <p>
-                Dr. Dhananjayas Clinic combines 25+ years of specialized anorectal surgery with authentic Kshara Sutra
-                and minimally invasive day-care techniques for permanent, recurrence-free healing in Chennai.
+                Dr. Dhananjayas Clinic provides focused Ayurvedic care only for Piles, Fistula and Fissure, including
+                authentic Kshara Sutra and gentle treatment plans selected after clinical assessment.
               </p>
               <button className="link-arrow" onClick={() => openBooking()} data-cursor="hover">
                 Book confidential consultation <Icon name="arrowR" size={15} strokeWidth={2.2} />
@@ -150,13 +141,13 @@ export default function ProcedureGuide() {
           </div>
         </div>
 
-        {/* Kshara Sutra vs Conventional Surgery Comparison Table */}
+        {/* Gentle Ayurvedic care vs conventional major surgery */}
         <div className="proc-compare" data-reveal>
           <div className="proc-compare__head">
             <span className="chip chip--tint">Treatment Comparison</span>
-            <h3>Why Choose Kshara Sutra &amp; Day-Care Proctology Over Open Surgery?</h3>
+            <h3>Why Patients Prefer Gentle Ayurvedic Care Over Major Open Surgery</h3>
             <p>
-              Understanding the clinical benefits of Dr. Dhananjaya’s specialized protocol compared to traditional open surgical cutting:
+              A clear comparison between conventional major surgery and our focused Ayurvedic approach:
             </p>
           </div>
 
@@ -166,7 +157,7 @@ export default function ProcedureGuide() {
                 <tr>
                   <th scope="col">Clinical Parameter</th>
                   <th scope="col" className="col--conventional">Conventional Open Surgery</th>
-                  <th scope="col" className="col--dhananjaya">Dr. Dhananjaya’s Protocol (Kshara Sutra / Laser)</th>
+                  <th scope="col" className="col--dhananjaya">Ayurvedic Care / Kshara Sutra</th>
                 </tr>
               </thead>
               <tbody>

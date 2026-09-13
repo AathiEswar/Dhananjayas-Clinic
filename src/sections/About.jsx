@@ -40,14 +40,14 @@ export default function About() {
           <SectionHeader
             eyebrow="Why Choose DR. Dhananjayas Clinic"
             segments={[
-              { t: 'Advanced surgical care that restores ' },
+              { t: 'Gentle Ayurvedic care that restores ' },
               { t: 'complete comfort, dignity & freedom.', em: true },
             ]}
           />
           <p className="about__lead" data-reveal>
-            Specialized anorectal healthcare in New Perungalathur and Tambaram should be dignified, virtually painless, and permanent.
-            DR. Dhananjayas Clinic brings over 25 years of mastery in authentic Kshara Sutra therapy and minimally invasive laser proctology,
-            offering safe 30-minute day-care procedures with zero damage to anal sphincter muscles and near-zero recurrence.
+            Care for Piles, Fistula and Fissure should be dignified, gentle and personalized.
+            DR. Dhananjayas Clinic brings over 25 years of Ayurvedic proctology experience, using herbal care,
+            lifestyle guidance and authentic Kshara Sutra without major open operations.
           </p>
 
           <ul className="about__list">

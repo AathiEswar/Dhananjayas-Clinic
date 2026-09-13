@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer__top">
           <p className="footer__tag" data-reveal>
-            Advanced Piles, Fistula &amp; Fissure Care · 25+ Years Surgical Mastery
+            Ayurvedic Piles, Fistula &amp; Fissure Care · No Major Operations
           </p>
           <h2 className="footer__wordmark" aria-label={CLINIC.name}>
             <span className="footer__wordmark-line">
@@ -35,7 +35,7 @@ export default function Footer() {
         <div className="footer__grid">
           <div className="footer__col footer__col--brand">
             <p>
-              A premier Proctology, Laser Piles &amp; Kshara Sutra healing center in {CLINIC.city}. Specializing in 30-minute minimally invasive day-care procedures with zero sphincter damage and near-zero recurrence.
+              A focused Ayurvedic clinic in {CLINIC.city} caring only for Piles, Fistula and Fissure through gentle treatment plans and authentic Kshara Sutra—without major open operations.
             </p>
             <button className="btn btn--primary btn--sm" onClick={() => openBooking()} data-cursor="hover">
               <span className="btn__solo">Book consultation</span>
@@ -54,13 +54,13 @@ export default function Footer() {
 
           <nav className="footer__col" aria-label="Treatments">
             <h4>Treatments</h4>
-            {SERVICES.slice(0, 5).map((s) => (
+            {SERVICES.map((s) => (
               <Link key={s.id} to="/treatments" data-cursor="hover">
                 {s.title.split('(')[0]}
               </Link>
             ))}
             <Link to="/treatments" data-cursor="hover" style={{ color: 'var(--teal)', fontWeight: '600' }}>
-              View All Treatments →
+              Explore Treatments →
             </Link>
           </nav>
 

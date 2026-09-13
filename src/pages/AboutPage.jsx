@@ -14,11 +14,10 @@ export default function AboutPage() {
         <div className="container">
           <span className="chip chip--light">About Dr. Dhananjayas Hospitals &amp; Clinic</span>
           <h1 className="page-header__title">
-            25+ Years of Pioneering <em>Sphincter-Preserving</em> Proctology.
+            25+ Years of Focused <em>Ayurvedic Proctology.</em>
           </h1>
           <p className="page-header__sub">
-            Leading anorectal surgery and authentic Kshara Sutra therapy across New Perungalathur, Tambaram &amp; Porur, Chennai. 
-            Dedicated to eliminating piles, fistula, and fissures permanently without hospital confinement or loss of continence.
+            Gentle Ayurvedic care exclusively for Piles, Fistula and Fissure across New Perungalathur, Tambaram &amp; Porur, Chennai—without major open operations.
           </p>
         </div>
       </section>
@@ -64,7 +63,7 @@ export default function AboutPage() {
               />
               <div className="about-founder-badge">
                 <strong>Dr. Dhananjaya</strong>
-                <span>Founder &amp; Chief Ayurvedic Surgeon · 25+ Yrs Exp</span>
+                <span>Founder &amp; Chief Ayurvedic Proctologist · 25+ Yrs Exp</span>
               </div>
             </div>
           </div>
@@ -76,7 +75,7 @@ export default function AboutPage() {
         <div className="container">
           <div className="section-head text-center" style={{ marginBottom: '48px' }}>
             <span className="eyebrow"><span className="eyebrow__dot" /> Our Senior Specialists</span>
-            <h2 className="h2">Meet Our Lead Proctology Surgeons</h2>
+            <h2 className="h2">Meet Our Ayurvedic Proctology Specialists</h2>
             <p style={{ maxWidth: '640px', margin: '12px auto 0', color: 'var(--ink-2)' }}>
               Compassionate, highly experienced anorectal clinicians committed to confidential, empathetic care and same-day recovery.
             </p>

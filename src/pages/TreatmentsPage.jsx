@@ -15,12 +15,12 @@ export default function TreatmentsPage() {
       {/* Page Header */}
       <section className="page-header" style={{ backgroundImage: 'linear-gradient(135deg, rgba(8, 48, 58, 0.94), rgba(15, 23, 42, 0.95)), url(/clinic-assets/hero-bg-54.png)' }}>
         <div className="container">
-          <span className="chip chip--light">Specialized Anorectal Proctology</span>
+          <span className="chip chip--light">Focused Ayurvedic Proctology</span>
           <h1 className="page-header__title">
-            Advanced Treatments For <em>Piles, Fistula &amp; Fissure.</em>
+            Ayurvedic Treatment For <em>Piles, Fistula &amp; Fissure.</em>
           </h1>
           <p className="page-header__sub">
-            Scientific, minimally invasive procedures performed under gentle local anesthesia. 30-minute day-care relief with zero damage to anal sphincter muscles and same-day walk-home discharge.
+            Three focused services only, with personalized Ayurvedic care and authentic Kshara Sutra when appropriate—without major open operations.
           </p>
         </div>
       </section>
@@ -29,8 +29,8 @@ export default function TreatmentsPage() {
       <section className="section treatments-detail">
         <div className="container">
           <div className="section-head text-center" style={{ marginBottom: '40px' }}>
-            <span className="eyebrow"><span className="eyebrow__dot" /> Clinical Modalities</span>
-            <h2 className="h2">Select a Condition to Explore Treatment Details</h2>
+            <span className="eyebrow"><span className="eyebrow__dot" /> Our Three Treatments</span>
+            <h2 className="h2">Choose Piles, Fistula or Fissure</h2>
           </div>
 
           <div className="treatments-layout">
@@ -54,6 +54,13 @@ export default function TreatmentsPage() {
 
             {/* Right Detailed Article Box */}
             <div className="treatments-detail-card">
+              <div className="treatments-detail-card__image-wrap">
+                <img
+                  src={selectedService.image}
+                  alt={selectedService.imageAlt}
+                  className="treatments-detail-card__image"
+                />
+              </div>
               <div className="treatments-detail-card__head">
                 <span className="chip chip--purple">{selectedService.meta}</span>
                 <h2>{selectedService.title}</h2>

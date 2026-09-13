@@ -153,11 +153,11 @@ export default function ContactPage() {
                   </li>
                   <li>
                     <Icon name="check" size={14} strokeWidth={3} />
-                    <span><strong>Transparent Advice:</strong> Clear explanation of conservative vs Kshara Sutra vs laser day-care options.</span>
+                    <span><strong>Focused Ayurvedic Advice:</strong> Clear guidance for Piles, Fistula or Fissure using medicines, local care, diet support, or Kshara Sutra when appropriate.</span>
                   </li>
                   <li>
                     <Icon name="check" size={14} strokeWidth={3} />
-                    <span><strong>No Unnecessary Surgery:</strong> Mild or early grades are treated with conservative medical regimens.</span>
+                    <span><strong>No Major Operations:</strong> Our clinic focuses on gentle Ayurvedic treatment and day-care care.</span>
                   </li>
                 </ul>
               </div>

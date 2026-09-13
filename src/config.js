@@ -9,9 +9,9 @@ export const CLINIC = {
   name: 'Dr. Dhananjayas Hospitals & Clinic',
   shortName: 'Dr. Dhananjayas Clinic',
   altName: 'Dr. Dhananjayan Piles & Fistula Hospital',
-  tagline: 'Leading Piles, Fistula (Kshara Sutra) & Fissure Care · 25+ Years of Excellence',
-  slogan: 'Minimally Invasive, Virtually Painless Anorectal Care With Zero Sphincter Damage.',
-  motto: '25+ Years of Surgical Excellence in Authentic Kshara Sutra & Day-Care Proctology.',
+  tagline: 'Ayurvedic Piles, Fistula (Kshara Sutra) & Fissure Care · 25+ Years of Excellence',
+  slogan: 'Gentle Ayurvedic Care for Piles, Fistula & Fissure Without Major Operations.',
+  motto: '25+ Years of Focused Ayurvedic Proctology & Authentic Kshara Sutra Care.',
   tamilTagline: 'மூலம், பௌத்திரம் மற்றும் ஆசனவாய் வெடிப்புக்கான நவீன மற்றும் க்ஷாரசூத்ரா அறுவை சிகிச்சையற்ற தீர்வு',
   city: 'Chennai (Tambaram, New Perungalathur, Porur & Koyambedu)',
 
@@ -36,7 +36,7 @@ export const CLINIC = {
     {
       id: 'tambaram-perungalathur',
       name: 'New Perungalathur / Tambaram Clinic (Main Center)',
-      tag: 'Primary Surgical Center',
+      tag: 'Primary Ayurvedic Treatment Center',
       address: 'First Floor, No. 3, G.R. Complex, NGO Nagar Main Road, SSM Nagar, Alappakkam, New Perungalathur, Chennai, Tamil Nadu – 600063',
       landmark: 'Near SSM Nagar, Off Tambaram / GST Road',
       phone: '+91 73583 61723 / 08048067521',

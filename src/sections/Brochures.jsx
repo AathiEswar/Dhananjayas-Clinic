@@ -50,7 +50,7 @@ export default function Brochures() {
         />
 
         <p className="brochures__intro" data-reveal>
-          Explore our anorectal diagnostic suite, sterile minor OT setup for Kshara Sutra and laser procedures, and private consultation chambers located at NGO Nagar, New Perungalathur (Near Tambaram).
+          Explore our private consultation and Ayurvedic treatment spaces for Piles, Fistula and Fissure, including hygienic Kshara Sutra care without major operations, at NGO Nagar, New Perungalathur (Near Tambaram).
         </p>
 
         <div className="brochures__grid">

@@ -34,11 +34,15 @@ export default function Hero() {
       <div className="hero__inner container">
         <div className="hero__copy">
           <h1 className="hero__title">
-            Advanced Piles, Fistula &amp; Fissure Care. <em>Minimally invasive &amp; virtually painless.</em>
+            Advanced{' '}
+            <span className="hero__condition-highlight">
+              <span>Piles</span><i>,</i> <span>Fistula</span> <i>&amp;</i> <span>Fissure</span>
+            </span>{' '}
+            Care. <em>Minimally invasive &amp; virtually painless.</em>
           </h1>
 
           <p className="hero__sub">
-            25+ years of specialized proctology &amp; Kshara Sutra excellence in <strong className="hero__sub-highlight">New Perungalathur</strong>, Tambaram. 30-minute day-care procedures, same-day walk-home discharge, and 100% sphincter preservation.
+            25+ years of focused Ayurvedic care for Piles, Fistula &amp; Fissure in <strong className="hero__sub-highlight">New Perungalathur</strong>, Tambaram. Gentle treatment, authentic Kshara Sutra, and no major operations.
           </p>
 
           <div className="hero__ctas">
@@ -90,24 +94,24 @@ export default function Hero() {
         </div>
 
         <div className="hero__visual" aria-hidden="false">
-          {/* Main Hero Visual: Dr. Dhananjaya Proctology Clinic */}
+          {/* Main Hero Visual: discreet patient discomfort in a caring clinic */}
           <div className="hero__main-card" data-scroll data-scroll-speed="-0.3">
             <div className="hero__img-frame">
               <img
-                src="/dr-dhananjaya-hero.jpg"
-                alt="Dr. Dhananjaya - Advanced Piles, Fistula and Fissure Specialist Clinic in New Perungalathur, Tambaram"
+                src="/images/piles-discomfort-hero.jpg"
+                alt="Patient experiencing discreet discomfort while consulting a doctor about piles treatment"
                 className="hero__main-img"
               />
               <div className="hero__img-badge">
                 <span className="hero__img-badge-dot" />
-                <span>Laser Piles &amp; Kshara Sutra Clinic</span>
+                <span>Ayurvedic Piles, Fistula &amp; Fissure Clinic</span>
               </div>
               <div className="hero__img-caption">
                 <p className="hero__img-quote">“30-Minute Day-Care Relief. Same-Day Discharge Without Painful Cuts.”</p>
                 <span className="hero__img-sub">G.R. Complex, NGO Nagar Main Road, New Perungalathur (Tambaram)</span>
               </div>
             </div>
-            <span className="hero__floating-heart" title="Sphincter-Preserving Laser &amp; Kshara Sutra Surgery">
+            <span className="hero__floating-heart" title="Gentle Ayurvedic care without major operations">
               ✦
             </span>
           </div>
